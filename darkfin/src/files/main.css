@@ -2,7 +2,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1em;
   min-height: 100vh;
-  background-color: paleturquoise;
+  background-color: #2c7980;
   margin: 0; }
   body.chapter {
     padding-top: 6em; }
@@ -49,24 +49,25 @@ body.chapter .journal {
   left: 0;
   right: 0;
   height: 6em;
-  background: paleturquoise;
+  background: #2c7980;
+  color: #e4f7ff;
   z-index: 101;
   padding-left: 2em;
   transition: height 0.25s ease-in-out;
   padding-right: 3em; }
   .header h1,
   .header h2 {
-    color: #000;
     text-align: left;
     margin: .25em 0;
     transition: all 0.25s ease-in-out;
     transition-property: font-size, margin; }
   .header h2 {
-    font-weight: lighter; }
+    font-weight: lighter;
+    font-size: 1.25em; }
     .header h2 em::before {
       content: ' - '; }
   .header .story-link {
-    color: #000;
+    color: #e4f7ff;
     position: absolute;
     top: 1em;
     right: 1em;
@@ -224,5 +225,3 @@ body.stories ol li a:hover {
       display: block;
       border: 1px solid #ccc;
       border-radius: 5px; } }
-
-/*# sourceMappingURL=main.css.map */

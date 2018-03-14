@@ -5,7 +5,8 @@
   <title>Darkfin: Story </title>
   <link rel="stylesheet" href="main.css?%%time%%">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="icon" href="df-favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="icon" href="df-favicon.png?%%time%%" type="image/x-icon">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
@@ -20,14 +21,14 @@
     <div class="body">
     </div>
     <div class="footer">
-        <div class="copyright-footer">&reg; All Rights Reserved, 2000-2018</div>
+        <div class="copyright-footer">&reg; All Rights Reserved, 2000-%%year%%</div>
     </div>
   </div>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.5/lodash.js"></script>
   <script>
     $.getJSON('story.json').then(res => {
-      console.log(res);
+      // console.log(res);
       let vignettes = _.sortBy(res.filter(s => (s.type === 'v')), 'fileName');
       let years = _.sortBy(res.filter(s => (s.type === 'y')), 'fileName');
       let prevYear;
@@ -60,17 +61,15 @@
       $('.body').append(wrap.append(vol));
 
     });
-    $(document).on('scroll', () => {
-      if ($(document).scrollTop() > 48) {
-        $('.header').addClass('shrink');
-        console.log('--', $(document).scrollTop());
-      } else {
-        $('.header').removeClass('shrink');
-        console.log('++', $(document).scrollTop());
-
-      }
-      
-    });
+    // $(document).on('scroll', () => {
+    //   if ($(document).scrollTop() > 48) {
+    //     $('.header').addClass('shrink');
+    //     console.log('--', $(document).scrollTop());
+    //   } else {
+    //     $('.header').removeClass('shrink');
+    //     console.log('++', $(document).scrollTop());
+    //   }
+    // });
 
   </script>
 </body>

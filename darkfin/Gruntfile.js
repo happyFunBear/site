@@ -1,18 +1,6 @@
 
 module.exports = function (grunt) {
   var _ = require('lodash');
-  var header = `<!DOCTYPE html> 
-  <html>
-  <head>
-    <title>Darkfin</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="df-favicon.png" type="image/x-icon">
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  </head>
-  <body>
-    <div class="wrapper">
-  `;
 
   var yearTitle = {
     1: 'Duquesa Bay',
@@ -20,26 +8,39 @@ module.exports = function (grunt) {
     3: 'Quartz Lake',
     4: 'Santa Conchita'
   }
-  var storyFilePath = '/files/';
+  // var storyFilePath = '/files/';
 
   var resourcePath = '../working-files/resources/';
   var storyPath = '../working-files/story/';
   var baseHtml = grunt.file.read(resourcePath + 'template.html');
-  var cssFileName = 'main.css';
+  // var cssFileName = 'main.css';
   var outPath = 'src/files/';
-  var h2regex = /<h2>([\s\S]*?)<\/h2>/gm;
+  // var h2regex = /<h2>([\s\S]*?)<\/h2>/gm;
 
   var timestamp = (new Date()).getTime();
-  var footer = `</div></body></html>`;
+  // var footer = `</div></body></html>`;
   var imagePath = '../assets/images/';
-  var allFiles = [];
+  // var allFiles = [];
   grunt.initConfig({
     post: {
       run: {}
     },
+    clean: [outPath],
     watch: {
       files: ['../working-files/**/*.*'],
-      tasks: ['sass:main', 'post:run']
+      // tasks: ['sass:main', 'post:run']
+      tasks: ['make']
+    },
+    copy: {
+      favicon: {
+        files: [{
+          src: [resourcePath + '*.png'],
+          dest: outPath,
+          // expand: true,
+          // flatten: true
+        }]
+  
+      }
     },
     sass: {
       main: {
@@ -51,15 +52,19 @@ module.exports = function (grunt) {
   });
 
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-sass');
-
+  grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.registerTask('makecss', ['sass:main']);
   grunt.registerTask('default', ['post:run']);
+  grunt.registerTask('make', ['clean', 'makecss', 'default']);
 
   grunt.task.registerMultiTask('post', 'post', () => {
     let structure = [];
     let files = grunt.file.expand(storyPath + '*.html');
-
+    const setTimes = function(content) {
+      return content.replace(/%%year%%/g, (new Date()).getFullYear()).replace(/%%time%%/g, timestamp);
+    }
     files.forEach(path => {
       let fileOut = baseHtml;
       let fileInfo = {};
@@ -87,7 +92,7 @@ module.exports = function (grunt) {
       structure.push(fileInfo);
 
       file = file
-        .replace(/<h2>([\s\S]*?)<\/h2>/, '')
+        // .replace(/<h2>([\s\S]*?)<\/h2>/, '')
         .replace(/<bar><\/bar>/g, '<hr>')
         .replace(/<stage>/g, '<div class="stage">')
         .replace(/<\/stage>/g, '</div>')
@@ -99,23 +104,24 @@ module.exports = function (grunt) {
 
 
       fileOut = fileOut
-        .replace(/%%time%%/g, timestamp)
         .replace(/%%title%%/g, fileInfo.title)
         .replace(/%%chapter%%/g, fileInfo.type === 'y' ? `Year ${fileInfo.year}, Chapter ${fileInfo.chapter}` : fileInfo.type === 'v' ? `Vignette ${fileInfo.chapter}` : '')
         .replace(/%%body%%/g, file)
         .replace(/%%prev%%/g, fileInfo.prevFile ? `<a href="${fileInfo.prevFile}"><i class="fa fa-chevron-left"></i>Prev</a>` : '')
         .replace(/%%next%%/g, fileInfo.nextFile ? `<a href="${fileInfo.nextFile}">Next<i class="fa fa-chevron-right"></i></a>` : '');
-
+       
+      fileOut = setTimes(fileOut);
       grunt.file.write(outPath + fileInfo.fileName, fileOut);
 
     });
 
+    var storiesFile = grunt.file.read(resourcePath + 'story.html');
+    storiesFile = setTimes(storiesFile);
 
-    // grunt.file.write(outPath + cssFileName, grunt.file.read(resourcePath + cssFileName));
-    // grunt.file.write(outPath + 'story-main.css', grunt.file.read(resourcePath + 'story-main.css'));
-
-    grunt.file.write(outPath + 'story.html', grunt.file.read(resourcePath + 'story.html'));
+    grunt.file.write(outPath + 'story.html', storiesFile);
     grunt.file.write(outPath + 'story.json', JSON.stringify(structure));
+
+    grunt.file.copy(resourcePath + 'df-favicon.png', outPath + 'df-favicon.png', { encoding: null } );
 
   });
 
