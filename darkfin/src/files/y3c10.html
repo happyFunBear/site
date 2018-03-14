@@ -1,18 +1,30 @@
-<html><head><style>
-  .stage { background-color: #ddd; margin: 10px 30px; }
-  .actor { background-color: #cee; }
-  .line { background-color: #eec; }
-  .actor:after { content: ":"; }
-  </style>
-  </head>
-  <body>
-  <h1>Year 3, Chapter 10</h1><h2>Circle Break</h2>
+<!DOCTYPE html>
+<html>
+  
+<head>
+  <title>Darkfin: Circle Break </title>
+  <link rel="stylesheet" href="main.css?1520816785324">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" href="df-favicon.png" type="image/x-icon">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body class="chapter">
+  <div class="wrapper">
+    <div class="header">
+      <h1>Darkfin <span>of Duquesa Bay</span></h1>
+      <h2>Year 3, Chapter 10<em>Circle Break</em></h2>
+      <a href="story.html" class="story-link"><i class="fa fa-file-text-o"></i></a>
+    </div>
+    <div class="body">
+      
 
 <div class="stage">With a lifeless Morrigan in her arms, Darkfin stumbles 
  out of the river and falls to the bank. Mt. Wiggins continues to explode 
  in the distance.</div>
 
-<p align="center"><img src="../assets/images/y3c10_df_morri.jpg" width="560" height="406"></p>
+<p a="center"><img src="../assets/images/y3c10_df_morri.jpg" h="406" w="560"></p>
 
 <p class="line"><span class="actor">Darkfin</span> Come on, Morrigan, keep fighting</p>
 
@@ -54,7 +66,7 @@
  did. Her head and torso spring upright as she sucks in a huge, rattling 
  breath.</div>
 
-<p align="center"><img src="../assets/images/y3c10_morri_eyes.jpg" width="510" height="427"></p>
+<p a="center"><img src="../assets/images/y3c10_morri_eyes.jpg" h="427" w="510"></p>
 
 <p class="line"><span class="actor">Darkfin</span> Morrigan?</p>
 
@@ -76,7 +88,7 @@
  as veins bulge and her muscles tense. She whirls around and prepares 
  to plunge the trident directly into the heart of Darkfin.</div>
 
-<p align="center"><img src="../assets/images/y3c10_morri_trident.jpg" width="510" height="534"></p>
+<p a="center"><img src="../assets/images/y3c10_morri_trident.jpg" h="534" w="510"></p>
 
 <p class="line"><span class="actor">Darkfin</span> (Unafraid) Release!</p>
 
@@ -407,9 +419,33 @@
 <div class="stage">She is stunned to find a very human silhouette behind 
  the frosted shower curtain.</div>
 
-<p align="center"><img src="../assets/images/y3c10_shower.jpg" width="510" height="422"></p>
+<p a="center"><img src="../assets/images/y3c10_shower.jpg" h="422" w="510"></p>
 
 <p class="line"><span class="actor">Morrigan</span> You ARE human!</p>
 
-<bar></bar>
-<div>prev file = y3c09.html</div><div>next file = y3c11.html</div></body></html>
+<hr>
+
+    </div>
+    <div class="footer">
+      <div class="footer-links">
+          <div class="prev-chapter"><a href="y3c09.html"><i class="fa fa-chevron-left"></i>Prev</a></div>
+          <div class="next-chapter"><a href="y3c11.html">Next<i class="fa fa-chevron-right"></i></a></div>
+
+      </div>
+      <div class="copyright-footer">&reg; All Rights Reserved, 2000-2018</div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script>
+    $(document).on('scroll', () => {
+      if ($(document).scrollTop() > 48) {
+        $('.header').addClass('shrink');
+      } else {
+        $('.header').removeClass('shrink');
+        // console.log('++', $(document).scrollTop());
+      }
+    });
+  </script>
+</body>
+
+</html>

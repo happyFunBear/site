@@ -1,12 +1,24 @@
-<html><head><style>
-  .stage { background-color: #ddd; margin: 10px 30px; }
-  .actor { background-color: #cee; }
-  .line { background-color: #eec; }
-  .actor:after { content: ":"; }
-  </style>
-  </head>
-  <body>
-  <h1>Year 2, Chapter 18</h1><h2>Holy Water, Sacred Ground</h2>
+<!DOCTYPE html>
+<html>
+  
+<head>
+  <title>Darkfin: Holy Water, Sacred Ground </title>
+  <link rel="stylesheet" href="main.css?1520816785324">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" href="df-favicon.png" type="image/x-icon">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body class="chapter">
+  <div class="wrapper">
+    <div class="header">
+      <h1>Darkfin <span>of Duquesa Bay</span></h1>
+      <h2>Year 2, Chapter 18<em>Holy Water, Sacred Ground</em></h2>
+      <a href="story.html" class="story-link"><i class="fa fa-file-text-o"></i></a>
+    </div>
+    <div class="body">
+      
 
 <div class="stage">Finishing a telephone conversation, KJ von Meer bangs his fist down on the kitchen table in his family's mansion and heads into the main parlor where his sister, Erika, is tinkering around with a Dvorak tune on the piano. He flops onto the leather sofa and sighs.</div>
 
@@ -29,7 +41,7 @@
 
 <p class="line"><span class="actor">KJ</span> LOOK, RIKKA, I DON'T TELL YOU HOW TO DISSECT FISH - I THINK I KNOW A LITTLE MORE ABOUT THE LAW THAN YOU DO</p>
 
-<p><img src="../assets/images/y2c18_kj.jpg" width="420" height="420" border="0"></p>
+<p><img src="../assets/images/y2c18_kj.jpg" h="420" w="420"  b="0"></p>
 
 <p class="line"><span class="actor">Erika</span> (Taking his hand) Kage, relax - I'm sorry - I wasn't trying to be disrespectful, I was just trying to offer a suggestion</p>
 <p class="line"><span class="actor">KJ</span> (Now pacing) Don't you think that I have been racking my brain, trying to come up with other solutions? - Sutter is the best criminal defense attorney in all of California and he's doing this as a personal favor to me</p>
@@ -138,7 +150,7 @@
 <div class="stage">She is suddenly scooped up by Darkfin and is brought within inches of her face. The young girl gasps but does not scream. The two stare at each other in silence for a moment. A large smile crosses the girl's face and she carefully reaches out her hand and pats the top of Darkfin's head.</div>
 
 
-<p><img src="../assets/images/y2c18_df_kid.jpg" width="620" height="621" border="0"></p>
+<p><img src="../assets/images/y2c18_df_kid.jpg" h="621" w="620"  b="0"></p>
 
 <p class="line"><span class="actor">Hannah</span> POINTY</p>
 
@@ -158,7 +170,7 @@
 
 <p class="line"><span class="actor">Darkfin</span> (Tracking her target) This should help</p>
 
-<p><img src="../assets/images/y2c18_shark.jpg" width="520" height="466" border="0"></p>
+<p><img src="../assets/images/y2c18_shark.jpg" h="466" w="520"  b="0"></p>
 
 
 <div class="stage">After finishing her successful attack on the shark, a sated and depleted Darkfin swims backs to her lair beneath the island of Concha Dos.</div>
@@ -167,7 +179,7 @@
 
 <div class="stage">She collapses to the ground and curls up in the fetal position.</div>
 
-<bar></bar>
+<hr>
 
 <div class="stage">Arriving at the Chumash burial grounds inside the Kiyomi State Park, Morrigan gets out of her car and is followed by Joenne Mirabello.</div>
 
@@ -210,7 +222,7 @@
 <div class="stage">Morrigan turns on her heels and begins to walk away. She is stopped by the sight of a rock painting and stares at the symbols.</div>
 
 
-<p><img src="../assets/images/y2c18_joenne_morri.jpg" width="420" height="447" border="0"></p>
+<p><img src="../assets/images/y2c18_joenne_morri.jpg" h="447" w="420"  b="0"></p>
 
 <p class="line"><span class="actor">Joenne</span> (Studying McBride's reaction) Look familiar?</p>
 <p class="line"><span class="actor">Morrigan</span> (Taking a step back) Um, no - I just wasn't expecting to see this</p>
@@ -261,6 +273,30 @@
 <p class="line"><span class="actor"><color="#006400">Anon1</color></span> You are not safe here</p>
 <p class="line"><span class="actor"><color="#4b0082">MMcB</color></span> i'm not safe anywhere</p>
 
-<bar></bar>
+<hr>
 
-<div>prev file = y2c17.html</div><div>next file = y2c19.html</div></body></html>
+
+    </div>
+    <div class="footer">
+      <div class="footer-links">
+          <div class="prev-chapter"><a href="y2c17.html"><i class="fa fa-chevron-left"></i>Prev</a></div>
+          <div class="next-chapter"><a href="y2c19.html">Next<i class="fa fa-chevron-right"></i></a></div>
+
+      </div>
+      <div class="copyright-footer">&reg; All Rights Reserved, 2000-2018</div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script>
+    $(document).on('scroll', () => {
+      if ($(document).scrollTop() > 48) {
+        $('.header').addClass('shrink');
+      } else {
+        $('.header').removeClass('shrink');
+        // console.log('++', $(document).scrollTop());
+      }
+    });
+  </script>
+</body>
+
+</html>

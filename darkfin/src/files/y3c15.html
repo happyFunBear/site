@@ -1,12 +1,24 @@
-<html><head><style>
-  .stage { background-color: #ddd; margin: 10px 30px; }
-  .actor { background-color: #cee; }
-  .line { background-color: #eec; }
-  .actor:after { content: ":"; }
-  </style>
-  </head>
-  <body>
-  <h1>Year 3, Chapter 15</h1><h2>Dive Urgency</h2> 
+<!DOCTYPE html>
+<html>
+  
+<head>
+  <title>Darkfin: Dive Urgency </title>
+  <link rel="stylesheet" href="main.css?1520816785324">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" href="df-favicon.png" type="image/x-icon">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body class="chapter">
+  <div class="wrapper">
+    <div class="header">
+      <h1>Darkfin <span>of Duquesa Bay</span></h1>
+      <h2>Year 3, Chapter 15<em>Dive Urgency</em></h2>
+      <a href="story.html" class="story-link"><i class="fa fa-file-text-o"></i></a>
+    </div>
+    <div class="body">
+       
 
 <div class="stage">Creeping along the Santa Conchita riverbank in Tim's
  Jeep, Erika returns to the mountains.</div>
@@ -43,7 +55,7 @@
  ooze all over her feet.</div>
 
 <p class="line"><span class="actor">Erika</span> Messy, messy</p>
-<p align="center"><img src="../assets/images/y3c15_erika_hilltop.jpg" alt="" height="492" width="605" border="0"></p>
+<p a="center"><img src="../assets/images/y3c15_erika_hilltop.jpg" alt="" h="492" w="605"  b="0"></p>
 
 
 <div class="stage">A loud explosion echoes down the canyon.</div>
@@ -151,7 +163,7 @@
 
 <p class="line"><span class="actor">Justine</span> (To Joenne) Later, we need to move...</p>
 
-<bar></bar>
+<hr>
 
 <div class="stage">Inside the tunnel, Griffin steps out of the limo as
  a wide-eyed KJ stares at the crew of hoods before them.</div>
@@ -177,7 +189,7 @@
  a dimly-lit chamber. Other Clergy members stand and wait at an empty
  hall.</div>
 
-<p align="center"><img src="../assets/images/y3c15_hood_cave.jpg" alt="" height="564" width="703" border="0"></p>
+<p a="center"><img src="../assets/images/y3c15_hood_cave.jpg" alt="" h="564" w="703"  b="0"></p>
 
 <p class="line"><span class="actor">KJ</span> (Whispering to Griffin) Can you at least tell me why everyone
  is dressed like an overgrown Jawa?</p>
@@ -233,7 +245,7 @@
 
 <div class="stage">It smiles and then delivers a sharp blow to KJ's jaw.</div>
 
-<bar></bar>
+<hr>
 
 <div class="stage">Back at her house, Morrigan slowly steps away from Tallulah's
  terrarium, her eyes trained on Amy the entire time. Amy smiles softly
@@ -339,7 +351,7 @@
 <p class="line"><span class="actor">Morrigan</span> Are you going to tell me about him?</p>
 <p class="line"><span class="actor">Amethyst</span> When you tell me about Aleta Oscura</p>
 
-<bar></bar>
+<hr>
 
 <div class="stage">Erika pulls the Jeep into a far back lot on the SCU
  campus. Making sure nobody is around, she climbs out with the trident
@@ -408,8 +420,32 @@
 <div class="stage">Staring back is a human skull, dozens of Nereidium coins,
  and three sticks of dynamite.</div>
 
-<p align="center"><img src="../assets/images/y3c15_erika_skull.jpg" alt="" height="540" width="424" border="0"></p>
+<p a="center"><img src="../assets/images/y3c15_erika_skull.jpg" alt="" h="540" w="424"  b="0"></p>
 
 
 
-<div>prev file = y3c14.html</div><div>next file = y3c16.html</div></body></html>
+
+    </div>
+    <div class="footer">
+      <div class="footer-links">
+          <div class="prev-chapter"><a href="y3c14.html"><i class="fa fa-chevron-left"></i>Prev</a></div>
+          <div class="next-chapter"><a href="y3c16.html">Next<i class="fa fa-chevron-right"></i></a></div>
+
+      </div>
+      <div class="copyright-footer">&reg; All Rights Reserved, 2000-2018</div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script>
+    $(document).on('scroll', () => {
+      if ($(document).scrollTop() > 48) {
+        $('.header').addClass('shrink');
+      } else {
+        $('.header').removeClass('shrink');
+        // console.log('++', $(document).scrollTop());
+      }
+    });
+  </script>
+</body>
+
+</html>

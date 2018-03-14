@@ -1,12 +1,24 @@
-<html><head><style>
-  .stage { background-color: #ddd; margin: 10px 30px; }
-  .actor { background-color: #cee; }
-  .line { background-color: #eec; }
-  .actor:after { content: ":"; }
-  </style>
-  </head>
-  <body>
-  <h1>Year 2, Chapter 6</h1><h2>Contact</h2>
+<!DOCTYPE html>
+<html>
+  
+<head>
+  <title>Darkfin: Contact </title>
+  <link rel="stylesheet" href="main.css?1520816785324">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" href="df-favicon.png" type="image/x-icon">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body class="chapter">
+  <div class="wrapper">
+    <div class="header">
+      <h1>Darkfin <span>of Duquesa Bay</span></h1>
+      <h2>Year 2, Chapter 6<em>Contact</em></h2>
+      <a href="story.html" class="story-link"><i class="fa fa-file-text-o"></i></a>
+    </div>
+    <div class="body">
+      
 
 <div class="stage">Sitting in her KCON office cube, Morrigan McBride pecks at the keyboard, working on her afternoon story, as she waits on hold with the California Highway Patrol. Ten minutes later, a human voice finally answers.</div>
 
@@ -79,7 +91,7 @@
 <p class="line"><span class="actor">Morrigan</span> (Clenching her teeth and fists) COULD YOU... could you possibly explain to me what is so important about this site? - you go through all of this hard work, you never get any feedback, you certainly aren't making any money off it, these people are nothing but losers with no lives, the actual Sig7 show could care less if you live or die - don't you think your time and efforts could be better spent ELSEWHERE?</p>
 <p class="line"><span class="actor">Gracie</span> ELSEWHERE DOING YOUR SLAVE WORK, WHITE PERKY BITCH?</p>
 
-<p><img src="../assets/images/y2c06_gracie.jpg" width="420" height="379" border="0"></p>
+<p><img src="../assets/images/y2c06_gracie.jpg" h="379" w="420"  b="0"></p>
 
 <p class="line"><span class="actor">Morrigan</span> HELLO, THIS IS A PLACE OF BUSINESS, NOT R'XAL'S SPACE STATION</p>
 
@@ -101,7 +113,7 @@
 <p class="line"><span class="actor">Gracie</span> What do you want, Clark?</p>
 <p class="line"><span class="actor">Jason</span> A ring full of mud and a midget referee</p>
 
-<p><img src="../assets/images/y2c06_jason.jpg" width="370" height="401" border="0"></p>
+<p><img src="../assets/images/y2c06_jason.jpg" h="401" w="370"  b="0"></p>
 
 
 <div class="stage">Both women shoot puzzled looks to each other and then to him.</div>
@@ -180,5 +192,29 @@
 <p class="line"><span class="actor">Zach</span> Can't, a better offer came up - see you tomorrow</p>
 <p class="line"><span class="actor">Morrigan</span> (Sighing as she clicks off) Heh, hanging with the hooded people is almost attractive right now</p>
 
-<bar></bar>
-<div>prev file = y2c05.html</div><div>next file = y2c07.html</div></body></html>
+<hr>
+
+    </div>
+    <div class="footer">
+      <div class="footer-links">
+          <div class="prev-chapter"><a href="y2c05.html"><i class="fa fa-chevron-left"></i>Prev</a></div>
+          <div class="next-chapter"><a href="y2c07.html">Next<i class="fa fa-chevron-right"></i></a></div>
+
+      </div>
+      <div class="copyright-footer">&reg; All Rights Reserved, 2000-2018</div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script>
+    $(document).on('scroll', () => {
+      if ($(document).scrollTop() > 48) {
+        $('.header').addClass('shrink');
+      } else {
+        $('.header').removeClass('shrink');
+        // console.log('++', $(document).scrollTop());
+      }
+    });
+  </script>
+</body>
+
+</html>

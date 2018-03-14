@@ -1,12 +1,24 @@
-<html><head><style>
-  .stage { background-color: #ddd; margin: 10px 30px; }
-  .actor { background-color: #cee; }
-  .line { background-color: #eec; }
-  .actor:after { content: ":"; }
-  </style>
-  </head>
-  <body>
-  <h1>Year 4, Chapter 2</h1><h2>The Eyes Have It</h2>
+<!DOCTYPE html>
+<html>
+  
+<head>
+  <title>Darkfin: The Eyes Have It </title>
+  <link rel="stylesheet" href="main.css?1520816785324">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" href="df-favicon.png" type="image/x-icon">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body class="chapter">
+  <div class="wrapper">
+    <div class="header">
+      <h1>Darkfin <span>of Duquesa Bay</span></h1>
+      <h2>Year 4, Chapter 2<em>The Eyes Have It</em></h2>
+      <a href="story.html" class="story-link"><i class="fa fa-file-text-o"></i></a>
+    </div>
+    <div class="body">
+      
 
 <div class="stage">Six weeks after the Bay Valley Medical Center explosion...</div>
 
@@ -15,7 +27,7 @@
 <div class="stage">A taller opponent clad in matching headgear and boxing gloves staggers back for a brief moment and then rejoins the sparring inside a Chaparral Heights gym.</div>
 
 <p class="line"><span class="actor">Zach</span> (Dodging a punch and then countering with a flurry of his own) One, two, three, four, five, JUST LIKE THAT, ANOTHER HIT JUST LIKE THAT</p>
-<p align="center"><img src="../assets/images/y4c02_zach.jpg" alt="" height="655" width="655" border="0"></p>
+<p a="center"><img src="../assets/images/y4c02_zach.jpg" alt="" h="655" w="655"  b="0"></p>
 
 <p class="line"><span class="actor">Opponent</span> (Going down on one knee) JESUS, ISAACSON, THIS IS JUST AN EXCERCISE</p>
 <p class="line"><span class="actor">Zach</span> GET UP, GET UP YOU SHITBAG AND HIT ME, HIT ME, C'MON LITTLE GIRL &mdash; ARE YOU TOO SCARED TO HIT ME?</p>
@@ -113,7 +125,7 @@
 
 <div class="stage">He holds up both fists. One dissolves into a friendly wave as the other bashes the door open. Craig shakes his head and quietly contemplates a row of weights before him.</div>
 
-<bar></bar>
+<hr>
 <p class="line"><span class="actor">Zach</span> (In his head) Toyota, Nissan, Honda, Mitsubishi, Subaru, Isuzu, Mazda, Suzuki, Kawasaki &mdash; wait, that's a motorcycle &mdash; SHIT... one, two, three, four, five, six, seven, eight...</p>
 
 <div class="stage">Now in his car, Zach pulls into the parking lot of the Jade Gate cocktail lounge. He takes a space in the very back.</div>
@@ -296,7 +308,7 @@
 
 <p class="line"><span class="actor">Man #1</span> Timmy, how are you holding up?</p>
 <p class="line"><span class="actor">Man #2</span> We are so sorry, we know how much you loved him</p>
-<p align="center"><img src="../assets/images/y4c02_tim_sad.jpg" alt="" height="473" width="620" border="0"></p>
+<p a="center"><img src="../assets/images/y4c02_tim_sad.jpg" alt="" h="473" w="620"  b="0"></p>
 
 <p class="line"><span class="actor">Tim</span> Thanks... but I'm just not ready to deal with this here, I hope you understand?</p>
 <p class="line"><span class="actor">Man #1</span> (Patting his arm) Of course we do</p>
@@ -355,5 +367,29 @@
 
 <p class="line"><span class="actor">Zach</span> ONE, TWO, THREE, FOUR, FIVE, SIX...</p>
 
-<bar></bar>
-<div>prev file = y4c01.html</div><div>next file = y4c03.html</div></body></html>
+<hr>
+
+    </div>
+    <div class="footer">
+      <div class="footer-links">
+          <div class="prev-chapter"><a href="y4c01.html"><i class="fa fa-chevron-left"></i>Prev</a></div>
+          <div class="next-chapter"><a href="y4c03.html">Next<i class="fa fa-chevron-right"></i></a></div>
+
+      </div>
+      <div class="copyright-footer">&reg; All Rights Reserved, 2000-2018</div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script>
+    $(document).on('scroll', () => {
+      if ($(document).scrollTop() > 48) {
+        $('.header').addClass('shrink');
+      } else {
+        $('.header').removeClass('shrink');
+        // console.log('++', $(document).scrollTop());
+      }
+    });
+  </script>
+</body>
+
+</html>

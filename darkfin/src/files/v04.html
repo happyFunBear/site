@@ -1,17 +1,29 @@
-<html><head><style>
-  .stage { background-color: #ddd; margin: 10px 30px; }
-  .actor { background-color: #cee; }
-  .line { background-color: #eec; }
-  .actor:after { content: ":"; }
-  </style>
-  </head>
-  <body>
-  <h1>Vignette 4</h1><h2>Ruminations</h2>
+<!DOCTYPE html>
+<html>
+  
+<head>
+  <title>Darkfin: Ruminations </title>
+  <link rel="stylesheet" href="main.css?1520816785324">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" href="df-favicon.png" type="image/x-icon">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body class="chapter">
+  <div class="wrapper">
+    <div class="header">
+      <h1>Darkfin <span>of Duquesa Bay</span></h1>
+      <h2>Vignette 4<em>Ruminations</em></h2>
+      <a href="story.html" class="story-link"><i class="fa fa-file-text-o"></i></a>
+    </div>
+    <div class="body">
+      
 
 <div class="stage">Inside her darkened room with Clan of Xymox blaring from the stereo, Penelope Renselier reclines on her bed and scrawls in a notebook. Her boyfriend, Jeremy Colvin, sits on the floor and sketches a dragon on his skateboard.</div>
 
 
-<p><img src="../assets/images/v04_pennys_room.jpg" width="470" height="421" border="0"></p>
+<p><img src="../assets/images/v04_pennys_room.jpg" h="421" w="470"  b="0"></p>
 
 <p class="line"><span class="actor">Jeremy</span> This band sucks</p>
 <p class="line"><span class="actor">Penny</span> DOES NOT - your retro techno shit does</p>
@@ -115,7 +127,7 @@
 
 <p class="line"><span class="actor">Penny</span> (Not looking at him) Don't snakes usually crawl in through the toilet?</p>
 
-<p><img src="../assets/images/v04_brad.jpg" width="320" height="509" border="0" align="right"></p>
+<p><img src="../assets/images/v04_brad.jpg" h="509" w="320"  b="0" a="center"></p>
 
 <p class="line"><span class="actor">Brad</span> (Going over to her) Is that any way to greet your uncle?</p>
 
@@ -152,7 +164,7 @@
 <p class="line"><span class="actor">Penny</span> Then, what's it for?</p>
 <p class="line"><span class="actor">Brad</span> (Getting out of the car) Something else</p>
 
-<p><img src="../assets/images/v04_buildings.jpg" width="620" height="386" border="0"></p>
+<p><img src="../assets/images/v04_buildings.jpg" h="386" w="620"  b="0"></p>
 
 <p class="line"><span class="actor">Penny</span> (Reluctantly following) That's specific</p>
 <p class="line"><span class="actor">Brad</span> No, that's the name - &quot;Something Else&quot;</p>
@@ -207,4 +219,28 @@
 
 <p class="line"><span class="actor">Brad</span> You're probably right... let's go</p>
 
-<div>prev file = v03.html</div><div>next file = v05.html</div></body></html>
+
+    </div>
+    <div class="footer">
+      <div class="footer-links">
+          <div class="prev-chapter"><a href="v03.html"><i class="fa fa-chevron-left"></i>Prev</a></div>
+          <div class="next-chapter"><a href="v05.html">Next<i class="fa fa-chevron-right"></i></a></div>
+
+      </div>
+      <div class="copyright-footer">&reg; All Rights Reserved, 2000-2018</div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script>
+    $(document).on('scroll', () => {
+      if ($(document).scrollTop() > 48) {
+        $('.header').addClass('shrink');
+      } else {
+        $('.header').removeClass('shrink');
+        // console.log('++', $(document).scrollTop());
+      }
+    });
+  </script>
+</body>
+
+</html>

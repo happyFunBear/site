@@ -1,12 +1,24 @@
-<html><head><style>
-  .stage { background-color: #ddd; margin: 10px 30px; }
-  .actor { background-color: #cee; }
-  .line { background-color: #eec; }
-  .actor:after { content: ":"; }
-  </style>
-  </head>
-  <body>
-  <h1>Vignette 6</h1><h2>Here She Comes...</h2>
+<!DOCTYPE html>
+<html>
+  
+<head>
+  <title>Darkfin: Here She Comes... </title>
+  <link rel="stylesheet" href="main.css?1520816785324">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" href="df-favicon.png" type="image/x-icon">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body class="chapter">
+  <div class="wrapper">
+    <div class="header">
+      <h1>Darkfin <span>of Duquesa Bay</span></h1>
+      <h2>Vignette 6<em>Here She Comes...</em></h2>
+      <a href="story.html" class="story-link"><i class="fa fa-file-text-o"></i></a>
+    </div>
+    <div class="body">
+      
 
 <div class="stage">The 1996 Miss America Pageant Individual Interview Portion:</div>
 
@@ -17,7 +29,7 @@
 <p class="line"><span class="actor">Kylee</span> (Big smile) Yes, it sure is - I suppose you could say it gave me a lot of HOPE for all of my endeavors</p>
 <p class="line"><span class="actor">Kylee</span>(In her mind) &quot;Cesspool Central&quot; would be more appropriate and the only hope it gave me was &quot;Please God, get me the fuck out of here!&quot;</p>
 
-<p><img src="../assets/images/v06_kylee_miss_a.jpg" width="420" height="508" border="0"></p>
+<p><img src="../assets/images/v06_kylee_miss_a.jpg" h="508" w="420"  b="0"></p>
 
 <p class="line"><span class="actor">MC</span> That's wonderful - so, tell us a little about your life there</p>
 <p class="line"><span class="actor">Kylee</span> Life was wonderful in New Hope, there was always singing and dancing and laughing in our house - a house full of family warmth and love</p>
@@ -76,4 +88,28 @@
 
 
 
-<div>prev file = v05.html</div><div>next file = v07.html</div></body></html>
+
+    </div>
+    <div class="footer">
+      <div class="footer-links">
+          <div class="prev-chapter"><a href="v05.html"><i class="fa fa-chevron-left"></i>Prev</a></div>
+          <div class="next-chapter"><a href="v07.html">Next<i class="fa fa-chevron-right"></i></a></div>
+
+      </div>
+      <div class="copyright-footer">&reg; All Rights Reserved, 2000-2018</div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script>
+    $(document).on('scroll', () => {
+      if ($(document).scrollTop() > 48) {
+        $('.header').addClass('shrink');
+      } else {
+        $('.header').removeClass('shrink');
+        // console.log('++', $(document).scrollTop());
+      }
+    });
+  </script>
+</body>
+
+</html>

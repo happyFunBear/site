@@ -1,17 +1,29 @@
-<html><head><style>
-  .stage { background-color: #ddd; margin: 10px 30px; }
-  .actor { background-color: #cee; }
-  .line { background-color: #eec; }
-  .actor:after { content: ":"; }
-  </style>
-  </head>
-  <body>
-  <h1>Vignette 2</h1><h2>Club Sandwich</h2>
+<!DOCTYPE html>
+<html>
+  
+<head>
+  <title>Darkfin: Club Sandwich </title>
+  <link rel="stylesheet" href="main.css?1520816785324">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" href="df-favicon.png" type="image/x-icon">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body class="chapter">
+  <div class="wrapper">
+    <div class="header">
+      <h1>Darkfin <span>of Duquesa Bay</span></h1>
+      <h2>Vignette 2<em>Club Sandwich</em></h2>
+      <a href="story.html" class="story-link"><i class="fa fa-file-text-o"></i></a>
+    </div>
+    <div class="body">
+      
 
 <div class="stage">Inside the main room of the Duquesa Bay Yacht &amp; Polo Club, Lydia Renselier and Dr. Shelby Willis await the arrival of Ona Rosa Sanchez for their weekly lunch involving the Santa Conchita Children's Charity Guild.</div>
 
 
-<p><img src="../assets/images/v02_lydia_shelby.jpg" width="620" height="459" border="0"></p>
+<p><img src="../assets/images/v02_lydia_shelby.jpg" h="459" w="620"  b="0"></p>
 
 <p class="line"><span class="actor">Lydia</span> (Glancing at her watch) I do hope Ona Rosa shows up soon, I am absolutely starving!</p>
 <p class="line"><span class="actor">Shelby</span> (Sipping her iced tea) I know what you mean, I am about to reach over to the next table and snatch us a couple of jumbo prawns</p>
@@ -45,7 +57,7 @@
 <div class="stage">Wearing a long dark flower pattern dress, Ona Rosa finally appears and is accompanied by a middle-aged Asian woman in a pink business suit.</div>
 
 
-<p><img src="../assets/images/v02_ona_rosa.jpg" width="370" height="470" border="0"></p>
+<p><img src="../assets/images/v02_ona_rosa.jpg" h="470" w="370"  b="0"></p>
 
 <p class="line"><span class="actor">Ona Rosa</span> (Reaching over to kiss Lydia and Shelby on the cheeks) Ladies, I am so sorry for being late, we were held up in traffic... this is Wing Mei, she is the wife of a new professor at the university</p>
 <p class="line"><span class="actor">Shelby</span> (Extending her hand and smiling) Of course, Dr. Dong's wife, so nice to finally meet you</p>
@@ -102,4 +114,28 @@
 <p class="line"><span class="actor">Lydia</span> Vesper was immature enough to get into this situation, now she needs to find the maturity to get out of this situation - it really is none of our business but I will tell you right now that if you keep telling her to keep it, I will make sure she hears ALL of the pros and cons</p>
 <p class="line"><span class="actor">Shelby</span> I'm with Lydia</p>
 <p class="line"><span class="actor">Wing</span> I think Ona Rosa is right - they kill babies all the time in China, it is wrong... and I have roast beef sandwich</p>
-<div>prev file = v01.html</div><div>next file = v03.html</div></body></html>
+
+    </div>
+    <div class="footer">
+      <div class="footer-links">
+          <div class="prev-chapter"><a href="v01.html"><i class="fa fa-chevron-left"></i>Prev</a></div>
+          <div class="next-chapter"><a href="v03.html">Next<i class="fa fa-chevron-right"></i></a></div>
+
+      </div>
+      <div class="copyright-footer">&reg; All Rights Reserved, 2000-2018</div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script>
+    $(document).on('scroll', () => {
+      if ($(document).scrollTop() > 48) {
+        $('.header').addClass('shrink');
+      } else {
+        $('.header').removeClass('shrink');
+        // console.log('++', $(document).scrollTop());
+      }
+    });
+  </script>
+</body>
+
+</html>

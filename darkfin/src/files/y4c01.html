@@ -1,20 +1,32 @@
-<html><head><style>
-  .stage { background-color: #ddd; margin: 10px 30px; }
-  .actor { background-color: #cee; }
-  .line { background-color: #eec; }
-  .actor:after { content: ":"; }
-  </style>
-  </head>
-  <body>
-  <h1>Year 4, Chapter 1</h1><h2>Sidereal Year</h2>
+<!DOCTYPE html>
+<html>
+  
+<head>
+  <title>Darkfin: Sidereal Year </title>
+  <link rel="stylesheet" href="main.css?1520816785324">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" href="df-favicon.png" type="image/x-icon">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body class="chapter">
+  <div class="wrapper">
+    <div class="header">
+      <h1>Darkfin <span>of Duquesa Bay</span></h1>
+      <h2>Year 4, Chapter 1<em>Sidereal Year</em></h2>
+      <a href="story.html" class="story-link"><i class="fa fa-file-text-o"></i></a>
+    </div>
+    <div class="body">
+      
 
 <div class="stage">365 days, 6 hours, 9 minutes, and 9.5 seconds ago in Duquesa Bay...</div>
 
 
-<p><img src="../assets/images/y4c01_montage.jpg" alt="" height="734" width="514" border="0"></p>
+<p><img src="../assets/images/y4c01_montage.jpg" alt="" h="734" w="514"  b="0"></p>
 
 
-<bar></bar>
+<hr>
 
 <div class="stage">Currently on the island of Maui...</div>
 
@@ -155,7 +167,7 @@
 
 <p class="line"><span class="actor">Gracie</span> I... I apologize for my reaction &mdash; hormones</p>
 <p class="line"><span class="actor">Morrigan</span> (Soft grin) So, I've noticed... congratulations</p>
-<p align="center"><img src="../assets/images/y4c01_gracie.jpg" alt="" height="491" width="601" border="0"></p>
+<p a="center"><img src="../assets/images/y4c01_gracie.jpg" alt="" h="491" w="601"  b="0"></p>
 
 <p class="line"><span class="actor">Gracie</span> Yeah</p>
 <p class="line"><span class="actor">Morrigan</span> Is the father a local?</p>
@@ -349,7 +361,7 @@
 
 <div class="stage">Morrigan gets up from the table and looks at herself in a wall mirror. She adjusts the black eye patch over her left eye.</div>
 
-<p align="center"><img src="../assets/images/y4c01_morri-big.jpg" alt="" height="505" width="564" border="0"></p>
+<p a="center"><img src="../assets/images/y4c01_morri-big.jpg" alt="" h="505" w="564"  b="0"></p>
 
 <p class="line"><span class="actor">Gracie</span> Sorry &mdash; I wish I could say something more but what do you say?</p>
 <p class="line"><span class="actor">Morrigan</span> It's what you don't say</p>
@@ -382,7 +394,31 @@
 <div class="stage">Gracie suddenly freezes and gawks at her glass patio door. Darkfin, mug in hand, peers back at them.</div>
 
 <p class="line"><span class="actor">Morrigan</span> My ace of spades needs to stay in your tub</p>
-<p align="center"><img src="../assets/images/y4c01_df-mug.jpg" alt="" height="614" width="314" border="0"></p>
+<p a="center"><img src="../assets/images/y4c01_df-mug.jpg" alt="" h="614" w="314"  b="0"></p>
 
-<bar></bar>
-<div>next file = y4c02.html</div></body></html>
+<hr>
+
+    </div>
+    <div class="footer">
+      <div class="footer-links">
+          <div class="prev-chapter"></div>
+          <div class="next-chapter"><a href="y4c02.html">Next<i class="fa fa-chevron-right"></i></a></div>
+
+      </div>
+      <div class="copyright-footer">&reg; All Rights Reserved, 2000-2018</div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script>
+    $(document).on('scroll', () => {
+      if ($(document).scrollTop() > 48) {
+        $('.header').addClass('shrink');
+      } else {
+        $('.header').removeClass('shrink');
+        // console.log('++', $(document).scrollTop());
+      }
+    });
+  </script>
+</body>
+
+</html>

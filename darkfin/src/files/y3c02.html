@@ -1,13 +1,25 @@
-<html><head><style>
-  .stage { background-color: #ddd; margin: 10px 30px; }
-  .actor { background-color: #cee; }
-  .line { background-color: #eec; }
-  .actor:after { content: ":"; }
-  </style>
-  </head>
-  <body>
-  <h1>Year 3, Chapter 2</h1><h2>As I Lay Dying</h2>
-<p align="center"><img src="../assets/images/y3c02_darkfin_red-green.jpg" width="510" height="358"></p>
+<!DOCTYPE html>
+<html>
+  
+<head>
+  <title>Darkfin: As I Lay Dying </title>
+  <link rel="stylesheet" href="main.css?1520816785324">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" href="df-favicon.png" type="image/x-icon">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body class="chapter">
+  <div class="wrapper">
+    <div class="header">
+      <h1>Darkfin <span>of Duquesa Bay</span></h1>
+      <h2>Year 3, Chapter 2<em>As I Lay Dying</em></h2>
+      <a href="story.html" class="story-link"><i class="fa fa-file-text-o"></i></a>
+    </div>
+    <div class="body">
+      
+<p a="center"><img src="../assets/images/y3c02_darkfin_red-green.jpg" h="358" w="510"></p>
 
 
 <div class="stage">Swimming along the shoreline, Darkfin is too ill to make 
@@ -30,7 +42,7 @@
 
 <p class="line"><span class="actor">Darkfin</span> But I can go... close</p>
 
-<bar></bar>
+<hr>
 
 <div class="stage">Outside an abandoned farmhand house on the outskirts 
  of the Fiore property, Hector Tapia and Dr. Stephanie Gates pull up 
@@ -152,7 +164,7 @@
 <div class="stage">Dr. Stephanie is unable to hold back the tears and the 
  two of them seek comfort in each other with an embrace.
 </div>
-<p align="center"><img src="../assets/images/y3c02_steph-hector.jpg" width="510" height="456"></p>
+<p a="center"><img src="../assets/images/y3c02_steph-hector.jpg" h="456" w="510"></p>
 
 <p class="line"><span class="actor">Dr. Stephanie</span> (Quickly pulling back) I'm sorry... I'm overstressed</p>
 <p class="line"><span class="actor">Hector</span> I can help out with that as well</p>
@@ -177,7 +189,7 @@
 <p class="line"><span class="actor">Karl Sr.</span> HELP HER... HELP HER, STEPHANIE, SHE'S 
  IN DANGER</p>
 
-<bar></bar>
+<hr>
 
 <div class="stage">Outside the Martel mansion on Beacon Point, Griffin is 
  on his cell phone.</div>
@@ -198,7 +210,7 @@
 <p class="line"><span class="actor">Griffin</span> (Running towards it) Of course! 
 </p>
 
-<p align="center"><img src="../assets/images/y3c02_griffin.jpg" width="445" height="510"></p>
+<p a="center"><img src="../assets/images/y3c02_griffin.jpg" h="510" w="445"></p>
 
 <div class="stage">Inside the boathouse, a completely changed Erika lies 
  naked in human form amongst a pile of towels and lifejackets. She is 
@@ -255,7 +267,7 @@
 
 <div class="stage">Griffin pulls Erika into his arms as she begins to sob.</div>
 
-<bar></bar>
+<hr>
 
 <div class="stage">Tossing and turning on her cot in the wine cellar, Morrigan 
  McBride continues to drift in and out of consciousness as her throbbing 
@@ -291,7 +303,7 @@
 <p class="line"><span class="actor">Deirdre</span> That's a beautiful butterfly, isn't it, Mo?</p>
 <p class="line"><span class="actor">Morrigan</span> (Chasing it) I CATCH IT FOR YOU 
 </p>
-<p align="center"><img src="../assets/images/y3c02_mm_butterfly.jpg" width="510" height="510"></p>
+<p a="center"><img src="../assets/images/y3c02_mm_butterfly.jpg" h="510" w="510"></p>
 <p class="line"><span class="actor">Deirdre</span> Don't hurt it, Sweetie!</p>
 <p class="line"><span class="actor">Priest</span> Remember, Morrigan, we are all God's creatures</p>
 <p class="line"><span class="actor">Deirdre</span> (Watching her daughter) I wish I never had her</p>
@@ -336,7 +348,7 @@
 <div class="stage">The young girl opens her hand to reveal two torn off 
  wings of the butterfly.</div>
 
-<bar></bar>
+<hr>
 
 <div class="stage">Upstairs at the Quartz Lake Inn, Big Joe Tiszo deals 
  with an excruciating headache and flails about his residence.</div>
@@ -421,5 +433,29 @@
  I can do?</p>
 <p class="line"><span class="actor">Joe</span> (Making his way back up the stairs) You will</p>
 
-<bar></bar>
-<div>prev file = y3c01.html</div><div>next file = y3c03.html</div></body></html>
+<hr>
+
+    </div>
+    <div class="footer">
+      <div class="footer-links">
+          <div class="prev-chapter"><a href="y3c01.html"><i class="fa fa-chevron-left"></i>Prev</a></div>
+          <div class="next-chapter"><a href="y3c03.html">Next<i class="fa fa-chevron-right"></i></a></div>
+
+      </div>
+      <div class="copyright-footer">&reg; All Rights Reserved, 2000-2018</div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script>
+    $(document).on('scroll', () => {
+      if ($(document).scrollTop() > 48) {
+        $('.header').addClass('shrink');
+      } else {
+        $('.header').removeClass('shrink');
+        // console.log('++', $(document).scrollTop());
+      }
+    });
+  </script>
+</body>
+
+</html>

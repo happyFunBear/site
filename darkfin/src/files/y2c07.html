@@ -1,12 +1,24 @@
-<html><head><style>
-  .stage { background-color: #ddd; margin: 10px 30px; }
-  .actor { background-color: #cee; }
-  .line { background-color: #eec; }
-  .actor:after { content: ":"; }
-  </style>
-  </head>
-  <body>
-  <h1>Year 2, Chapter 7</h1><h2>Lusus Naturae</h2>
+<!DOCTYPE html>
+<html>
+  
+<head>
+  <title>Darkfin: Lusus Naturae </title>
+  <link rel="stylesheet" href="main.css?1520816785324">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" href="df-favicon.png" type="image/x-icon">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body class="chapter">
+  <div class="wrapper">
+    <div class="header">
+      <h1>Darkfin <span>of Duquesa Bay</span></h1>
+      <h2>Year 2, Chapter 7<em>Lusus Naturae</em></h2>
+      <a href="story.html" class="story-link"><i class="fa fa-file-text-o"></i></a>
+    </div>
+    <div class="body">
+      
 
 <div class="stage">Inside the private office of Dr. Stephanie Gates, Morrigan lies on an exam table in a blue paper gown. She glances at her watch, counts the panels in the ceiling and then stares at nondescript poster art on the wall. The doctor finally returns with an armful of charts.</div>
 
@@ -29,7 +41,7 @@
 <p class="line"><span class="actor">Dr. Stephanie</span> Brad was so proud of himself for getting front row seats... I'm sure you're familiar with Irish dancing</p>
 <p class="line"><span class="actor">Morrigan</span> (Figuring out what happened) Oh, no!</p>
 
-<p><img src="../assets/images/y2c07_dr_steph.jpg" width="320" height="380" border="0"></p>
+<p><img src="../assets/images/y2c07_dr_steph.jpg" h="380" w="320"  b="0"></p>
 
 <p class="line"><span class="actor">Dr. Stephanie</span> Uh-huh - the stage was elevated, the only thing I saw for the entire show were rigid torsos and stone faces</p>
 
@@ -110,7 +122,7 @@
 <p class="line"><span class="actor">Morrigan</span> (A little embarrassed) One would hope so</p>
 <p class="line"><span class="actor">Dr. Stephanie</span> AHEM, Mr. Tapia... I wasn't expecting you today</p>
 
-<p><img src="../assets/images/y2c07_hector.jpg" width="420" height="379" border="0"></p>
+<p><img src="../assets/images/y2c07_hector.jpg" h="379" w="420"  b="0"></p>
 
 <p class="line"><span class="actor">Hector</span> I just need a few moments of your time, Stephi, it won't take long</p>
 <p class="line"><span class="actor">Morrigan</span> (Thinking to herself) Stephi!</p>
@@ -159,7 +171,7 @@
 
 <p class="line"><span class="actor">Hector</span> You know exactly why</p>
 
-<bar></bar>
+<hr>
 
 <div class="stage">Stopping off at a deli to get a chicken focaccia sandwich, Morrigan returns to her car and speeds off down the coast. She pulls into an isolated turn-out by the shore and parks under a grove of shrubs and palm trees. She opens a file entitled PCOC and begins to read through the company's annual report, as well as, recent drilling proposals along the coast. A few hours later, she begins to doze off.</div>
 
@@ -216,7 +228,7 @@
 <p class="line"><span class="actor">Morrigan</span> Oh, NOT you too!</p>
 <p class="line"><span class="actor">Darkfin</span> What do you mean?</p>
 
-<p><img src="../assets/images/y2c07_morri_wetsuit.jpg" width="220" height="526" border="0" align="right"></p>
+<p><img src="../assets/images/y2c07_morri_wetsuit.jpg" h="526" w="220"  b="0" a="center"></p>
 <p class="line"><span class="actor">Morrigan</span> I just spent the day at the doctors getting poked and prodded - I'm not about to waste my precious evening doing the same</p>
 <p class="line"><span class="actor">Darkfin</span> Which doctor?</p>
 <p class="line"><span class="actor">Morrigan</span> You mean, Pipi didn't tell you?</p>
@@ -261,5 +273,29 @@
 <p class="line"><span class="actor">Darkfin</span> (Catching them) You will need these for protection against the cold</p>
 <p class="line"><span class="actor">Morrigan</span> (Tears still streaming down her face) No, I won't - in fact, I'll overheat... and I'm betting you know EXACTLY why that is!</p>
 
-<bar></bar>
-<div>prev file = y2c06.html</div><div>next file = y2c08.html</div></body></html>
+<hr>
+
+    </div>
+    <div class="footer">
+      <div class="footer-links">
+          <div class="prev-chapter"><a href="y2c06.html"><i class="fa fa-chevron-left"></i>Prev</a></div>
+          <div class="next-chapter"><a href="y2c08.html">Next<i class="fa fa-chevron-right"></i></a></div>
+
+      </div>
+      <div class="copyright-footer">&reg; All Rights Reserved, 2000-2018</div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script>
+    $(document).on('scroll', () => {
+      if ($(document).scrollTop() > 48) {
+        $('.header').addClass('shrink');
+      } else {
+        $('.header').removeClass('shrink');
+        // console.log('++', $(document).scrollTop());
+      }
+    });
+  </script>
+</body>
+
+</html>

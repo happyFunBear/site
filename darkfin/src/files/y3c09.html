@@ -1,12 +1,24 @@
-<html><head><style>
-  .stage { background-color: #ddd; margin: 10px 30px; }
-  .actor { background-color: #cee; }
-  .line { background-color: #eec; }
-  .actor:after { content: ":"; }
-  </style>
-  </head>
-  <body>
-  <h1>Year 3, Chapter 9</h1><h2>Insanity Intensified</h2>
+<!DOCTYPE html>
+<html>
+  
+<head>
+  <title>Darkfin: Insanity Intensified </title>
+  <link rel="stylesheet" href="main.css?1520816785324">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" href="df-favicon.png" type="image/x-icon">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body class="chapter">
+  <div class="wrapper">
+    <div class="header">
+      <h1>Darkfin <span>of Duquesa Bay</span></h1>
+      <h2>Year 3, Chapter 9<em>Insanity Intensified</em></h2>
+      <a href="story.html" class="story-link"><i class="fa fa-file-text-o"></i></a>
+    </div>
+    <div class="body">
+      
 
 <div class="stage">At the USCG base, Captain Craig Phelps gawks in disbelief 
  at the erupting Mt. Wiggins in the distance. Lieutenant Anita Fiore 
@@ -121,7 +133,7 @@
 <div class="stage">Two U.S. fighter jets zoom past them on a rapid ascent. 
  Anita fights against the wake and quickly regains control.</div>
 
-<p align="center"><img src="../assets/images/y3c09_chopper_jets.jpg" width="510" height="403"></p>
+<p a="center"><img src="../assets/images/y3c09_chopper_jets.jpg" h="403" w="510"></p>
 
 <p class="line"><span class="actor">Craig</span> (Holding his mouth) Not again</p>
 <p class="line"><span class="actor"> Anita</span> WHAT THE FUCK ARE THEY DOING HERE?</p>
@@ -136,12 +148,12 @@
  at a volcano is standard protocol... there's something else going on 
  down there!</p>
 
-<bar></bar>
+<hr>
 
 <div class="stage">Nearly jumping out of his skin, Karl Senior rears against 
  his bed as Stephanie keeps the needle aimed at Hector.</div>
 
-<p align="center"><img src="../assets/images/y3c09_steph_hector.jpg" width="510" height="406"></p>
+<p a="center"><img src="../assets/images/y3c09_steph_hector.jpg" h="406" w="510"></p>
 
 <p class="line"><span class="actor">Stephanie</span> What do you mean Joe's dead? - why are you dressed 
  like that?</p>
@@ -192,12 +204,12 @@
 <p class="line"><span class="actor"> Karl</span> But...</p>
 <p class="line"><span class="actor"> Stephanie</span> NO ARGUMENTS, LET'S GO</p>
 
-<bar></bar>
+<hr>
 
 <div class="stage">Amethyst and Zach run across an open field, away from 
  the eruption.</div>
 
-<p align="center"><img src="../assets/images/y3c09_zach_amy.jpg" width="510" height="510"></p>
+<p a="center"><img src="../assets/images/y3c09_zach_amy.jpg" h="510" w="510"></p>
 
 <p class="line"><span class="actor">Zach</span> (Looking back in horror) WHAT... HOW... WHY?</p>
 <p class="line"><span class="actor"> Amy</span> KEEP MOVING, WE NEED TO KEEP MOVING</p>
@@ -235,7 +247,7 @@
 <div class="stage">Zach grabs his bleeding backside and collapses to the 
  ground crying.</div>
 
-<bar></bar>
+<hr>
 
 <div class="stage">The KCON news van barrels down Via Royal at high speed 
  away from the eruption.</div>
@@ -323,7 +335,7 @@
 <p class="line"><span class="actor"> Gracie</span> (Grabbing her camera) I know some shortcuts... let's 
  go</p>
 
-<bar></bar>
+<hr>
 
 <div class="stage">A waterlogged Griffin is sobbing by the riverbank outside 
  of his condo complex as KJ pulls up in his car.</div>
@@ -364,8 +376,32 @@
 
 <p class="line"><span class="actor"> Calvin</span> (Pointing to the volcano) He's over there 
 </p>
-<p align="center"><img src="../assets/images/y3c09_shelby.jpg" width="510" height="415"></p>
+<p a="center"><img src="../assets/images/y3c09_shelby.jpg" h="415" w="510"></p>
 
-<bar></bar>
+<hr>
 
-<div>prev file = y3c08.html</div><div>next file = y3c10.html</div></body></html>
+
+    </div>
+    <div class="footer">
+      <div class="footer-links">
+          <div class="prev-chapter"><a href="y3c08.html"><i class="fa fa-chevron-left"></i>Prev</a></div>
+          <div class="next-chapter"><a href="y3c10.html">Next<i class="fa fa-chevron-right"></i></a></div>
+
+      </div>
+      <div class="copyright-footer">&reg; All Rights Reserved, 2000-2018</div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script>
+    $(document).on('scroll', () => {
+      if ($(document).scrollTop() > 48) {
+        $('.header').addClass('shrink');
+      } else {
+        $('.header').removeClass('shrink');
+        // console.log('++', $(document).scrollTop());
+      }
+    });
+  </script>
+</body>
+
+</html>

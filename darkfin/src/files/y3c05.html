@@ -1,12 +1,24 @@
-<html><head><style>
-  .stage { background-color: #ddd; margin: 10px 30px; }
-  .actor { background-color: #cee; }
-  .line { background-color: #eec; }
-  .actor:after { content: ":"; }
-  </style>
-  </head>
-  <body>
-  <h1>Year 3, Chapter 5</h1><h2>Sand on Asphalt</h2> 
+<!DOCTYPE html>
+<html>
+  
+<head>
+  <title>Darkfin: Sand on Asphalt </title>
+  <link rel="stylesheet" href="main.css?1520816785324">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" href="df-favicon.png" type="image/x-icon">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body class="chapter">
+  <div class="wrapper">
+    <div class="header">
+      <h1>Darkfin <span>of Duquesa Bay</span></h1>
+      <h2>Year 3, Chapter 5<em>Sand on Asphalt</em></h2>
+      <a href="story.html" class="story-link"><i class="fa fa-file-text-o"></i></a>
+    </div>
+    <div class="body">
+       
 
 <div class="stage">Inside the von Meer estate, everyone has left except for a few close 
  friends and family. Joe is helping Pauline make arrangements as KJ and 
@@ -58,7 +70,7 @@
  allows it to happen. A second one follows in which Oni equally participates 
  in.</div>
 
-<p align="center"><img src="../assets/images/y3c05_kj_ona.jpg" width="510" height="506"></p>
+<p a="center"><img src="../assets/images/y3c05_kj_ona.jpg" h="506" w="510"></p>
 <p class="line"><span class="actor">Ona Rosa</span> (Pulling back) No...</p>
 <p class="line"><span class="actor"> KJ</span> But...</p>
 <p class="line"><span class="actor"> Ona Rosa</span> My children need me... I've got to go</p>
@@ -146,7 +158,7 @@
 <p class="line"><span class="actor"> KJ</span> (Swallowing hard as he looks around) I take it this isn't 
  a meeting about switching from winter to summer blends of gas?</p>
 
-<bar></bar>
+<hr>
 
 <div class="stage">After a long moment of silence in the Quartz Lake Inn wine cellar, 
  Morrigan breaks the hug and starts to question Erika.</div>
@@ -222,8 +234,8 @@
  she'll she be able to find me?</p>
 <p class="line"><span class="actor"> Erika</span> Don't worry, I'm sure she will</p>
 
-<bar></bar>
-<p align="center"><img src="../assets/images/y3c05_joenne.jpg" width="510" height="456"></p>
+<hr>
+<p a="center"><img src="../assets/images/y3c05_joenne.jpg" h="456" w="510"></p>
 
 <div class="stage">After searching all over town for her sister, an exhausted Justine 
  returns to her apartment. A nervous Joenne cocks a submachine gun at 
@@ -261,7 +273,7 @@
 <p class="line"><span class="actor"> Joenne</span> (Pulling her sister) WE'VE GOT TO GET OUT OF HERE, 
  NOW</p>
 
-<bar></bar>
+<hr>
 
 <div class="stage">Walking along the bustling Duquesa Bay marina, Marcy chatters endlessly 
  while Anita half-heartedly nibbles at an ice-cream cone.</div>
@@ -336,9 +348,33 @@
  trying to catch his breath.</div>
 
 <p class="line"><span class="actor"> Anita</span> (Grabbing her wrist) And I am REALLY tired of him! 
-<p align="center"><img src="../assets/images/y3c05_anita_marcy.jpg" width="610" height="545"> </p>
+<p a="center"><img src="../assets/images/y3c05_anita_marcy.jpg" h="545" w="610"> </p>
 </p>
 
-<bar></bar>
+<hr>
 
-<div>prev file = y3c04.html</div><div>next file = y3c06.html</div></body></html>
+
+    </div>
+    <div class="footer">
+      <div class="footer-links">
+          <div class="prev-chapter"><a href="y3c04.html"><i class="fa fa-chevron-left"></i>Prev</a></div>
+          <div class="next-chapter"><a href="y3c06.html">Next<i class="fa fa-chevron-right"></i></a></div>
+
+      </div>
+      <div class="copyright-footer">&reg; All Rights Reserved, 2000-2018</div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script>
+    $(document).on('scroll', () => {
+      if ($(document).scrollTop() > 48) {
+        $('.header').addClass('shrink');
+      } else {
+        $('.header').removeClass('shrink');
+        // console.log('++', $(document).scrollTop());
+      }
+    });
+  </script>
+</body>
+
+</html>

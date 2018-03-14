@@ -1,12 +1,24 @@
-<html><head><style>
-  .stage { background-color: #ddd; margin: 10px 30px; }
-  .actor { background-color: #cee; }
-  .line { background-color: #eec; }
-  .actor:after { content: ":"; }
-  </style>
-  </head>
-  <body>
-  <h1>Year 3, Chapter 7</h1><h2>Divining</h2>
+<!DOCTYPE html>
+<html>
+  
+<head>
+  <title>Darkfin: Divining </title>
+  <link rel="stylesheet" href="main.css?1520816785324">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" href="df-favicon.png" type="image/x-icon">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body class="chapter">
+  <div class="wrapper">
+    <div class="header">
+      <h1>Darkfin <span>of Duquesa Bay</span></h1>
+      <h2>Year 3, Chapter 7<em>Divining</em></h2>
+      <a href="story.html" class="story-link"><i class="fa fa-file-text-o"></i></a>
+    </div>
+    <div class="body">
+      
 
 <div class="stage">Speeding along in the KCON newsvan, an exhausted and 
  still baffled Gracie heads back to the station from the von Meer estate. 
@@ -17,7 +29,7 @@
  of old but he was still old - back in Alabama, they drop like flies 
  at his age
 </p>
-<p align="center"><img src="../assets/images/y3c07_gracie-kylee.jpg" width="510" height="456"></p>
+<p a="center"><img src="../assets/images/y3c07_gracie-kylee.jpg" h="456" w="510"></p>
 <p class="line"><span class="actor">Gracie</span> That's because two-thirds of their bodies are made up 
  of lard and tobacco</p>
 <p class="line"><span class="actor"> Kylee</span> Occasionally, we'll have the one that lives to 112 but 
@@ -234,7 +246,7 @@
 <p class="line"><span class="actor"> Gracie</span> (Pounding the gas pedal) WE'RE LEAVING, WE'RE LEAVING, 
  WE'RE SO LEAVING...I HATE THIS DAY</p>
 
-<bar></bar>
+<hr>
 
 <div class="stage">Back at the SCU lab, Erika and Shelby stare at Javier.</div>
 
@@ -273,7 +285,7 @@
 <div class="stage">Erika stride across the room in two steps, grabs Javier 
  by the throat with one hand and pins him back with the other.
 </div>
-<p align="center"><img src="../assets/images/y3c07_erika-sandy.jpg" width="510" height="376"></p>
+<p a="center"><img src="../assets/images/y3c07_erika-sandy.jpg" h="376" w="510"></p>
 
 <p class="line"><span class="actor">Erika</span> I'm not going to ask you again, Sandy</p>
 
@@ -291,7 +303,7 @@
 <p class="line"><span class="actor"> Erika</span> WHO, WHO IS HE?</p>
 <p class="line"><span class="actor"> Javier</span> Griffin!</p>
 
-<bar></bar>
+<hr>
 
 <div class="stage">Thrashing around his bedroom at the Quartz Lake Inn, 
  an agitated Joe Tiszo rummages through an old wooden chest.</div>
@@ -307,11 +319,11 @@
 <div class="stage">He now pulls a long, black robe out of the chest and 
  throws it on.
 </div>
-<p align="center"><img src="../assets/images/y3c07_hooded_joe.jpg" width="410" height="367"></p>
+<p a="center"><img src="../assets/images/y3c07_hooded_joe.jpg" h="367" w="410"></p>
 
 <p class="line"><span class="actor">Joe</span> (Pulling the hood over his head) Pray for us, Deirdre</p>
 
-<bar></bar>
+<hr>
 
 <div class="stage">Deep inside the caverns of the Kiyomis, Amethyst stands 
  back and watches helplessly as Morrigan is cornered. Several hoods converge 
@@ -323,7 +335,7 @@
 <div class="stage">The white robed leader places a hand on Amethyst's shoulder 
  as Morrigan is quickly bound, gagged and carried off by the hoods.
 </div>
-<p align="center"><img src="../assets/images/y3c07_gagged_morri.jpg" width="510" height="456"></p>
+<p a="center"><img src="../assets/images/y3c07_gagged_morri.jpg" h="456" w="510"></p>
 
 <p class="line"><span class="actor">White Robe</span> You did well, my child</p>
 <p class="line"><span class="actor"> Amethyst</span> (Flinching) I hate you for making me do this</p>
@@ -446,5 +458,29 @@
 
 <p class="line"><span class="actor"> Joe</span> (Eyes glowing) IT IS NOW YOUR TIME... YOUR TIME TO DIE</p>
 
-<bar></bar>
-<div>prev file = y3c06.html</div><div>next file = y3c08.html</div></body></html>
+<hr>
+
+    </div>
+    <div class="footer">
+      <div class="footer-links">
+          <div class="prev-chapter"><a href="y3c06.html"><i class="fa fa-chevron-left"></i>Prev</a></div>
+          <div class="next-chapter"><a href="y3c08.html">Next<i class="fa fa-chevron-right"></i></a></div>
+
+      </div>
+      <div class="copyright-footer">&reg; All Rights Reserved, 2000-2018</div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script>
+    $(document).on('scroll', () => {
+      if ($(document).scrollTop() > 48) {
+        $('.header').addClass('shrink');
+      } else {
+        $('.header').removeClass('shrink');
+        // console.log('++', $(document).scrollTop());
+      }
+    });
+  </script>
+</body>
+
+</html>

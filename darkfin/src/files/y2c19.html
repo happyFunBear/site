@@ -1,17 +1,29 @@
-<html><head><style>
-  .stage { background-color: #ddd; margin: 10px 30px; }
-  .actor { background-color: #cee; }
-  .line { background-color: #eec; }
-  .actor:after { content: ":"; }
-  </style>
-  </head>
-  <body>
-  <h1>Year 2, Chapter 19</h1><h2>Capers and Kippers</h2>
+<!DOCTYPE html>
+<html>
+  
+<head>
+  <title>Darkfin: Capers and Kippers </title>
+  <link rel="stylesheet" href="main.css?1520816785324">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" href="df-favicon.png" type="image/x-icon">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body class="chapter">
+  <div class="wrapper">
+    <div class="header">
+      <h1>Darkfin <span>of Duquesa Bay</span></h1>
+      <h2>Year 2, Chapter 19<em>Capers and Kippers</em></h2>
+      <a href="story.html" class="story-link"><i class="fa fa-file-text-o"></i></a>
+    </div>
+    <div class="body">
+      
 
 <div class="stage">With the shades drawn and the room darkened, Morrigan types away on her keyboard as the Cowboy Junkies &quot;Pale Sun, Crescent Moon&quot; CD plays softly in the background.</div>
 
 
-<p><img src="../assets/images/y2c19_chat.jpg" width="587" height="615" border="0"></p>
+<p><img src="../assets/images/y2c19_chat.jpg" h="615" w="587"  b="0"></p>
 
 <p class="line"><span class="actor"><color="#006400">Anon1</color></span> Why are you not safe, Morrigan, have you been threatened?</p>
 <p class="line"><span class="actor"><color="#4b0082">MMcB</color></span> not overtly</p>
@@ -62,7 +74,7 @@
 <p class="line"><span class="actor"><color="#006400">Anon1</color></span> I shall try</p>
 <p class="line"><span class="actor"><color="#4b0082">MMcB</color></span> no, u shall DO - feel better - 'night!</p>
 
-<p><img src="../assets/images/y2c19_morri_dream.jpg" width="520" height="589" border="0"></p>
+<p><img src="../assets/images/y2c19_morri_dream.jpg" h="589" w="520"  b="0"></p>
 
 
 <div class="stage">Overwhelmed with the need for sleep, Morrigan flips off her computer and barely makes it to her bed. She is out the minute she hits the pillow. Over the next hour, she is confronted with wild dreams. They include blurry images, muffled voices, symbols that don't make sense to her, and the last thing she feels is an overwhelming sense of coldness. She screams and opens her eyes. Standing at the foot of her bed is a naked Amethyst, wearing a solitary crystal around her neck.</div>
@@ -70,9 +82,9 @@
 <p class="line"><span class="actor">Morrigan</span> WHAT ARE YOU DOING IN HERE?</p>
 <p class="line"><span class="actor">Amethyst</span> (Blank expression) You must come with me... NOW</p>
 
-<p><img src="../assets/images/y2c19_amy.jpg" width="520" height="466" border="0"></p>
+<p><img src="../assets/images/y2c19_amy.jpg" h="466" w="520"  b="0"></p>
 
-<bar></bar>
+<hr>
 
 <div class="stage">Inside the Duquesa Bay Yacht &amp; Polo Club's main dining room, Zach finishes touring the small dance floor with Justine. They wave to KJ having dinner with his parents and return to their table.</div>
 
@@ -177,9 +189,9 @@
 <div class="stage">The elder von Meer slumps over into his dish.</div>
 
 
-<p><img src="../assets/images/y2c19_karlsr.jpg" width="420" height="553" border="0"></p>
+<p><img src="../assets/images/y2c19_karlsr.jpg" h="553" w="420"  b="0"></p>
 
-<bar></bar>
+<hr>
 
 <div class="stage">Takanachi arrives at the station and sneaks in the side entrance. She cautiously approaches the darkened newsroom floor and makes her way towards Morrigan's cubicle. She hears a light tapping on a keyboard.</div>
 
@@ -207,7 +219,7 @@
 <p class="line"><span class="actor">Jason</span> Yeah... does Eyes have a job for me at The Beacon?</p>
 <p class="line"><span class="actor">Gracie</span> Are you ready to live on peanuts and drive a Geo Prism?</p>
 
-<p><img src="../assets/images/y2c19_gracie_jason.jpg" width="620" height="555" border="0"></p>
+<p><img src="../assets/images/y2c19_gracie_jason.jpg" h="555" w="620"  b="0"></p>
 
 <p class="line"><span class="actor">Jason</span> (Grimacing) Oooh</p>
 <p class="line"><span class="actor">Gracie</span> You'll be a chick magnet for sure</p>
@@ -245,6 +257,30 @@
 <p class="line"><span class="actor">Jason</span> (Whispering) Who in the hell is that?</p>
 <p class="line"><span class="actor">Gracie</span> WHAT in the hell is that?</p>
 
-<bar></bar>
+<hr>
 
-<div>prev file = y2c18.html</div><div>next file = y2c20.html</div></body></html>
+
+    </div>
+    <div class="footer">
+      <div class="footer-links">
+          <div class="prev-chapter"><a href="y2c18.html"><i class="fa fa-chevron-left"></i>Prev</a></div>
+          <div class="next-chapter"><a href="y2c20.html">Next<i class="fa fa-chevron-right"></i></a></div>
+
+      </div>
+      <div class="copyright-footer">&reg; All Rights Reserved, 2000-2018</div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script>
+    $(document).on('scroll', () => {
+      if ($(document).scrollTop() > 48) {
+        $('.header').addClass('shrink');
+      } else {
+        $('.header').removeClass('shrink');
+        // console.log('++', $(document).scrollTop());
+      }
+    });
+  </script>
+</body>
+
+</html>

@@ -1,12 +1,24 @@
-<html><head><style>
-  .stage { background-color: #ddd; margin: 10px 30px; }
-  .actor { background-color: #cee; }
-  .line { background-color: #eec; }
-  .actor:after { content: ":"; }
-  </style>
-  </head>
-  <body>
-  <h1>Year 1, Chapter 18</h1><h2>Evening Entertainment</h2>
+<!DOCTYPE html>
+<html>
+  
+<head>
+  <title>Darkfin: Evening Entertainment </title>
+  <link rel="stylesheet" href="main.css?1520816785324">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" href="df-favicon.png" type="image/x-icon">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body class="chapter">
+  <div class="wrapper">
+    <div class="header">
+      <h1>Darkfin <span>of Duquesa Bay</span></h1>
+      <h2>Year 1, Chapter 18<em>Evening Entertainment</em></h2>
+      <a href="story.html" class="story-link"><i class="fa fa-file-text-o"></i></a>
+    </div>
+    <div class="body">
+      
 
 <div class="stage">Docked in the mid-sized port of Duquesa Bay, a Meer-A-Mar Cargo ship carrying imported goods from Bulgaria rests quietly against the burgeoning night sky. Inside, a few members of its crew gather in a small room filled with various illegal weapons.</div>
 
@@ -38,7 +50,7 @@
 
 <p class="line"><span class="actor">Darkfin</span> (Picking him up by the neck) I want you to do me a favor</p>
 
-<p><img src="../assets/images/y1c18_fight.gif" width="400" height="379" border="0"></p>
+<p><img src="../assets/images/y1c18_fight.gif" h="379" w="400"  b="0"></p>
 
 <p class="line"><span class="actor">Crewman #1</span> PLEASE DON'T KILL ME</p>
 <p class="line"><span class="actor">Darkfin</span> (Placing him at the ship's intercom) Call for help</p>
@@ -76,7 +88,7 @@
 <div class="stage">With a quick gesture, Darkfin's trident flies out of the water and spears the captain through the chest. She pulls her weapon out of the body and glides down to the remaining crewmen, still desperately trying to flee.</div>
 
 
-<p><img src="../assets/images/y1c18_fight_2.gif" width="400" height="260" border="0"></p>
+<p><img src="../assets/images/y1c18_fight_2.gif" h="260" w="400"  b="0"></p>
 
 <p class="line"><span class="actor">Crewman #4</span> PLEASE, WE BEG YOU, LET US GO</p>
 
@@ -94,9 +106,9 @@
 
 <div class="stage">With a deep sigh, she takes one last look around her and dives gracefully into the water below.</div>
 
-<bar></bar>
+<hr>
 
-<p><img src="../assets/images/y1c18_fiore_farm.jpg" width="520" height="234" border="0"></p>
+<p><img src="../assets/images/y1c18_fiore_farm.jpg" h="234" w="520"  b="0"></p>
 
 
 <div class="stage">Inside the Fiore family farmhouse, Frank and his wife Carmen prepare a small dinner for their family. Craig Phelps plays ball with Ona Rosa's children as she watches on with her sister, Anita.</div>
@@ -248,12 +260,12 @@
 <p class="line"><span class="actor">Ona Rosa</span> (Half smile) I'll save you some pie</p>
 <p class="line"><span class="actor">Anita</span> Oh, Captain, let's go!</p>
 
-<bar></bar>
+<hr>
 
 <div class="stage">At the KCON station breakroom, Morrigan is picking at some stale coffee cake with anchor Dan Henshaw.</div>
 
 
-<p><img src="../assets/images/kcon_logo.gif" width="225" height="83" border="0" align="right"></p>
+<p><img src="../assets/images/kcon_logo.gif" h="83" w="225"  b="0" a="center"></p>
 <p class="line"><span class="actor">Dan</span> Seagull guano - I've had spectacular results with it!</p>
 <p class="line"><span class="actor">Morrigan</span> Does it work for African Violets?</p>
 
@@ -283,7 +295,7 @@
 <p class="line"><span class="actor">Morrigan</span> (Halting) Excuse me?</p>
 <p class="line"><span class="actor">Dan</span> Never use urea-based nitrogen to feed African Violets, it gives them root burn</p>
 
-<bar></bar>
+<hr>
 
 <div class="stage">Craig and Anita thoroughly inspect the ship, along with the severely injured or dead crewmen.</div>
 
@@ -307,7 +319,31 @@
 <p class="line"><span class="actor">Anita</span> Yeah, but slightly different - it's like... it's like she was PRACTICING for something</p>
 <p class="line"><span class="actor">Morrigan</span> (Coming up behind them) Practicing for what?</p>
 
-<bar></bar> 
+<hr> 
 
 
-<div>prev file = y1c17.html</div><div>next file = y1c19.html</div></body></html>
+
+    </div>
+    <div class="footer">
+      <div class="footer-links">
+          <div class="prev-chapter"><a href="y1c17.html"><i class="fa fa-chevron-left"></i>Prev</a></div>
+          <div class="next-chapter"><a href="y1c19.html">Next<i class="fa fa-chevron-right"></i></a></div>
+
+      </div>
+      <div class="copyright-footer">&reg; All Rights Reserved, 2000-2018</div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script>
+    $(document).on('scroll', () => {
+      if ($(document).scrollTop() > 48) {
+        $('.header').addClass('shrink');
+      } else {
+        $('.header').removeClass('shrink');
+        // console.log('++', $(document).scrollTop());
+      }
+    });
+  </script>
+</body>
+
+</html>

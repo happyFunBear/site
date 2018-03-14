@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Darkfin: Story </title>
+  <link rel="stylesheet" href="main.css?%%time%%">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" href="df-favicon.png" type="image/x-icon">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+  </style>
+</head>
+
+<body class="stories">
+    <div class="wrapper">
+    <div class="header">
+      <h1>Story</h1>
+    </div>
+    <div class="body">
+    </div>
+    <div class="footer">
+        <div class="copyright-footer">&reg; All Rights Reserved, 2000-2018</div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.5/lodash.js"></script>
+  <script>
+    $.getJSON('story.json').then(res => {
+      console.log(res);
+      let vignettes = _.sortBy(res.filter(s => (s.type === 'v')), 'fileName');
+      let years = _.sortBy(res.filter(s => (s.type === 'y')), 'fileName');
+      let prevYear;
+      let vol = $('<ol>'), sol = null, wrap = $('<div class="wrap">');
+
+      years.forEach(year => {
+        if (year.year !== prevYear) {
+          if (sol) {
+            $('.body').append(wrap.append(sol));
+            wrap = $('<div class="wrap">');
+            wrap.prepend($('<h3>').text('Year ' + year.year + ': ' + year.yearTitle));
+          } else {
+            wrap.prepend($('<h3>').text('Year ' + year.year + ': ' + year.yearTitle));
+          }
+          sol = $('<ol>');
+        }
+
+        prevYear = year.year;
+        sol.append($('<li>').append($('<a>').attr('href', year.fileName).text(year.title)));
+      });
+
+      $('.body').append(wrap.append(sol));
+
+
+      wrap = $('<div class="wrap">');
+      wrap.append($('<h3>').text('Vignettes '));
+      vignettes.forEach(vig => {
+        vol.append($('<li>').append($('<a>').attr('href', vig.fileName).text(vig.title)));
+      });
+      $('.body').append(wrap.append(vol));
+
+    });
+    $(document).on('scroll', () => {
+      if ($(document).scrollTop() > 48) {
+        $('.header').addClass('shrink');
+        console.log('--', $(document).scrollTop());
+      } else {
+        $('.header').removeClass('shrink');
+        console.log('++', $(document).scrollTop());
+
+      }
+      
+    });
+
+  </script>
+</body>
+
+</html>

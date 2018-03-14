@@ -1,12 +1,24 @@
-<html><head><style>
-  .stage { background-color: #ddd; margin: 10px 30px; }
-  .actor { background-color: #cee; }
-  .line { background-color: #eec; }
-  .actor:after { content: ":"; }
-  </style>
-  </head>
-  <body>
-  <h1>Vignette 12</h1><h2>In the Bedroom</h2>
+<!DOCTYPE html>
+<html>
+  
+<head>
+  <title>Darkfin: In the Bedroom </title>
+  <link rel="stylesheet" href="main.css?1520816785324">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" href="df-favicon.png" type="image/x-icon">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body class="chapter">
+  <div class="wrapper">
+    <div class="header">
+      <h1>Darkfin <span>of Duquesa Bay</span></h1>
+      <h2>Vignette 12<em>In the Bedroom</em></h2>
+      <a href="story.html" class="story-link"><i class="fa fa-file-text-o"></i></a>
+    </div>
+    <div class="body">
+      
 
 <div class="stage">Reclining in a hammock on her condo balcony, Kylee Shepperton looks up from reading the newspaper to gaze at the beautiful view of Duquesa Bay. Turner Gates finishes dressing and joins her there.</div>
 
@@ -59,7 +71,7 @@
 <p class="line"><span class="actor">Kylee</span> Heh, right</p>
 <p class="line"><span class="actor">Turner</span> Don't you ever want to get married?</p>
 
-<p><img src="../assets/images/kylee_pissed.jpg" width="323" height="521" border="0"></p>
+<p><img src="../assets/images/kylee_pissed.jpg" h="521" w="323"  b="0"></p>
 
 <p class="line"><span class="actor">Kylee</span> Maybe in ten years or so when my looks start to fade, when I'm not as... physically active - I suppose I'll finally settle down - actually more like settle, period</p>
 <p class="line"><span class="actor">Turner</span> That's not what family is about</p>
@@ -92,7 +104,7 @@
 <p class="line"><span class="actor">Kylee</span> (Whipping them away) Ugh, Fergie might have been into that - not me!</p>
 <p class="line"><span class="actor">Turner</span> YOU ARE INTO WHATEVER I SAY YOU ARE INTO, BITCH</p>
 
-<p><img src="../assets/images/turner_angry.jpg" width="420" height="535" border="0"></p>
+<p><img src="../assets/images/turner_angry.jpg" h="535" w="420"  b="0"></p>
 
 
 <div class="stage">Before Kylee has a chance to get up and walk away, Turner sucker punches her in the stomach, taking extra care not to hit her in the face. Doubled over in pain, the young woman is unable to move as the older man drags her into the bedroom. Finally, after getting his jollies, Turner prepares to leave as a humiliated Kylee lies silent and still under the sheets.</div>
@@ -115,4 +127,28 @@
 
 <p class="line"><span class="actor">Kylee</span> I already know what you can do</p>
 
-<div>prev file = v11.html</div><div>next file = v13.html</div></body></html>
+
+    </div>
+    <div class="footer">
+      <div class="footer-links">
+          <div class="prev-chapter"><a href="v11.html"><i class="fa fa-chevron-left"></i>Prev</a></div>
+          <div class="next-chapter"><a href="v13.html">Next<i class="fa fa-chevron-right"></i></a></div>
+
+      </div>
+      <div class="copyright-footer">&reg; All Rights Reserved, 2000-2018</div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script>
+    $(document).on('scroll', () => {
+      if ($(document).scrollTop() > 48) {
+        $('.header').addClass('shrink');
+      } else {
+        $('.header').removeClass('shrink');
+        // console.log('++', $(document).scrollTop());
+      }
+    });
+  </script>
+</body>
+
+</html>

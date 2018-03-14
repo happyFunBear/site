@@ -1,12 +1,24 @@
-<html><head><style>
-  .stage { background-color: #ddd; margin: 10px 30px; }
-  .actor { background-color: #cee; }
-  .line { background-color: #eec; }
-  .actor:after { content: ":"; }
-  </style>
-  </head>
-  <body>
-  <h1>Vignette 5</h1><h2>Soothing</h2>
+<!DOCTYPE html>
+<html>
+  
+<head>
+  <title>Darkfin: Soothing </title>
+  <link rel="stylesheet" href="main.css?1520816785324">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" href="df-favicon.png" type="image/x-icon">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body class="chapter">
+  <div class="wrapper">
+    <div class="header">
+      <h1>Darkfin <span>of Duquesa Bay</span></h1>
+      <h2>Vignette 5<em>Soothing</em></h2>
+      <a href="story.html" class="story-link"><i class="fa fa-file-text-o"></i></a>
+    </div>
+    <div class="body">
+      
 
 <div class="stage">As early afternoon settles over the Quartz Lake Inn, Joe Tiszo, the owner and master chef of the establishment, tends to the vineyards just south of the property. He gazes towards the lake and notices a small, private plane flying low, curving behind the mountains and disappearing from view.</div>
 
@@ -70,12 +82,12 @@
 
 <p class="line"><span class="actor">Joe</span> She is here and she is not well</p>
 
-<bar></bar>
+<hr>
 
 <div class="stage">Inside one of the well-appointed suites of the Quartz Lake Inn, Erika takes off her glasses, strips down to her underwear, and lies with a cloth full of ice on her forehead. She quickly nods off and starts to dream. Flashing back to six years ago, the blonde now sees herself arriving at the Indian Ocean Marine Institute with a couple of colleagues in Colombo, Sri Lanka.</div>
 
 
-<p><img src="../assets/images/v05_erika_sleeping.jpg" width="520" height="304" border="0"></p>
+<p><img src="../assets/images/v05_erika_sleeping.jpg" h="304" w="520"  b="0"></p>
 
 <p class="line"><span class="actor">Colleague #1</span> Would you look at this place? - my dorm building is bigger than all of it combined!</p>
 <p class="line"><span class="actor">Erika</span> (Lugging an olive duffle bag) Just remember, we're here for one semester and then we get the hell home</p>
@@ -180,13 +192,13 @@
 
 <p class="line"><span class="actor">Erika</span> Not yet</p>
 
-<bar></bar>
+<hr>
 
 <div class="stage">Just off the Quartz Lake Inn's tennis courts, Pauline von Meer relaxes on the patio with a glass of orange juice. Joe Tiszo makes his way over to her.</div>
 
 <p class="line"><span class="actor">Pauline</span> Joe, darling - would it be too much to ask for a slice of your wonderful poppyseed cake?</p>
 
-<p><img src="../assets/images/v05_joe_and_pauline.jpg" width="520" height="287" border="0"></p>
+<p><img src="../assets/images/v05_joe_and_pauline.jpg" h="287" w="520"  b="0"></p>
 
 <p class="line"><span class="actor">Joe</span> (Taking a seat next to her) It's cooling as we speak, I'll bring you a fresh slice in a few minutes</p>
 <p class="line"><span class="actor">Pauline</span> (Brushing her face with her towel) Wonderful</p>
@@ -216,13 +228,13 @@
 <p class="line"><span class="actor">Joe</span> Erika is lying down in a suite... she's not feeling very well</p>
 <p class="line"><span class="actor">Pauline</span> (Jumping up) Take me to her!</p>
 
-<bar></bar>
+<hr>
 
 <div class="stage">Now tossing and turning violently on her bed, Erika continues to dream as her mother enters the room alone.</div>
 
 <p class="line"><span class="actor">Erika</span> (Perspiring) Sam... no... NO - HELP ME - SAM, SAAAAAAM</p>
 
-<p><img src="../assets/images/v05_pauline_door.jpg" width="363" height="466" border="0"></p>
+<p><img src="../assets/images/v05_pauline_door.jpg" h="466" w="363"  b="0"></p>
 
 
 <div class="stage">Mrs. von Meer approaches her daughter's bedside as Erika wakes up with a start.</div>
@@ -272,4 +284,28 @@
 <p class="line"><span class="actor">Pauline</span> (Sighing) Yeah... thanks, Joe</p>
 
 
-<div>prev file = v04.html</div><div>next file = v06.html</div></body></html>
+
+    </div>
+    <div class="footer">
+      <div class="footer-links">
+          <div class="prev-chapter"><a href="v04.html"><i class="fa fa-chevron-left"></i>Prev</a></div>
+          <div class="next-chapter"><a href="v06.html">Next<i class="fa fa-chevron-right"></i></a></div>
+
+      </div>
+      <div class="copyright-footer">&reg; All Rights Reserved, 2000-2018</div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script>
+    $(document).on('scroll', () => {
+      if ($(document).scrollTop() > 48) {
+        $('.header').addClass('shrink');
+      } else {
+        $('.header').removeClass('shrink');
+        // console.log('++', $(document).scrollTop());
+      }
+    });
+  </script>
+</body>
+
+</html>

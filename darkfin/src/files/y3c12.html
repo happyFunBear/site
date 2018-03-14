@@ -1,12 +1,24 @@
-<html><head><style>
-  .stage { background-color: #ddd; margin: 10px 30px; }
-  .actor { background-color: #cee; }
-  .line { background-color: #eec; }
-  .actor:after { content: ":"; }
-  </style>
-  </head>
-  <body>
-  <h1>Year 3, Chapter 12</h1><h2>Myth Understanding</h2>
+<!DOCTYPE html>
+<html>
+  
+<head>
+  <title>Darkfin: Myth Understanding </title>
+  <link rel="stylesheet" href="main.css?1520816785324">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" href="df-favicon.png" type="image/x-icon">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body class="chapter">
+  <div class="wrapper">
+    <div class="header">
+      <h1>Darkfin <span>of Duquesa Bay</span></h1>
+      <h2>Year 3, Chapter 12<em>Myth Understanding</em></h2>
+      <a href="story.html" class="story-link"><i class="fa fa-file-text-o"></i></a>
+    </div>
+    <div class="body">
+      
 
 <div class="stage">A cherry-red Jeep speeds its way up a winding road into 
  the Don Alessandro Mountains. Inside is Tim Hajanian. A satellite phone 
@@ -36,7 +48,7 @@
  view overlooks the entire Santa Conchita Valley with Mount Wiggins' 
  thin trail of smoke fading in the distance.</div>
 
-<p align="center"><img src="../assets/images/y3c12_tim_jeep.jpg" width="510" height="495"></p>
+<p a="center"><img src="../assets/images/y3c12_tim_jeep.jpg" h="495" w="510"></p>
 <p class="line"><span class="actor">Tim</span> It's time to go, it's past time to go - I'm getting the 
  bag from the cabin and hoping on the next flight to Guam</p>
 
@@ -99,7 +111,7 @@
 <p class="line"><span class="actor"> Tim</span> FUCK YOU, PIGS, YOU CAN SUCK MY ASS... on second thought, 
  noo</p>
 
-<bar></bar>
+<hr>
 
 <div class="stage">Inside the cabin, shafts of daylight stream through the 
  holes in the window shades. Morrigan, dressed in an oversized camouflage 
@@ -108,7 +120,7 @@
  a red-striped necktie.</div>
 
 <p class="line"><span class="actor"> Morrigan</span> (Stirring) Uhh... ow, my head - I'M BLIND, I'M BLIND</p>
-<p align="center"><img src="../assets/images/y3c12_morri_bound.jpg" width="610" height="502"></p>
+<p a="center"><img src="../assets/images/y3c12_morri_bound.jpg" h="502" w="610"></p>
 
 <div class="stage">Wearing a black silk robe with a Japanese character embroidered 
  on the pocket, Erika steps over from the kitchen, sipping some tea.</div>
@@ -253,7 +265,7 @@
 
 <p class="line"><span class="actor"> Erika</span> (Her robe now falls open) It blew really long and hard 
  last night</p>
-<p align="center"><img src="../assets/images/y3c12_erika_robe.jpg" width="500" height="409"></p>
+<p a="center"><img src="../assets/images/y3c12_erika_robe.jpg" h="409" w="500"></p>
 
 <p class="line"><span class="actor"> Officer</span> (Not hiding the bulge in his pants) Oh, yeah</p>
 
@@ -575,4 +587,28 @@
 <p class="line"><span class="actor"> Tim</span> (Spotting a small black rucksack) There it is!</p>
 
 
-<div>prev file = y3c11.html</div><div>next file = y3c13.html</div></body></html>
+
+    </div>
+    <div class="footer">
+      <div class="footer-links">
+          <div class="prev-chapter"><a href="y3c11.html"><i class="fa fa-chevron-left"></i>Prev</a></div>
+          <div class="next-chapter"><a href="y3c13.html">Next<i class="fa fa-chevron-right"></i></a></div>
+
+      </div>
+      <div class="copyright-footer">&reg; All Rights Reserved, 2000-2018</div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script>
+    $(document).on('scroll', () => {
+      if ($(document).scrollTop() > 48) {
+        $('.header').addClass('shrink');
+      } else {
+        $('.header').removeClass('shrink');
+        // console.log('++', $(document).scrollTop());
+      }
+    });
+  </script>
+</body>
+
+</html>

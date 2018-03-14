@@ -1,12 +1,24 @@
-<html><head><style>
-  .stage { background-color: #ddd; margin: 10px 30px; }
-  .actor { background-color: #cee; }
-  .line { background-color: #eec; }
-  .actor:after { content: ":"; }
-  </style>
-  </head>
-  <body>
-  <h1>Year 1, Chapter 16</h1><h2>Moribund</h2>
+<!DOCTYPE html>
+<html>
+  
+<head>
+  <title>Darkfin: Moribund </title>
+  <link rel="stylesheet" href="main.css?1520816785324">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" href="df-favicon.png" type="image/x-icon">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body class="chapter">
+  <div class="wrapper">
+    <div class="header">
+      <h1>Darkfin <span>of Duquesa Bay</span></h1>
+      <h2>Year 1, Chapter 16<em>Moribund</em></h2>
+      <a href="story.html" class="story-link"><i class="fa fa-file-text-o"></i></a>
+    </div>
+    <div class="body">
+      
 
 <div class="stage">Across the street from the Quartz County Morgue, Fingers and Eyes recline in Zach's car with the windows rolled down and the stereo turned up. Lifting her sunglasses, Gracie grabs Zach's arm and peers at his watch as he slurps down a large orange soda.</div>
 
@@ -15,7 +27,7 @@
 <p class="line"><span class="actor">Zach</span> (Taking a huge bite out of his sandwich) True</p>
 <p class="line"><span class="actor">Gracie</span> You know, we're about to look at a bunch of dead guys, is eating a meatball sub such a wise idea?</p>
 
-<p><img border="0" height="127" width="250" src="../assets/images/y1c16_sammich.gif" align="right"></p>
+<p><img  b="0" h="127" w="250" src="../assets/images/y1c16_sammich.gif" a="center"></p>
 
 <p class="line"><span class="actor">Zach</span> Ah, I can handle it... I'm a man!</p>
 <p class="line"><span class="actor">Gracie</span> Yes, your dangling Gumby air freshener totally screams that</p>
@@ -64,7 +76,7 @@
 <p class="line"><span class="actor">Gracie</span> (Watching) That's Justine's boss, right?</p>
 <p class="line"><span class="actor">Zach</span> Yep - that's our cue to head on in</p>
 
-<p><img border="0" height="93" width="288" src="../assets/images/y1c16_coroners.jpg" align="middle"></p>
+<p><img  b="0" h="93" w="288" src="../assets/images/y1c16_coroners.jpg" a="middle"></p>
 
 
 <div class="stage">As the two get out of the car and make their way across the street, Morrigan zooms around the corner and pretends to run them over.</div>
@@ -266,7 +278,7 @@
 
 <div class="stage">They all take off in separate directions.</div>
 
-<bar></bar>
+<hr>
 
 <div class="stage">Inside a dark cavern, a hooded figure hands a letter to another hooded figure. They bow to each other and the one delivering the piece of mail exits. Soft, feminine hands, with coral fingernail tips, rip open the envelope. The contents are carefully studied.</div>
 
@@ -294,4 +306,28 @@
 </div>
 
 
-<div>prev file = y1c15.html</div><div>next file = y1c17.html</div></body></html>
+
+    </div>
+    <div class="footer">
+      <div class="footer-links">
+          <div class="prev-chapter"><a href="y1c15.html"><i class="fa fa-chevron-left"></i>Prev</a></div>
+          <div class="next-chapter"><a href="y1c17.html">Next<i class="fa fa-chevron-right"></i></a></div>
+
+      </div>
+      <div class="copyright-footer">&reg; All Rights Reserved, 2000-2018</div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script>
+    $(document).on('scroll', () => {
+      if ($(document).scrollTop() > 48) {
+        $('.header').addClass('shrink');
+      } else {
+        $('.header').removeClass('shrink');
+        // console.log('++', $(document).scrollTop());
+      }
+    });
+  </script>
+</body>
+
+</html>

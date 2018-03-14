@@ -1,12 +1,24 @@
-<html><head><style>
-  .stage { background-color: #ddd; margin: 10px 30px; }
-  .actor { background-color: #cee; }
-  .line { background-color: #eec; }
-  .actor:after { content: ":"; }
-  </style>
-  </head>
-  <body>
-  <h1>Year 4, Chapter 5</h1><h2>One-Eyed Jacks</h2>
+<!DOCTYPE html>
+<html>
+  
+<head>
+  <title>Darkfin: One-Eyed Jacks </title>
+  <link rel="stylesheet" href="main.css?1520816785324">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" href="df-favicon.png" type="image/x-icon">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body class="chapter">
+  <div class="wrapper">
+    <div class="header">
+      <h1>Darkfin <span>of Duquesa Bay</span></h1>
+      <h2>Year 4, Chapter 5<em>One-Eyed Jacks</em></h2>
+      <a href="story.html" class="story-link"><i class="fa fa-file-text-o"></i></a>
+    </div>
+    <div class="body">
+      
 
 <div class="stage">Two business quarters after the Bay Valley Medical Center explosion...</div>
 
@@ -14,7 +26,7 @@
 <div class="stage">On the 18th floor of a downtown Vancouver office building, KJ von Meer stares out of a large panoramic window. He outlines the harbor with his finger while snacking on a strawberry muffin.</div>
 
 <p class="line"><span class="actor">Receptionist</span> (In French) Mr. Patterson... the doctor will see you now</p>
-<p align="center"><img src="../assets/images/y4c04_kj.jpg" alt="" height="510" width="756" border="0"></p>
+<p a="center"><img src="../assets/images/y4c04_kj.jpg" alt="" h="510" w="756"  b="0"></p>
 
 <p class="line"><span class="actor">KJ</span> (Wolfing down the remaining half) Merci</p>
 
@@ -216,7 +228,7 @@
 <p class="line"><span class="actor">Victoria</span> Ready, Honey?</p>
 <p class="line"><span class="actor">KJ</span> (Smiling) I guess so</p>
 
-<bar></bar>
+<hr>
 
 <div class="stage">Inhaling a cigar and swirling the liquor in his glass, Griffin is seated a private baccarat table inside a high-end Las Vegas casino. The gentlemen surrounding him for this whale game represent the global elite from the worlds of business and politics.</div>
 
@@ -230,7 +242,7 @@
 
 <p class="line"><span class="actor">Businessman</span> You must have complete confidence in your company's current prospects?</p>
 <p class="line"><span class="actor">Griffin</span> Complete and utter confidence &mdash; my business partner is in Vancouver as we speak</p>
-<p align="center"><img src="../assets/images/y4c04_griff.jpg" alt="" height="579" width="741" border="0"></p>
+<p a="center"><img src="../assets/images/y4c04_griff.jpg" alt="" h="579" w="741"  b="0"></p>
 
 <p class="line"><span class="actor">Businessman</span> Wonderful, Mr. Martel, because the port negotiations are going to be a major hurdle for you</p>
 
@@ -274,5 +286,29 @@
 
 <p class="line"><span class="actor">Griffin</span> Now, if you will excuse me, I have a suite filled with beautiful young women covered in sushi and white lines who are in dire need of my attention, thank you</p>
 
-<bar></bar>
-<div>prev file = y4c04.html</div></body></html>
+<hr>
+
+    </div>
+    <div class="footer">
+      <div class="footer-links">
+          <div class="prev-chapter"><a href="y4c04.html"><i class="fa fa-chevron-left"></i>Prev</a></div>
+          <div class="next-chapter"></div>
+
+      </div>
+      <div class="copyright-footer">&reg; All Rights Reserved, 2000-2018</div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script>
+    $(document).on('scroll', () => {
+      if ($(document).scrollTop() > 48) {
+        $('.header').addClass('shrink');
+      } else {
+        $('.header').removeClass('shrink');
+        // console.log('++', $(document).scrollTop());
+      }
+    });
+  </script>
+</body>
+
+</html>

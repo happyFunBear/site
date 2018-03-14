@@ -1,15 +1,27 @@
-<html><head><style>
-  .stage { background-color: #ddd; margin: 10px 30px; }
-  .actor { background-color: #cee; }
-  .line { background-color: #eec; }
-  .actor:after { content: ":"; }
-  </style>
-  </head>
-  <body>
-  <h1>Year 3, Chapter 16</h1><h2>Weekness</h2>
+<!DOCTYPE html>
+<html>
+  
+<head>
+  <title>Darkfin: Weekness </title>
+  <link rel="stylesheet" href="main.css?1520816785324">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" href="df-favicon.png" type="image/x-icon">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body class="chapter">
+  <div class="wrapper">
+    <div class="header">
+      <h1>Darkfin <span>of Duquesa Bay</span></h1>
+      <h2>Year 3, Chapter 16<em>Weekness</em></h2>
+      <a href="story.html" class="story-link"><i class="fa fa-file-text-o"></i></a>
+    </div>
+    <div class="body">
+      
 <p class="line"><span class="actor">Dan</span> Welcome back to KCON's special presentation, &quot;Mountain Meltdown: One Week Later&quot; - I'm Dan Henshaw...</p>
 
-<p><img src="../assets/images/y3c16_claudia.jpg" alt="" height="513" width="642" border="0"></p>
+<p><img src="../assets/images/y3c16_claudia.jpg" alt="" h="513" w="642"  b="0"></p>
 
 <p class="line"><span class="actor">Claudia</span> And I'm Claudia Steel - the eruption at Mt. Wiggins was more than unsettling for many of our viewers but what has truly amazed emergency personnel, as well as local residents, is how rapidly things have returned to normal...</p>
 
@@ -73,7 +85,7 @@
 <p class="line"><span class="actor">Claudia</span> ALL OF YOU, IN THE CAR, NOW - I'll be there in 10 minutes!</p>
 <p class="line"><span class="actor">Dan</span> (To Claudia) You know, if you ever need specifically shaped vegetables to use as teaching tools, feel free to ask - I have this gourd...</p>
 
-<bar></bar>
+<hr>
 
 <div class="stage">Inside Techtonic, Gracie watches Austin's weather report on the TV over the bar. She pours herself a beer and sighs. Jeremy steps away from the DJ booth and joins her.</div>
 
@@ -160,7 +172,7 @@
 
 <p class="line"><span class="actor">Jason</span> We need to talk, Takanachi</p>
 
-<bar></bar>
+<hr>
 
 <div class="stage">Penelope, George, and Lydia are dressed in black rain slickers. They are crowded in with a dozen other people in a tiny boat that ferries them to the Meeramar cargo tanker.</div>
 
@@ -192,11 +204,11 @@
 <div class="stage">The boat pulls up to side of the tanker as George ignores his daughter's scowl. Lydia struggles to her feet as Penelope rips off her slicker to reveal a bright red dress.</div>
 
 
-<p><img src="../assets/images/y3c16_penny_in_red.jpg" alt="" height="487" width="510" border="0"></p>
+<p><img src="../assets/images/y3c16_penny_in_red.jpg" alt="" h="487" w="510"  b="0"></p>
 
 <p class="line"><span class="actor">Lydia</span> (Rolling her eyes) The one day she decides to wear color...</p>
 
-<bar></bar>
+<hr>
 
 <div class="stage">Around 300 people dressed in formal black gather on the deck of Der Herzog, Meeramar's premier shipping tanker. A huge banner bearing a grinning image of a younger Karl on his first yacht hangs over dozens of white-flowered wreaths and a lone candle. People mill about as Erika sneaks off around a corner with Stephanie.</div>
 
@@ -219,7 +231,7 @@
 <p class="line"><span class="actor">Erika</span> Ah</p>
 <p class="line"><span class="actor">Stephanie</span> I figured she deserved a nice send off</p>
 
-<p><img src="../assets/images/y3c16_erika_steph.jpg" alt="" height="501" width="453" border="0"></p>
+<p><img src="../assets/images/y3c16_erika_steph.jpg" alt="" h="501" w="453"  b="0"></p>
 
 <p class="line"><span class="actor">Erika</span> How munificent of you</p>
 <p class="line"><span class="actor">Stephanie</span> Besides, it's a great way to get back at my ex - taking this tanker out on a dry run must be costing Doug plenty</p>
@@ -293,4 +305,28 @@
 
 
 
-<div>prev file = y3c15.html</div><div>next file = y3c17.html</div></body></html>
+
+    </div>
+    <div class="footer">
+      <div class="footer-links">
+          <div class="prev-chapter"><a href="y3c15.html"><i class="fa fa-chevron-left"></i>Prev</a></div>
+          <div class="next-chapter"><a href="y3c17.html">Next<i class="fa fa-chevron-right"></i></a></div>
+
+      </div>
+      <div class="copyright-footer">&reg; All Rights Reserved, 2000-2018</div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script>
+    $(document).on('scroll', () => {
+      if ($(document).scrollTop() > 48) {
+        $('.header').addClass('shrink');
+      } else {
+        $('.header').removeClass('shrink');
+        // console.log('++', $(document).scrollTop());
+      }
+    });
+  </script>
+</body>
+
+</html>

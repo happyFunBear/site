@@ -1,12 +1,24 @@
-<html><head><style>
-  .stage { background-color: #ddd; margin: 10px 30px; }
-  .actor { background-color: #cee; }
-  .line { background-color: #eec; }
-  .actor:after { content: ":"; }
-  </style>
-  </head>
-  <body>
-  <h1>Year 3, Chapter 11</h1><h2>In the Clear</h2>
+<!DOCTYPE html>
+<html>
+  
+<head>
+  <title>Darkfin: In the Clear </title>
+  <link rel="stylesheet" href="main.css?1520816785324">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" href="df-favicon.png" type="image/x-icon">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body class="chapter">
+  <div class="wrapper">
+    <div class="header">
+      <h1>Darkfin <span>of Duquesa Bay</span></h1>
+      <h2>Year 3, Chapter 11<em>In the Clear</em></h2>
+      <a href="story.html" class="story-link"><i class="fa fa-file-text-o"></i></a>
+    </div>
+    <div class="body">
+      
 
 <div class="stage">Early morning breaks over the Santa Conchita Valley. Craig and Anita 
  land their helicopter at an emergency base camp set up on the north 
@@ -62,7 +74,7 @@
  qualifies as a national emergency and we have every right to be kept 
  informed!</p>
  
-<p align="center"><img src="../assets/images/y3c11_anita.jpg" width="610" height="347"></p>
+<p a="center"><img src="../assets/images/y3c11_anita.jpg" h="347" w="610"></p>
 
 <p class="line"><span class="actor">Official</span> Captain, please remind your lieutenant that I have the authority 
  to reprimand her if she keeps challenging me - and, if I am not mistaken, 
@@ -81,7 +93,7 @@
 <p class="line"><span class="actor">Craig</span> Understood</p>
 <p class="line"><span class="actor">Official</span> Good - now, get inside - my team is waiting for your assessment</p>
 
-<bar></bar>
+<hr>
 
 <div class="stage">In the crowded parking lot of a cheap roadside motel, Gracie sets 
  up the KCON newsvan for a live remote shoot with Kylee. A single strand 
@@ -147,11 +159,11 @@
  is a news story</p>
 <p class="line"><span class="actor">Kylee</span> A SAD news story but I can't appear too depressed or too chipper 
  - remember, this is going across the country</p>
-<p align="center"><img src="../assets/images/y3c11_kylie.jpg" width="510" height="450"> </p>
+<p a="center"><img src="../assets/images/y3c11_kylie.jpg" h="450" w="510"> </p>
 
 <p class="line"><span class="actor">Gracie</span> NO TIME NOW, WE'RE ON IN TEN... NINE... EIGHT...</p>
 
-<bar></bar>
+<hr>
 
 <div class="stage">Zach is now inside the motel room. He slumps on the bed and watches 
  Kylee on the television.</div>
@@ -199,7 +211,7 @@
 <p class="line"><span class="actor">Gracie</span> But...</p>
 <p class="line"><span class="actor">Zach</span> I SAID, I DON'T WANT TO HEAR ABOUT IT, GRACE</p>
 
-<p align="center"><img src="../assets/images/y3c11_zach.jpg" width="610" height="478"></p>
+<p a="center"><img src="../assets/images/y3c11_zach.jpg" h="478" w="610"></p>
 
 <p class="line"><span class="actor">Gracie</span> WELL, MAYBE I DO - JESUS, EYES, WHAT IS WRONG WITH YOU?</p>
 
@@ -233,7 +245,7 @@
 
 <p class="line"><span class="actor">Kylee</span> JUSTINE HAS STOLEN THE NEWSVAN</p>
 
-<bar></bar>
+<hr>
 
 <div class="stage">Griffin, KJ, Shelby, and Calvin all stand along the riverbank as a 
  search crew of divers and one lone sheriff's deputy complete their sweep 
@@ -310,7 +322,7 @@
 <p class="line"><span class="actor">KJ</span> What about...</p>
 <p class="line"><span class="actor">Griffin</span> NOW, KJ</p>
 
-<bar></bar>
+<hr>
 
 <div class="stage">Just outside of San Luis Obispo, Hector, Stephanie and Karl exit a 
  run-down truck pulled up to a remote medical clinic.</div>
@@ -346,7 +358,7 @@
  is okay</p>
 <p class="line"><span class="actor">Hector</span> I'm going back to make sure OUR family is okay</p>
 
-<bar></bar>
+<hr>
 
 <div class="stage">A private jet is on final approach to Sacramento. George sits between 
  his wife and daughter as Kylee is shown on the television screen.</div>
@@ -391,4 +403,28 @@
 
 
 
-<div>prev file = y3c10.html</div><div>next file = y3c12.html</div></body></html>
+
+    </div>
+    <div class="footer">
+      <div class="footer-links">
+          <div class="prev-chapter"><a href="y3c10.html"><i class="fa fa-chevron-left"></i>Prev</a></div>
+          <div class="next-chapter"><a href="y3c12.html">Next<i class="fa fa-chevron-right"></i></a></div>
+
+      </div>
+      <div class="copyright-footer">&reg; All Rights Reserved, 2000-2018</div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script>
+    $(document).on('scroll', () => {
+      if ($(document).scrollTop() > 48) {
+        $('.header').addClass('shrink');
+      } else {
+        $('.header').removeClass('shrink');
+        // console.log('++', $(document).scrollTop());
+      }
+    });
+  </script>
+</body>
+
+</html>

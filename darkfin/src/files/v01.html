@@ -1,14 +1,26 @@
-<html><head><style>
-  .stage { background-color: #ddd; margin: 10px 30px; }
-  .actor { background-color: #cee; }
-  .line { background-color: #eec; }
-  .actor:after { content: ":"; }
-  </style>
-  </head>
-  <body>
-  <h1>Vignette 1</h1><h2>At The Movies</h2>
+<!DOCTYPE html>
+<html>
+  
+<head>
+  <title>Darkfin: At The Movies </title>
+  <link rel="stylesheet" href="main.css?1520816785324">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" href="df-favicon.png" type="image/x-icon">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
 
-<p><img src="../assets/images/v01_theater.jpg" width="520" height="340" border="0"></p>
+<body class="chapter">
+  <div class="wrapper">
+    <div class="header">
+      <h1>Darkfin <span>of Duquesa Bay</span></h1>
+      <h2>Vignette 1<em>At The Movies</em></h2>
+      <a href="story.html" class="story-link"><i class="fa fa-file-text-o"></i></a>
+    </div>
+    <div class="body">
+      
+
+<p><img src="../assets/images/v01_theater.jpg" h="340" w="520"  b="0"></p>
 
 
 <div class="stage">Sitting inside the semi-dark movie theater, Justine Mirabello and her sister, Joenne, await the new Julia Roberts movie. Joenne sits back with her feet up as Justine neatly unfolds a couple of napkins and places them on her and her sister's laps.</div>
@@ -42,7 +54,7 @@
 <p class="line"><span class="actor">Justine</span> Yes, I want to know</p>
 <p class="line"><span class="actor">Joenne</span> No, you don't want to know</p>
 
-<p><img src="../assets/images/v1_j_j.jpg" width="686" height="438" border="0"></p>
+<p><img src="../assets/images/v1_j_j.jpg" h="438" w="686"  b="0"></p>
 
 <p class="line"><span class="actor">Justine</span> Well, I REALLY want to know now - and if you don't tell me, Zach will tell me his version... is that what you want?</p>
 <p class="line"><span class="actor">Joenne</span> Fine, I met Marvin in the parking lot of Fry's and... you know, we made out</p>
@@ -118,4 +130,28 @@
 
 <p class="line"><span class="actor">Joenne</span> (Getting up to buy some more) Your truth, Justine, not mine</p>
 <p class="line"><span class="actor">Justine</span> Whatever, Joenne... bring me back some Red Vines!</p>
-<div>next file = v02.html</div></body></html>
+
+    </div>
+    <div class="footer">
+      <div class="footer-links">
+          <div class="prev-chapter"></div>
+          <div class="next-chapter"><a href="v02.html">Next<i class="fa fa-chevron-right"></i></a></div>
+
+      </div>
+      <div class="copyright-footer">&reg; All Rights Reserved, 2000-2018</div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script>
+    $(document).on('scroll', () => {
+      if ($(document).scrollTop() > 48) {
+        $('.header').addClass('shrink');
+      } else {
+        $('.header').removeClass('shrink');
+        // console.log('++', $(document).scrollTop());
+      }
+    });
+  </script>
+</body>
+
+</html>
