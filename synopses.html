@@ -1,0 +1,823 @@
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+		<meta name="generator" content="Adobe GoLive 4">
+		<title>Darkfin: Story Synopsis</title>
+		<meta name="keywords" content="darkfin, dark fin, superhero, super hero, superheroine, super heroine, comic">
+		<meta name="description" content="DARKFIN is an online super heroine story with a complex plot and diverse characters.">
+		<csscriptdict>
+			<script><!--
+CSInit = new Array;
+function CSScriptInit() {
+if(typeof(skipPage) != "undefined") { if(skipPage) return; }
+idxArray = new Array;
+for(var i=0;i<CSInit.length;i++)
+	idxArray[i] = i;
+CSAction2(CSInit, idxArray);}
+CSAg = window.navigator.userAgent; CSBVers = parseInt(CSAg.charAt(CSAg.indexOf("/")+1),10);
+function IsIE() { return CSAg.indexOf("MSIE") > 0;}
+function CSIEStyl(s) { return document.all.tags("div")[s].style; }
+function CSNSStyl(s) { return CSFindElement(s,0); }
+function CSFindElement(n,ly) { if (CSBVers < 4) return document[n];
+	var curDoc = ly ? ly.document : document; var elem = curDoc[n];
+	if (!elem) { for (var i=0;i<curDoc.layers.length;i++) {
+		elem = CSFindElement(n,curDoc.layers[i]); if (elem) return elem; }}
+	return elem;
+}
+
+function CSClickReturn () {
+	var bAgent = window.navigator.userAgent; 
+	var bAppName = window.navigator.appName;
+	if ((bAppName.indexOf("Explorer") >= 0) && (bAgent.indexOf("Mozilla/3") >= 0) && (bAgent.indexOf("Mac") >= 0))
+		return true; // dont follow link
+	else return false; // dont follow link
+}
+
+function CSButtonReturn () {
+	var bAgent = window.navigator.userAgent; 
+	var bAppName = window.navigator.appName;
+	if ((bAppName.indexOf("Explorer") >= 0) && (bAgent.indexOf("Mozilla/3") >= 0) && (bAgent.indexOf("Mac") >= 0))
+		return false; // follow link
+	else return true; // follow link
+}
+
+CSIm = new Object();
+function CSIShow(n,i) {
+	if (document.images) {
+		if (CSIm[n]) {
+			var img = (!IsIE()) ? CSFindElement(n,0) : document[n];
+			if (img && typeof(CSIm[n][i].src) != "undefined") {img.src = CSIm[n][i].src;}
+			if(i != 0)
+				self.status = CSIm[n][3];
+			else
+				self.status = " ";
+			return true;
+		}
+	}
+	return false;
+}
+function CSILoad(action) {
+	im = action[1];
+	if (document.images) {
+		CSIm[im] = new Object();
+		for (var i=2;i<5;i++) {
+			if (action[i] != '') { CSIm[im][i-2] = new Image(); CSIm[im][i-2].src = action[i]; }
+			else CSIm[im][i-2] = 0;
+		}
+		CSIm[im][3] = action[5];
+	}
+}
+CSStopExecution = false;
+function CSAction(array) { 
+	return CSAction2(CSAct, array);
+}
+function CSAction2(fct, array) { 
+	var result;
+	for (var i=0;i<array.length;i++) {
+		if(CSStopExecution) return false; 
+		var actArray = fct[array[i]];
+		if (actArray == null) return false;
+		var tempArray = new Array;
+		for(var j=1;j<actArray.length;j++) {
+			if((actArray[j] != null) && (typeof(actArray[j]) == "object") && (actArray[j].length == 2)) {
+				if(actArray[j][0] == "VAR") {
+					tempArray[j] = CSStateArray[actArray[j][1]];
+				}
+				else {
+					if(actArray[j][0] == "ACT") {
+						tempArray[j] = CSAction(new Array(new String(actArray[j][1])));
+					}
+				else
+					tempArray[j] = actArray[j];
+				}
+			}
+			else
+				tempArray[j] = actArray[j];
+		}			
+		result = actArray[0](tempArray);
+	}
+	return result;
+}
+CSAct = new Object;
+
+
+// --></script>
+		</csscriptdict>
+		<csactiondict>
+			<script><!--
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'button',/*URL*/'graphics/h_mainpage.gif',/*URL*/'graphics/h_mainpage_x.gif',/*URL*/'','Main Page : http://www.darkfin.com/main.html');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'button2',/*URL*/'graphics/h_story.gif',/*URL*/'graphics/h_story_x.gif',/*URL*/'','Go to the Story: http://www.darkfin.com/story.html');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'button3',/*URL*/'graphics/h_people.gif',/*URL*/'graphics/h_people_x.gif',/*URL*/'','Characters & Settings: http://www.darkfin.com/people_places.html');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'button4',/*URL*/'graphics/h_aquarium.gif',/*URL*/'graphics/h_aquarium_x.gif',/*URL*/'','Gallery Page: http://www.darkfin.com/aquarium.html');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'button5',/*URL*/'graphics/h_info.gif',/*URL*/'graphics/h_info_x.gif',/*URL*/'','General Information: http://www.darkfin.com/information.html');
+
+// --></script>
+		</csactiondict>
+	</head>
+
+	<body marginwidth="0" marginheight="0" leftmargin="0" topmargin="0" style="margin:0" bgcolor="black" text="#87cefa" link="aqua" alink="red" vlink="#ff00ff" background="graphics/ocean_bkg_dark.jpg" onload="CSScriptInit();">
+		<center>
+			<table border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="black">
+				<tr>
+					<td width="100%">
+						<center>
+							<img border="0" height="185" width="437" src="graphics/df_main_logo.jpg"><br>
+							<img border="0" height="49" width="309" src="graphics/story_synopsis.gif"></center>
+					</td>
+				</tr>
+			</table>
+			<table border="0" cellpadding="0" cellspacing="0" width="100%">
+				<tr>
+					<td width="5%" bgcolor="black"><font color="black">.</font></td>
+					<td width="90%">
+						<center>
+          <p><img src="graphics/year_one_large.gif" width="207" height="52" border="0"></p>
+          <p>
+          <table border="0" cellpadding="3" cellspacing="3" width="85%">
+            <tr> 
+              <td bgcolor="#000000"> 
+                <center>
+                  <font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><a href="story/y1prolog.html">Prologue</a></font></center></td>
+              <td bgcolor="#000066"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><font size="2">A 
+                foggy night on Duquesa Bay... Three men dumping toxic waste are 
+                stopped -- killed -- by a dark, female form.</font> 
+                <p><font size="2">The locals whisper about her as &quot;Aleta 
+                  Obscura&quot; or simply DARKFIN.</font></p>
+                </font></td>
+            </tr>
+            <tr> 
+              <td bgcolor="#000000"> 
+                <center>
+                  <font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><a href="story/y1c01.html">Chapter 
+                  1</a></font></center></td>
+              <td bgcolor="#000066"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><font size="2">Driving 
+                up the coast to her new KCON reporting job, Morrigan McBride experiences 
+                mysterious car trouble and breaks down on the outskirts of town. 
+                She is forced to spend the night in her car by the side of the 
+                road.</font> 
+                <p><font size="2">The next morning, only more problems ensue as 
+                  she meets up with her idiosyncratic field producer/camerawoman, 
+                  Gracie Takanachi, and is forced to go to work early, covering 
+                  Duquesa Bay's latest multiple homicide.</font></p>
+                </font></td>
+            </tr>
+            <tr> 
+              <td bgcolor="#000000"> 
+                <center>
+                  <font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><a href="story/y1c02.html">Chapter 
+                  2</a></font></center></td>
+              <td bgcolor="#000066"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><font size="2">Inside 
+                the mansion of the rich and powerful von Meer family, Dr. Erika 
+                von Meer recovers from her transformation and joins her eccentric 
+                clan at the breakfast table. They watch the breaking news of the 
+                murders as Morrigan makes her first on-air KCON appearance.</font> 
+                <p><font size="2">Erika returns to her lab at the University where 
+                  Griffin Martel pesters her into having dinner with him that 
+                  night. After making the date with Dr. von Meer, Griffin makes 
+                  certain that there is no connection between him and the men 
+                  on the boat.</font></p>
+                </font></td>
+            </tr>
+            <tr> 
+              <td bgcolor="#000000"> 
+                <center>
+                  <font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><a href="story/y1c03.html">Chapter 
+                  3</a></font></center></td>
+              <td bgcolor="#000066"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><font size="2">Recovering 
+                from the previous night and hectic morning, Morrigan and Gracie, 
+                along with Zach Isaacson of the Daily Beacon, prepare to attend 
+                a joint news conference on the murders by the county sheriff and 
+                the United States Coast Guard.</font> 
+                <p><font size="2">Captain Craig Phelps and Lieutenant Anita Fiore 
+                  of the USCG try to come up with just enough information for 
+                  the public while continuing to sit on the facts about the real 
+                  body count over the last few years.</font></p>
+                <p><font size="2">Just as the press conference is about to begin, 
+                  there's word of a serious train wreck with oil leaking into 
+                  the Santa Conchita River. </font></p>
+                </font></td>
+            </tr>
+            <tr> 
+              <td bgcolor="#000000"> 
+                <center>
+                  <font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><a href="story/y1c04.html">Chapter 
+                  4</a></font></center></td>
+              <td bgcolor="#000066"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><font size="2">Erika 
+                is at dinner with Griffin when she sees the news report on the 
+                train wreck. She excuses herself from her dinner, strips and dives 
+                into the ocean, transforming into her alter ego... Darkfin!</font></font></td>
+            </tr>
+            <tr> 
+              <td bgcolor="#000000"> 
+                <center>
+                  <font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><a href="story/y1c05.html">Chapter 
+                  5</a></font></center></td>
+              <td bgcolor="#000066"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><font size="2">All 
+                the principles rush to the train accident. As the authorities 
+                bicker and delay a response, Darkfin decides to ignite the oil 
+                slick before it can hit the bay. Meanwhile Morrigan spots a man 
+                in the wreckage and goes to help him. Darkfin charges her trident 
+                and throws it into the oil causing a huge fireball...&nbsp;</font></font></td>
+            </tr>
+            <tr> 
+              <td bgcolor="#000000"> 
+                <center>
+                  <font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><a href="story/y1c06.html">Chapter 
+                  6</a></font></center></td>
+              <td bgcolor="#000066"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><font size="2">Zach 
+                and Gracie fear the worst as Morrigan is blown into the river. 
+                In the middle of her &quot;meeting&quot; with network executives, 
+                Kylee Shepperton is urgently called back by her boss, Turner Gates. 
+                Craig and Anita circle the scene in a helicopter, trying to figure 
+                out who set fire to the oil slick, while Dr. Javier Sanchez and 
+                Dr. Shelby Willis try to assess the damage and look for Erika. 
+                Morrigan somehow manages to make it to shore. Anita spots Darkfin 
+                in the water and dives out of the helicopter after her.</font></font></td>
+            </tr>
+            <tr> 
+              <td bgcolor="#000000"> 
+                <center>
+                  <font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><a href="story/y1c07.html">Chapter 
+                  7</a></font></center></td>
+              <td bgcolor="#000066"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><font size="2">Erika 
+                struggles with her incomplete transformation back from Darkfin 
+                and slowly makes her way to Bay Valley Medical Center. Awakening 
+                in the hospital, Morrigan tries to convince Gracie and Zach about 
+                the hand she saw from her dream. Afterwards, she deals with the 
+                individual agendas of Turner, Kylee, and her sickbed roomie, Anita. 
+                Mystery in the Kiyomi Mountains.</font></font></td>
+            </tr>
+            <tr> 
+              <td bgcolor="#000000"> 
+                <center>
+                  <font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><a href="story/y1c08.html">Chapter 
+                  8</a></font></center></td>
+              <td bgcolor="#000066"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><font size="2">Erika 
+                finally completes the change back from Darkfin by stealing the 
+                necessary materials from a medical supply room. Dr. Stephanie 
+                Gates walks in and confronts her. Anita pesters Morrigan with 
+                questions about the explosion and &quot;Aleta Obscura.&quot; McBride 
+                seeks refuge in the hall and literally runs into Erika, the vending 
+                machine victor. More mystery in the Kiyomis.</font></font></td>
+            </tr>
+            <tr> 
+              <td bgcolor="#000000"> 
+                <center>
+                  <font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><a href="story/y1c09.html">Chapter 
+                  9</a></font></center></td>
+              <td bgcolor="#000066"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><font size="2">Zach 
+                and Gracie bust Morrigan out of the hospital and show her the 
+                footage of the &quot;blue flash&quot; igniting the oil slick. 
+                While trying to decide on a costume for the museum ball, KJ butts 
+                heads with his father, questions his sister, and makes a date. 
+                After dealing with perplexing goo and the bathroom habits of the 
+                rich and famous, Morrigan finally settles into her new house with 
+                Amethyst and Roshumba.</font></font></td>
+            </tr>
+            <tr> 
+              <td bgcolor="#000000"> 
+                <center>
+                  <font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><a href="story/y1c10.html">Chapter 
+                  10</a></font></center></td>
+              <td bgcolor="#000066"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><font size="2">Erika 
+                ponders on her boat in the bay while Morrigan slowly adjusts to 
+                her KCON surroundings and co-workers. Information about the Celoso 
+                Beach murders, as well as a tasty basket of clams, is served at 
+                Captain Dave's Seafood Shack. Morrigan ends up at Santa Conchita 
+                University's Biology &amp; Aquatics Department and asks Dr. Sanchez 
+                to run the sample for her. It ends up in the hands of Dr. von 
+                Meer.</font></font></td>
+            </tr>
+            <tr> 
+              <td bgcolor="#000000"> 
+                <center>
+                  <font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><a href="story/y1c11.html">Chapter 
+                  11</a></font></center></td>
+              <td bgcolor="#000066"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><font size="2">Penny 
+                Renselier and her friends awaken after a heavy night of partying. 
+                Enjoying breakfast with Amethyst, Morrigan eagerly awaits the 
+                test results while she considers a rack of expensive ball costumes 
+                from KJ. Sandy and Ona Rosa Sanchez start the morning off right 
+                but quickly get into a disagreement. Captain Phelps and Lieutenant 
+                Fiore deal with a broken door, pirate costumes and fun with an 
+                ironing board. Erika and KJ share the usual sibling strife. Mysterious 
+                plans are made for the museum ball. </font></font></td>
+            </tr>
+            <tr> 
+              <td bgcolor="#000000"> 
+                <div align="center"> <font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><a href="story/y1c12.html">Chapter 
+                  12</a></font></div></td>
+              <td bgcolor="#000066"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><font size="2">Jeremy, 
+                Turner, Zach and Morrigan interrupt Gracie Takanachi's harmless 
+                &quot;Sigma Seven&quot; obsession. Lydia and Penny Renselier share 
+                a unique mother/daughter moment while intrigue takes place at 
+                the Quartz County Museum. Unhappy with the test results, Morrigan 
+                confronts Tim Hajanian over the supposed smelt innards and discovers 
+                a beneficial secret.</font></font></td>
+            </tr>
+            <tr> 
+              <td bgcolor="#000000"> 
+                <div align="center"> <font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><a href="story/y1c13.html">Chapter 
+                  13</a></font></div></td>
+              <td bgcolor="#000066"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><font size="2">Everyone 
+                gets ready and attends the costume party at the museum. Both Morrigan 
+                and Erika sense something is wrong with the security guards and 
+                they are quickly proven right.</font></font></td>
+            </tr>
+            <tr> 
+              <td bgcolor="#000000"> 
+                <div align="center"> <font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><a href="story/y1c14.html">Chapter 
+                  14</a></font></div></td>
+              <td bgcolor="#000066"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><font size="2">The 
+                Duquesa's Tears are stolen as pandemonium breaks out. There are 
+                several injured, including Lydia. Darkfin takes on the security 
+                guards as Morrigan goes after a mysterious hooded man.</font></font></td>
+            </tr>
+            <tr> 
+              <td bgcolor="#000000"> 
+                <div align="center"> <font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><a href="story/y1c15.html">Chapter 
+                  15</a></font></div></td>
+              <td bgcolor="#000066"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><font size="2">After 
+                Penny makes sure her mom is safe, she goes after her father, Brad 
+                and Jeremy. Gracie and Zach wonder where Morrigan is. The hooded 
+                man toys with McBride. This leads to another encounter with Darkfin 
+                who is able to recover most of the pearl necklace. Above in the 
+                helicopter, Craig and Anita find Morrigan passed out on shore.</font></font></td>
+            </tr>
+            <tr> 
+              <td bgcolor="#000000"> 
+                <div align="center"> <font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><a href="story/y1c16.html">Chapter 
+                  16</a></font></div></td>
+              <td bgcolor="#000066"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><font size="2">Fun 
+                at the county morgue with Zach, Gracie, Morrigan, the Mirabello 
+                twins and the dead bodies from the museum.</font></font></td>
+            </tr>
+            <tr> 
+              <td bgcolor="#000000"> 
+                <div align="center"> <font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><a href="story/y1c17.html">Chapter 
+                  17</a></font></div></td>
+              <td bgcolor="#000066"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><font size="2">The 
+                Martels enjoy a lively breakfast and a round of golf. Erika tries 
+                to enjoy a game of chess with Big Joe and Griffin definitely enjoys 
+                the bed with Kylee.</font></font></td>
+            </tr>
+            <tr> 
+              <td bgcolor="#000000"> 
+                <div align="center"> <font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><a href="story/y1c18.html">Chapter 
+                  18</a></font></div></td>
+              <td bgcolor="#000066"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><font size="2">A 
+                Bulgarian ship docked in the bay is about to unload its cargo 
+                of illegal weapons but Darkfin has other plans. Anita and Ona 
+                Rosa attempt to have a quite family meal with Craig in tow but 
+                the captain and the lieutenant are called away to the ship where 
+                Morrigan shows up for a KCON report.</font></font></td>
+            </tr>
+            <tr> 
+              <td bgcolor="#000000"> 
+                <div align="center"> <font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><a href="story/y1c19.html">Chapter 
+                  19</a></font></div></td>
+              <td bgcolor="#000066"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><font size="2">With 
+                his father and Karl Senior watching, Griffin gives a press conference 
+                about the incident. Morrigan is enjoying the company of her cherished 
+                tarantula when Gracie, Amethyst, and then Tim interrupt her day 
+                off. Tim's test results are not surprising but still require Morrigan 
+                to head to SCU's library for further research. She runs into Erika 
+                who is doing research of her own.</font></font></td>
+            </tr>
+            <tr> 
+              <td bgcolor="#000000"> 
+                <center>
+                  <font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><a href="story/y1c20.html">Chapter 
+                  20</a></font></center></td>
+              <td bgcolor="#000066"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><font size="2">Griffin 
+                tries his best to sooth a preoccupied Erika. Penny has fun with 
+                both Jeremy and Brad. After a lively lunch at Muldoon's, Morrigan 
+                relaxes on a sunset hike with KJ in the Kiyomis and hears the 
+                legend of Duquesa Bay. After KJ takes off, Morrigan is now alone 
+                in the middle of a storm with a hooded figure. After giving chase, 
+                she finally comes face to face with Darkfin!</font></font></td>
+            </tr>
+          </table>
+          <p><a name="year2"></a><img src="graphics/year_two_large.gif" width="207" height="52" border="0"></p>
+							<p><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><b>
+							<table border="0" cellpadding="3" cellspacing="3" width="85%">
+            <tr> 
+              <td bgcolor="#000000"> 
+                <center>
+                  <a href="story/y2c01.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">Chapter 
+                  1</font></a></center></td>
+              <td bgcolor="#000066"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2">Investigating 
+                the Kiyomi mountains, Morrigan comes face to face with Darkfin 
+                for the first time. As they search deeper into a cave, the two 
+                are discovered by the mysterious hooded figures. Morrigan is caught 
+                and her triskele birthmark is revealed by the hooded leader. Darkfin 
+                manages to escape with an unconscious Morrigan.<br>
+                </font></td>
+            </tr>
+            <tr> 
+              <td bgcolor="#000000"> 
+                <center>
+                  <a href="story/y2c02.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">Chapter 
+                  2</font></a></center></td>
+              <td bgcolor="#000066"><font size="2" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">Inside 
+                her secret lab under the island of Concha Dos, Erika ponders her 
+                past as she does research into Morrigan's mark and a new fighting 
+                power. She morphs into Darkfin to try out her concussive skill.<br>
+                </font></td>
+            </tr>
+            <tr> 
+              <td bgcolor="#000000"> 
+                <center>
+                  <a href="story/y2c03.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">Chapter 
+                  3</font></a></center></td>
+              <td bgcolor="#000066"><font size="2" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">Craig 
+                and Anita comb the coastal waters in search of Darkfin clues and 
+                come across Doug Martel's disabled yacht with the Sigma Seven 
+                cast party on board. There's a lively exchange between Doug and 
+                his wife, Ursula, while Anita finds a new foil in Marcy Nolan.</font></td>
+            </tr>
+            <tr> 
+              <td bgcolor="#000000"> 
+                <center>
+                  <a href="story/y2c04.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">Chapter 
+                  4</font></a></center></td>
+              <td bgcolor="#000066"><font size="2" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">Griffin 
+                goes before the Pacific Coast Oil Consortium board to discuss 
+                something besides regular business. Morrigan waits to interview 
+                him but encounters Erika instead. She invites her to dinner later 
+                at the club. Morrigan accepts and learns what she needs to know 
+                from observing KJ with Griffin.</font></td>
+            </tr>
+            <tr> 
+              <td bgcolor="#000000"> 
+                <center>
+                  <a href="story/y2c05.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">Chapter 
+                  5</font></a></center></td>
+              <td bgcolor="#000066"><font size="2" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">Morrigan 
+                continues to take walks along the beach, hoping to encounter Darkfin 
+                but runs into Karl Senior instead. Awhile later, Darkfin finally 
+                appears. Morrigan is tested with the trident as two hooded figures 
+                observe. Darkfin takes them on with her new power and escapes 
+                with Morrigan in the car.</font></td>
+            </tr>
+            <tr> 
+              <td bgcolor="#000000"> 
+                <div align="center"><a href="story/y2c06.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">Chapter 
+                  6</font></a></div></td>
+              <td bgcolor="#000066"><font size="2" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">While 
+                working at KCON, Morrigan suddenly realizes that her gun is missing. 
+                Moments later, she receives a mysterious instant message from 
+                &quot;Anon1&quot; asking to meet. Morrigan clashes with Gracie 
+                over her Sigma 7 obsession and the ability to track the IM. Jason 
+                Clark comes over with a suspicious bruise on his hand.</font></td>
+            </tr>
+            <tr> 
+              <td bgcolor="#000000"> 
+                <div align="center"><a href="story/y2c07.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">Chapter 
+                  7</font></a></div></td>
+              <td bgcolor="#000066"><font size="2" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">Dr. 
+                Stephanie Gates conducts some tests on Morrigan and is later confronted 
+                by Hector Tapia. A curious Darkfin meets up with Morrigan at the 
+                beach. She convinces the reporter with the fluctuating body temperature 
+                to undergo more medical tests at her secret lab in exchange for 
+                more information. </font></td>
+            </tr>
+            <tr> 
+              <td bgcolor="#000000"> 
+                <div align="center"><a href="story/y2c08.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">Chapter 
+                  8</font></a></div></td>
+              <td bgcolor="#000066"><font size="2" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">In 
+                Coast Guard helicopter, Craig and Anita search for signs of Darkfin 
+                in the bay. Craig admits to having an affair with Mrs. Martel. 
+                After a lively swim, Morrigan and Darkfin are now in a lair on 
+                the island of Concha Dos. The two discuss Nereidium. An illegal 
+                fishing boat incident brings everyone to the same location.</font></td>
+            </tr>
+            <tr> 
+              <td bgcolor="#000000"> 
+                <div align="center"><a href="story/y2c09.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">Chapter 
+                  9</font></a></div></td>
+              <td bgcolor="#000066"><font size="2" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">Dr. 
+                Javier Sanchez, suspicious of his co-woker, searches through Erika's 
+                office and computer. Erika flashes back to a time in Sri Lanka 
+                with Samadara. Darkfin contacts Morrigan by IM and is reminded 
+                of her promise to break into Griffin Martel's office.</font></td>
+            </tr>
+            <tr> 
+              <td bgcolor="#000000"> 
+                <div align="center"><a href="story/y2c10.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">Chapter 
+                  10</font></a></div></td>
+              <td bgcolor="#000066"><font size="2" face="Helvetica, Arial, Geneva, SunSans-Regular, sans-serif">As 
+                Morrigan leaves for the evening, Amy confronts her. Now at the 
+                Meer-A-Mar Headquarters, Morrigan prepares to break in along with 
+                Darkfin's help. They find out certain information but are interrupted 
+                by Griffin. Trying to escape, they run into the hooded goons and 
+                KJ. </font></td>
+            </tr>
+            <tr> 
+              <td bgcolor="#000000">
+<div align="center"><a href="story/y2c11.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">Chapter 
+                  11</font></a></div></td>
+              <td bgcolor="#000066"><font size="2" face="Helvetica, Arial, Geneva, SunSans-Regular, sans-serif">Joenne Mirabello observes the 
+                hooded leader as it speaks with another. Morrigan attempts to 
+                enjoy an evening of socializing with KJ, Gracie, Zach, Justine 
+                and Jason but abruptly leaves after sharing a family secret. At 
+                Saint Brendan's Catholic Church, Frank and Carmen Fiore discuss 
+                matters with Hector Tapia as he waits for Morrigan to show up. 
+                Before she can go inside the church, Morrigan is confronted by 
+                Joenne.</font></td>
+            </tr>
+            <tr> 
+              <td bgcolor="#000000">
+<div align="center"><a href="story/y2c12.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">Chapter 
+                  12</font></a></div></td>
+              <td bgcolor="#000066"><font size="2" face="Helvetica, Arial, Geneva, SunSans-Regular, sans-serif">Griffin Martel discusses Meeramar 
+                business as a bored Erika and KJ look on. Joenne reveals her covert 
+                ties to the U.S. government and gives a little information about 
+                &quot;The Clergy&quot; to Morrigan but is seemingly unaware of 
+                Darkfin's existence. Hector catches Morrigan as she returns to 
+                her car, she makes an excuse and leaves. Father Greg is shot in 
+                the chest and dies.</font></td>
+            </tr>
+            <tr> 
+              <td bgcolor="#000000">
+<div align="center"><a href="story/y2c13.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">Chapter 
+                  13</font></a></div></td>
+              <td bgcolor="#000066"><font size="2" face="Helvetica, Arial, Geneva, SunSans-Regular, sans-serif">Anita is over at Kylee's when 
+                they hear about the shooting. Erika takes Griffin's car and zooms 
+                off to the church. As Gracie and Jeremy discuss life and music, 
+                Zach arrives and tells them the news. Morrigan and Erika get into 
+                a car accident with each other. Eventually, everyone gathers at 
+                the church where Morrigan instantly recognizes her stolen gun 
+                as the murder weapon.</font></td>
+            </tr>
+            <tr> 
+              <td bgcolor="#000000">
+<div align="center"><a href="story/y2c14.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">Chapter 
+                  14</font></a></div></td>
+              <td bgcolor="#000066"><font size="2" face="Helvetica, Arial, Geneva, SunSans-Regular, sans-serif">Morrigan is grilled by two 
+                Santa Conchita Police detectives regarding the murder of Father 
+                Greg. They are trying to set her up as the main suspect. Joenne 
+                pulls Morrigan aside and tells her to keep quiet about their meeting 
+                and that she is on her own with this problem. Erika observes the 
+                situation and is ready to do whatever it takes to keep Morrigan 
+                safe.</font></td>
+            </tr>
+            <tr> 
+              <td bgcolor="#000000">
+<div align="center"><a href="story/y2c15.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">Chapter 
+                  15</font></a></div></td>
+              <td bgcolor="#000066"><font size="2" face="Helvetica, Arial, Geneva, SunSans-Regular, sans-serif">The Clergy continue to plot 
+                against Morrigan and Darkfin. KJ lets a brooding Erika off at 
+                the beach and drives Morrigan back to her house. After coaxing 
+                him to leave, she goes inside and discovers a disturbed Amy waiting 
+                for her. Morrigan plays her messages back and is on suspension 
+                from KCON. The Fiore family discusses the events of the evening 
+                and the possibility of Frank being a suspect. Anita and Craig 
+                leave to see if Morrigan goes to meet Darkfin.</font></td>
+            </tr>
+            <tr> 
+              <td bgcolor="#000000">
+<div align="center"><a href="story/y2c16.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">Chapter 
+                  16</font></a></div></td>
+              <td bgcolor="#000066"><font size="2" face="Helvetica, Arial, Geneva, SunSans-Regular, sans-serif">Erika and Griffin discuss personal 
+                and professional matters over the phone. As Griffin hangs up, 
+                he is brought a special drill bit that is essential to his PCOC 
+                plans. Doug Martel is meeting with some business associates at 
+                the polo club when his private detective confirms his suspicions 
+                about Ursula. After a business conference with his son and Erika, 
+                Doug follows Ursula to Craig's apartment and violently confronts 
+                them.</font></td>
+            </tr>
+            <tr> 
+              <td bgcolor="#000000">
+<div align="center"><a href="story/y2c17.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">Chapter 
+                  17</font></a></div></td>
+              <td bgcolor="#000066"><font size="2" face="Helvetica, Arial, Geneva, SunSans-Regular, sans-serif">At the doughnut shop, Gracie 
+                and Zach have a lively discussion about Morrigan and the crazy 
+                happenings of late. Gracie admits to tampering with Morrigan's 
+                computer at KCON. Morrigan arrives and pumps them both for information 
+                about the Mirabello twins. Justine checks out the body of Father 
+                Greg and makes some startling discoveries.</font></td>
+            </tr>
+            <tr> 
+              <td bgcolor="#000000">
+<div align="center"><a href="story/y2c18.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">Chapter 
+                  18</font></a></div></td>
+              <td bgcolor="#000066"><font size="2" face="Helvetica, Arial, Geneva, SunSans-Regular, sans-serif">Erika and KJ have a long conversation 
+                about the murder case. As KJ leaves to meet their parents for 
+                dinner, Erika tries out an experiment on herself with unexpected 
+                results. Ben and his children enjoy a BBQ that Darkfin nearly 
+                spoils. Joenne takes Morrigan to the ancient burial grounds where 
+                the two discuss the Chumash myths and the situation with The Clergy.</font></td>
+            </tr>
+            <tr> 
+              <td bgcolor="#000000">
+<div align="center"><a href="story/y2c19.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">Chapter 
+                  19</font></a></div></td>
+              <td bgcolor="#000066"><font size="2" face="Helvetica, Arial, Geneva, SunSans-Regular, sans-serif">Morrigan sends an instant message 
+                to an ailing Darkfin. Feeling ill herself, Morrigan falls asleep 
+                and is terrorized by bizarre nightmares. She awakens to find a 
+                naked Amy in her room with a glowing crystal around her neck. 
+                Joenne tells Zach about her Father Greg test results. Karl Senior 
+                suddenly collapses during dinner. Gracie discovers Jason using 
+                Morrigan's computer and confronts him. A hooded figure emerges 
+                from the elevator and heads in their direction.</font></td>
+            </tr>
+            <tr> 
+              <td bgcolor="#000000">
+<div align="center"><a href="story/y2c20.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">Chapter 
+                  20</font></a></div></td>
+              <td bgcolor="#000066"><div align="left"><font size="2" face="Helvetica, Arial, Geneva, SunSans-Regular, sans-serif">Against better 
+                  judgment, Darkfin heads back to shore. The saltwater reaction 
+                  causes a change in her coloring. Karl Senior is brought into 
+                  the ER where Stephanie tries to save his life. As the police 
+                  go to arrest Morrigan for the murder of Father Greg, Amy leads 
+                  her to safety inside Brad and Penny's warehouse. Suddenly, the 
+                  building begins to shake as chanting is heard from outside. 
+                  Darkfin hitches a ride on Craig and Anita's helicopter. They 
+                  are shocked to discover what awaits them on shore.</font></div></td>
+            </tr>
+          </table>
+							<center>
+								<p><a name="year3"></a><img src="graphics/year_three.gif" width="249" height="53" border="0"></p>
+								<table border="0" cellpadding="3" cellspacing="3" width="85%">
+									<tr>
+										<td bgcolor="#000000">
+											<div align="center">
+												<a href="story/y3c01.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">Teaser</font></a></div>
+										</td>
+										<td bgcolor="#000066"><font size="2" face="Helvetica, Arial, Geneva, SunSans-Regular, sans-serif">A night to remember? Or maybe not as Gracie wakes up in bed with Jason. While she attempts to piece together the events of the previous 24 hours, all hell has broken loose in Duquesa Bay.</font></td>
+									</tr>
+									<tr>
+										<td bgcolor="#000000">
+											<center>
+												<a href="story/y3c01.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">Chapter 1</font></a></center>
+										</td>
+										<td bgcolor="#000066"><font size="2" face="Helvetica, Arial, Geneva, SunSans-Regular, sans-serif">Flashback to the night before. Darkfin hitches a ride on Craig and Anita&rsquo;s USCG copter. After battling the hoods on the cliff, the copter crashes, Craig is unconscious, and Darkfin saves Anita from a date with a dagger. Brad and Penny survive the quake but their shop is in ruins and Morrigan is seemingly lost in the rubble. Amethyst has actually led her to safety at the Quartz Lake Inn. Dr. Stephanie delivers the news about Karl to his family while Hector sneaks him out of the hospital.</font></td>
+									</tr>
+									<tr>
+										<td bgcolor="#000000">
+											<center>
+												<a href="story/y3c02.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">Chapter 2</font></a></center>
+										</td>
+										<td bgcolor="#000066"><font size="2" face="Helvetica, Arial, Geneva, SunSans-Regular, sans-serif">Griffin finds Erika recovering in the family boathouse. She refuses to believe him about her father&rsquo;s death. Hector hides Karl at the Fiore farmhouse and spars with Stephanie over their relationship. Morrigan has a dream flashing back to when she was six and to a place where she spent the day with her pregnant mother and a mysterious priest.</font></td>
+									</tr>
+									<tr>
+										<td bgcolor="#000000">
+											<center>
+												<a href="story/y3c03.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">Chapter 3</font></a></center>
+										</td>
+										<td bgcolor="#000066"><font size="2" face="Helvetica, Arial, Geneva, SunSans-Regular, sans-serif">The white robed hood leader gathers the others to discuss strategy while Amy is brought before them. Brad and Penny are confronted by the cops and Jeremy. Anita gets a call from Marcy while Ona Rosa pays her respects to the von Meers. A suspicious Erika confronts Stephanie about Karl.<br>
+											</font></td>
+									</tr>
+									<tr>
+										<td bgcolor="#000000">
+											<center>
+												<a href="story/y3c04.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">Chapter 4</font></a></center>
+										</td>
+										<td bgcolor="#000066"><font size="2" face="Helvetica, Arial, Geneva, SunSans-Regular, sans-serif">Amethyst must choose between saving Zach or sacrificing Morrigan. Erika finds out the truth about Karl and forces Stephanie to drive to Hector&rsquo;s place. Their close call with Anita prompts a sudden move to the Quartz Lake Inn where Erika meets up with Morrigan.</font></td>
+									</tr>
+									<tr>
+										<td bgcolor="#000000">
+											<center>
+												<a href="story/y3c05.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">Chapter 5</font></a></center>
+										</td>
+										<td bgcolor="#000066"><font size="2" face="Helvetica, Arial, Geneva, SunSans-Regular, sans-serif">In a moment of grief, KJ kisses Ona Rosa but Griffin drags him off to a crucial PCOC meeting. Erika asks Morrigan to stay with Karl while she works on an antidote. Justine returns home to find a gun held to her head by Joenne. Marcy and Anita handle things differently at the beach.</font></td>
+									</tr>
+									<tr>
+										<td bgcolor="#000000">
+											<div align="center">
+												<a href="story/y3c06.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">Chapter 6</font></a></div>
+										</td>
+										<td bgcolor="#000066"><font size="2" face="Helvetica, Arial, Geneva, SunSans-Regular, sans-serif">Shelby helps Erika in the lab as Javier eavesdrops. Morrigan goes to get ice for a deteriorating Karl when she is taken by the hooded Amy. Victoria warns KJ about their families at the end of the PCOC meeting. Lydia comforts Pauline while Penny has a revealing debate with Stephanie downstairs.</font></td>
+									</tr>
+									<tr>
+										<td bgcolor="#000000">
+											<div align="center">
+												<a href="story/y3c07.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">Chapter 7</font></a></div>
+										</td>
+										<td bgcolor="#000066"><font size="2" face="Helvetica, Arial, Geneva, SunSans-Regular, sans-serif">Covering Karl's supposed death for KCON, Gracie and Kylee ride back in the newsvan when they come across Justine and Joenne fleeing from the Hoods. When Erika confronts Javier over his ties to the toxin, he blames Griffin for hiring him. Big Joe dons his black robe and prepares for battle as Amy trades Morrigan to the hoods for Zach. They use the Marked One to find the right drilling spot as Mt. Wiggins erupts.</font></td>
+									</tr>
+									<tr>
+										<td bgcolor="#000000">
+											<div align="center">
+												<a href="story/y3c08.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">Chapter 8</font></a></div>
+										</td>
+										<td bgcolor="#000066"><font size="2" face="Helvetica, Arial, Geneva, SunSans-Regular, sans-serif">With a red moon rising, Stephanie prepares to use the serum on Karl. Erika fights with Griffin over the toxin for Ursula&rsquo;s cosmetics line. Sensing Morrigan is in dire straits, Erika dives off the penthouse balcony into the Santa Conchita. The hood battle claims the life of Joe but not before he throws Morrigan&rsquo;s lifeless body into the underground river. Hector reveals he is a member of The Clergy to Karl and Stephanie.</font></td>
+									</tr>
+									<tr>
+										<td bgcolor="#000000">
+											<div align="center">
+												<a href="story/y3c09.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">Chapter 9</font></a></div>
+										</td>
+										<td bgcolor="#000066"><font size="2" face="Helvetica, Arial, Geneva, SunSans-Regular, sans-serif">Craig and Anita help out with the evacuation but are nearly taken down by two military jets. Hector, Karl, and Stephanie flee from the lava as it overtakes the Quartz Lake Inn. Hooded Amy leads a bloody Zach to safety from the caves. KJ and Griffin are frantically searching the river when they come across Shelby and her young son in worship over the volcano.</font></td>
+									</tr>
+									<tr>
+										<td bgcolor="#000000">
+											<div align="center">
+												<a href="story/y3c10.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">Chapter 10</font></a></div>
+										</td>
+										<td bgcolor="#000066"><font size="2" face="Helvetica, Arial, Geneva, SunSans-Regular, sans-serif">Morrigan is brought back by Darkfin but she is not herself. After nearly taking out Darkfin with the trident, Morrigan settles down and the two run for safety through the foothills. They avoid a search helicopter and coyotes by taking shelter at Tim&rsquo;s family cabin. Darkfin tries to regenerate in the shower when Morrigan sneaks a peak and is stunned by the human silhouette.</font></td>
+									</tr>
+									<tr>
+										<td bgcolor="#000000">
+											<div align="center">
+												<a href="story/y3c11.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">Chapter 11</font></a></div>
+										</td>
+										<td bgcolor="#000066"><font size="2" face="Helvetica, Arial, Geneva, SunSans-Regular, sans-serif">Craig tries to hold Anita back as she verbally assaults the feds in charge. Gracie and Kylee call a truce to do a nationwide feed for KCON. Gracie attempts to talk to Zach about what happened. He cries that Morrigan is dead while Justine steals the newsvan. Hector and Stephanie drop off Karl at a secluded clinic. George and Lydia argue with Penny on the private jet to Sacramento when it hits unexpected turbulence.</font></td>
+									</tr>
+									<tr>
+										<td bgcolor="#000000">
+											<div align="center">
+												<a href="story/y3c12.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">Chapter 12</font></a></div>
+										</td>
+										<td bgcolor="#000066"><font size="2" face="Helvetica, Arial, Geneva, SunSans-Regular, sans-serif">On his way to the cabin, Tim is confronted by belligerent deputies. Morrigan awakens and realizes Darkfin knocked her out to keep her from discovering her identity. They finally have the chance to discuss Duquesa Bay, Nereidium, and other mysteries, one-on-one. A disguised Erika finds a way to distract the deputy at the door while Morrigan hides in the bathroom. Tim arrives at the cabin and rummages for the black bag.</font></td>
+									</tr>
+									<tr>
+										<td bgcolor="#000000">
+											<div align="center">
+												<a href="story/y3c13.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">Chapter 13</font></a></div>
+										</td>
+										<td bgcolor="#000066"><font size="2" face="Helvetica, Arial, Geneva, SunSans-Regular, sans-serif">To everyone&rsquo;s amazement, the Renselier jet lands safely. Penelope suspects something is happening to her but her parents refuse to discuss it. Erika knocks Tim out and leaves him for the deputies. She takes his bag and drives Morrigan away in the Jeep. Gracie is frustrated by Zach&rsquo;s nonsensical stories until he reveals a painful secret.</font></td>
+									</tr>
+									<tr>
+										<td bgcolor="#000000">
+											<div align="center">
+												<a href="story/y3c14.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">Chapter 14</font></a></div>
+										</td>
+										<td bgcolor="#000066"><font size="2" face="Helvetica, Arial, Geneva, SunSans-Regular, sans-serif">Erika drops Morrigan off at Amy&rsquo;s house and heads back to the hills for her trident. KJ and Griffin are arguing in the limo when they are diverted into a tunnel. Hoods surround them and Griffin introduces KJ to the white robed leader, his new business partner. Joenne and her squad clean up the battle area and come across the trident. They fire on the newsvan as it enters the perimeter.<br>
+											</font></td>
+									</tr>
+									<tr>
+										<td bgcolor="#000000">
+											<div align="center">
+												<a href="story/y3c15.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">Chapter 15</font></a></div>
+										</td>
+										<td bgcolor="#000066"><font size="2" face="Helvetica, Arial, Geneva, SunSans-Regular, sans-serif">Erika retrieves the trident and finishes off a hood before Joenne and the others return. The hood leader tells Griffin that the timetable has been moved up puts KJ to the test. Amethyst and Morrigan confront each other over The Clergy and their connections to it. Erika returns Tim&rsquo;s Jeep to the SCU lab and gathers supplies. Exhausted, she collapses in tears on her boat while the black bag spills its contents.</font></td>
+									</tr>
+									<tr>
+										<td bgcolor="#000000">
+											<div align="center">
+												<a href="story/y3c16.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">Chapter 16</font></a></div>
+										</td>
+										<td bgcolor="#000066"><font size="2" face="Helvetica, Arial, Geneva, SunSans-Regular, sans-serif">A week has passed since the eruption with the KCON news team reporting on the devastating aftermath. Claudia and her family board the Meeramar tanker for Karl&rsquo;s memorial. Jeremy and Gracie are planning her trip when Jason shows up. Erika and Stephanie discuss Karl when KJ confronts Erika over her disappearance. A sudden storm and an explosion rock the tanker.</font></td>
+									</tr>
+									<tr>
+										<td bgcolor="#000000">
+											<div align="center">
+												<a href="story/y3c17.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">Chapter 17</font></a></div>
+										</td>
+										<td bgcolor="#000066"><font size="2" face="Helvetica, Arial, Geneva, SunSans-Regular, sans-serif">Craig attempts to calm the panicked passengers as the ship takes on water. Ona Rosa is reflecting in church when she is strangled by a hood. Back at the farm, Hector, Carmen and Frank bicker over the land, the bracelet, and Stephanie. Marcy and Anita consider leaving Duquesa Bay when they hear about the tanker. Erika is baited by the enemy lights at sea but resists. She is forced to dive overboard to save Hannah.</font></td>
+									</tr>
+									<tr>
+										<td bgcolor="#000000">
+											<div align="center">
+												<a href="story/y3c18.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">Chapter 18</font></a></div>
+										</td>
+										<td bgcolor="#000066"><font size="2" face="Helvetica, Arial, Geneva, SunSans-Regular, sans-serif">Craig also dives in after Hannah but is knocked unconscious. Darkfin flashes back to a time with Samadara before saving both Hannah and Craig. She hands them over to an oddly behaving Penelope. Morrigan senses the doom and forces Amy to drive her to the beach. Darkfin enlists the help of her marine friends as she battles the lights. Anita and the USCG finally evacuate the ship. Later, Penny is questioned by Anita.</font></td>
+									</tr>
+									<tr>
+										<td bgcolor="#000000">
+											<div align="center">
+												<a href="story/y3c19.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">Chapter 19</font></a></div>
+										</td>
+										<td bgcolor="#000066"><font size="2" face="Helvetica, Arial, Geneva, SunSans-Regular, sans-serif">Morrigan saves Darkfin with the trident but is forced to challenge Amethyst. Morrigan and Darkfin drive to the Bay Valley Medical Center where the tanker&rsquo;s passengers are being treated. Darkfin uses the sewers to break in and get the necessary supplies. The hoods surprise Morrigan by floating past her and hurrying inside for the showdown.</font></td>
+									</tr>
+									<tr>
+										<td bgcolor="#000000">
+											<div align="center">
+												<a href="story/y3c20.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">Chapter 20</font></a></div>
+										</td>
+										<td bgcolor="#000066">
+											<div align="left">
+												<font size="2" face="Helvetica, Arial, Geneva, SunSans-Regular, sans-serif">Inside a clandestine office, Doug calls Griffin to oversee the drilling in the Kiyomis. They argue when Griffin alerts him to a potential problem. Doug and Turner posture over the power of the white robe. Penny assists a weakened Darkfin and they take on the hoods with Anita and Morrigan. Jason is killed and Hector betrays his family as a massive explosion rocks the hospital. The real white robed leader watches from a distance &#150; Samadara has returned!</font></div>
+										</td>
+									</tr>
+								</table>
+							</center>
+							<p><font color="black">.</font></p>
+						</center>
+					</td>
+					<td width="5%" bgcolor="black"><font color="black">.</font></td>
+				</tr>
+			</table>
+			<table border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="black">
+				<tr>
+					<td>&nbsp;
+						<center>
+							<p><img border="0" height="40" width="85" src="graphics/h_left_top.gif"><csobj w="163" h="40" t="Button" ht="graphics/h_mainpage_x.gif"><a href="main.html" onmouseover="return CSIShow(/*CMP*/'button',1)" onmouseout="return CSIShow(/*CMP*/'button',0)" onclick="return CSButtonReturn()"><img src="graphics/h_mainpage.gif" width="163" height="40" name="button" border="0" alt="Main Page : http://www.darkfin.com/main.html"></a></csobj><csobj w="158" h="40" t="Button" ht="graphics/h_story_x.gif"><a href="story.html" onmouseover="return CSIShow(/*CMP*/'button2',1)" onmouseout="return CSIShow(/*CMP*/'button2',0)" onclick="return CSButtonReturn()"><img src="graphics/h_story.gif" width="158" height="40" name="button2" border="0" alt="Go to the Story: http://www.darkfin.com/story.html"></a></csobj><img border="0" height="40" width="125" src="graphics/h_right_top.gif"><br>
+							<csobj w="164" h="49" t="Button" ht="graphics/h_people_x.gif"><a href="people_places.html" onmouseover="return CSIShow(/*CMP*/'button3',1)" onmouseout="return CSIShow(/*CMP*/'button3',0)" onclick="return CSButtonReturn()"><img src="graphics/h_people.gif" width="164" height="49" name="button3" border="0" alt="Characters &amp; Settings: http://www.darkfin.com/people_places.html"></a></csobj><csobj w="155" h="49" t="Button" ht="graphics/h_aquarium_x.gif"><a href="aquarium.html" onmouseover="return CSIShow(/*CMP*/'button4',1)" onmouseout="return CSIShow(/*CMP*/'button4',0)" onclick="return CSButtonReturn()"><img src="graphics/h_aquarium.gif" width="155" height="49" name="button4" border="0" alt="Gallery Page: http://www.darkfin.com/aquarium.html"></a></csobj><csobj w="87" h="49" t="Button" ht="graphics/h_info_x.gif"><a href="information.html" onmouseover="return CSIShow(/*CMP*/'button5',1)" onmouseout="return CSIShow(/*CMP*/'button5',0)" onclick="return CSButtonReturn()"><img src="graphics/h_info.gif" width="87" height="49" name="button5" border="0" alt="General Information: http://www.darkfin.com/information.html"></a></csobj><img border="0" height="49" width="125" src="graphics/h_right_bottom.gif"></p>
+							<p><font color="#99ffff" size="1">Surfaced on July 1, 2000<br>
+									
+							&reg; All Rights Reserved, 2000-2018<br />
+								</font><a href="mailto:webmaster@darkfin.com"><font size="1" color="#ccccff">Contact the Webmaster<br>
+							</font></a></center>
+					</td>
+				</tr>
+			</table>
+		</center>
+	</body>
+
+</html>

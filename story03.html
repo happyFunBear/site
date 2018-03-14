@@ -1,0 +1,545 @@
+<html>
+
+	
+<head>
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+<meta name="generator" content="Adobe GoLive 4">
+<title>Darkfin: Story</title>
+<meta name="description" content="DARKFIN is an online super heroine story with a complex plot and diverse characters.">
+<meta name="keywords" content="darkfin, super hero, superhero, super heroine, superheroine, comic, comic book, adventure, story">
+<csScriptDict> 
+<script><!--
+CSInit = new Array;
+function CSScriptInit() {
+if(typeof(skipPage) != "undefined") { if(skipPage) return; }
+idxArray = new Array;
+for(var i=0;i<CSInit.length;i++)
+	idxArray[i] = i;
+CSAction2(CSInit, idxArray);}
+CSAg = window.navigator.userAgent; CSBVers = parseInt(CSAg.charAt(CSAg.indexOf("/")+1),10);
+function IsIE() { return CSAg.indexOf("MSIE") > 0;}
+function CSIEStyl(s) { return document.all.tags("div")[s].style; }
+function CSNSStyl(s) { return CSFindElement(s,0); }
+function CSFindElement(n,ly) { if (CSBVers < 4) return document[n];
+	var curDoc = ly ? ly.document : document; var elem = curDoc[n];
+	if (!elem) { for (var i=0;i<curDoc.layers.length;i++) {
+		elem = CSFindElement(n,curDoc.layers[i]); if (elem) return elem; }}
+	return elem;
+}
+
+function CSClickReturn () {
+	var bAgent = window.navigator.userAgent; 
+	var bAppName = window.navigator.appName;
+	if ((bAppName.indexOf("Explorer") >= 0) && (bAgent.indexOf("Mozilla/3") >= 0) && (bAgent.indexOf("Mac") >= 0))
+		return true; // dont follow link
+	else return false; // dont follow link
+}
+
+function CSButtonReturn () {
+	var bAgent = window.navigator.userAgent; 
+	var bAppName = window.navigator.appName;
+	if ((bAppName.indexOf("Explorer") >= 0) && (bAgent.indexOf("Mozilla/3") >= 0) && (bAgent.indexOf("Mac") >= 0))
+		return false; // follow link
+	else return true; // follow link
+}
+
+CSIm = new Object();
+function CSIShow(n,i) {
+	if (document.images) {
+		if (CSIm[n]) {
+			var img = (!IsIE()) ? CSFindElement(n,0) : document[n];
+			if (img && typeof(CSIm[n][i].src) != "undefined") {img.src = CSIm[n][i].src;}
+			if(i != 0)
+				self.status = CSIm[n][3];
+			else
+				self.status = " ";
+			return true;
+		}
+	}
+	return false;
+}
+function CSILoad(action) {
+	im = action[1];
+	if (document.images) {
+		CSIm[im] = new Object();
+		for (var i=2;i<5;i++) {
+			if (action[i] != '') { CSIm[im][i-2] = new Image(); CSIm[im][i-2].src = action[i]; }
+			else CSIm[im][i-2] = 0;
+		}
+		CSIm[im][3] = action[5];
+	}
+}
+CSStopExecution = false;
+function CSAction(array) { 
+	return CSAction2(CSAct, array);
+}
+function CSAction2(fct, array) { 
+	var result;
+	for (var i=0;i<array.length;i++) {
+		if(CSStopExecution) return false; 
+		var actArray = fct[array[i]];
+		if (actArray == null) return false;
+		var tempArray = new Array;
+		for(var j=1;j<actArray.length;j++) {
+			if((actArray[j] != null) && (typeof(actArray[j]) == "object") && (actArray[j].length == 2)) {
+				if(actArray[j][0] == "VAR") {
+					tempArray[j] = CSStateArray[actArray[j][1]];
+				}
+				else {
+					if(actArray[j][0] == "ACT") {
+						tempArray[j] = CSAction(new Array(new String(actArray[j][1])));
+					}
+				else
+					tempArray[j] = actArray[j];
+				}
+			}
+			else
+				tempArray[j] = actArray[j];
+		}			
+		result = actArray[0](tempArray);
+	}
+	return result;
+}
+CSAct = new Object;
+
+
+// --></script>
+</csScriptDict> <csActionDict> 
+<script><!--
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'button7',/*URL*/'graphics/h_mainpage.gif',/*URL*/'graphics/h_mainpage_x.gif',/*URL*/'','Main Page : http://www.darkfin.com/main.html');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'button8',/*URL*/'graphics/h_story.gif',/*URL*/'graphics/h_story_x.gif',/*URL*/'','Go to the Story: http://www.darkfin.com/story.html');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'button9',/*URL*/'graphics/h_people.gif',/*URL*/'graphics/h_people_x.gif',/*URL*/'','Characters & Settings: http://www.darkfin.com/people_places.html');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'button10',/*URL*/'graphics/h_aquarium.gif',/*URL*/'graphics/h_aquarium_x.gif',/*URL*/'','Gallery Page: http://www.darkfin.com/aquarium.html');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'button11',/*URL*/'graphics/h_info.gif',/*URL*/'graphics/h_info_x.gif',/*URL*/'','General Information: http://www.darkfin.com/information.html');
+
+// --></script>
+</csActionDict> 
+<style type="text/css">
+<!--
+-->
+</style>
+</head>
+
+	<body marginwidth="0" marginheight="0" leftMargin="0" topMargin="0" style="margin:0" bgColor="black" text="#99ffff" link="#99ccff" aLink="#9966cc" vLink="#9966cc" background="graphics/ocean_bkg_dark.jpg" onLoad="CSScriptInit();">
+		<table border="0" cellpadding="0" cellspacing="0" width="100%">
+			<tr>
+				<td width="5%" bgcolor="black"><font color="black">.</font></td>
+				<td width="90%" bgcolor="black">
+					<div align="center">
+						<img border="0" height="185" width="437" src="graphics/df_main_logo.jpg"><br>
+						
+						
+						&nbsp;<img border="0" height="59" width="176" src="graphics/story.gif"></div>
+				</td>
+				<td width="5%" bgcolor="black"><font color="black">.</font></td>
+			</tr>
+			<tr>
+				<td width="5%" bgcolor="black"><font color="black">.</font></td>
+				<td width="90%">
+					<div align="center">
+						<p><font color="black">.</font></p>
+						
+        <table border="0" cellPadding="2" cellSpacing="0" width="80%">
+          <tr>
+								<td>
+									<div align="left"> 
+                <p><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" color="#00bfff"><b>What 
+                  is Darkfin<sup>&reg;</sup>?</b></font> </p>
+                <p><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">Darkfin 
+                  is a combination of many things. It is a story in the superhero 
+                  tradition, but it is not told with the traditional panel and 
+                  word balloon style. It has the characters and interpersonal 
+                  drama of a soap opera, but it has the action and suspense of 
+                  an adventure novel. It's a romance, a comedy, a tragedy, a mystery. 
+                  It's a different kind of story with different kinds of characters.</font></p>
+                <p><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><img src="graphics/tvma.gif" width="90" height="30" align="left"><font size="2">Darkfin 
+                  is intended for mature audiences. Much in the style of an HBO 
+                  drama series there will be occasional &quot;adult situations 
+                  and language&quot;. Read Accordingly</font>.</font></p>
+									</div>
+								</td>
+							</tr>
+						</table>
+						
+        <br>
+        <center>
+							
+          <table border="0" cellpadding="5" cellspacing="0" width="80%">
+            <tr> 
+              <td width="50%"> <div align="center"> <img src="graphics/year_three.gif" width="249" height="53" border="0"></div></td>
+              <td> <div align="center"><font size="5" face="Arial, Helvetica, sans-serif"><strong>Previous 
+                  Year Synopsis</strong></font></div></td>
+            </tr>
+            <tr> 
+              <td width="50%" valign="top"> <div align="center"> 
+                  <table border="0" cellpadding="2" cellspacing="0" width="80%">
+                    <tr> 
+                      <td bgcolor="black"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><b>Latest 
+                        Chapter</b></font></td>
+                      <td bgcolor="black"> <div align="center"> <font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><b>Last 
+                          Update</b></font></div></td>
+                    </tr>
+                    <tr>
+                      <td bgcolor="#000066"><a href="story/y3c05.html"><font face="Arial, Helvetica, sans-serif">Year 
+                        3, Chapter 5</font></a></td>
+                      <td bgcolor="#000066"><center>
+                          <font color="#00FFFF" size="2" face="Arial, Helvetica, sans-serif">3/24/2003</font> 
+                        </center></td>
+                    </tr>
+                    <tr> 
+                      <td bgcolor="#000066"><a href="story/y3c04.html"><font face="Arial, Helvetica, sans-serif">Year 
+                        3, Chapter 4</font></a></td>
+                      <td bgcolor="#000066"><div align="center"><font color="#00FFFF" size="2" face="Arial, Helvetica, sans-serif">2/23/2003</font></div></td>
+                    </tr>
+                    <tr> 
+                      <td bgcolor="#000066"><a href="story/y3c03.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">Year 
+                        3, Chapter 3</font></a></td>
+                      <td bgcolor="#000066"><div align="center"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2" color="aqua">11/17/2002</font> 
+                        </div></td>
+                    </tr>
+                    <tr> 
+                      <td bgcolor="#000066"><a href="story/y3c02.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">Year 
+                        3, Chapter 2</font></a></td>
+                      <td bgcolor="#000066"> <div align="center"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2" color="aqua">11/4/2002</font> 
+                        </div></td>
+                    </tr>
+                    <tr> 
+                      <td bgcolor="#000066"><a href="story/y3_teaser.html"></a><a href="story/y3c01.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">Year 
+                        3, Chapter 1</font></a></td>
+                      <td bgcolor="#000066"> <div align="center"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2" color="aqua">10/20/2002</font></div></td>
+                    </tr>
+                    <tr> 
+                      <td bgcolor="#000066"><a href="story/y3_teaser.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">Year 
+                        3, Teaser</font></a></td>
+                      <td bgcolor="#000066"><div align="center"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2" color="aqua">9/29/2002</font></div></td>
+                    </tr>
+                  </table>
+                </div></td>
+              <td valign="top"> <div align="center"><a href="synopses.html"><img src="graphics/year_one_large.gif" width="207" height="52" border="0"></a> 
+                  <br>
+                  <a href="synopses.html"><img src="graphics/year02_large.gif" width="207" height="52" border="0"></a> 
+                </div></td>
+            </tr>
+            <tr> 
+              <td width="50%" valign="top"> <div align="center"> 
+                  <p><a href="synopses.html"><img src="graphics/year_two_large.gif" width="207" height="52" border="0"></a> 
+                  </p>
+                  <table border="0" cellpadding="2" cellspacing="0" width="80%" bgcolor="#000066">
+                    <tr> 
+                      <td colspan="2" bgcolor="black"> <div align="center"> <b><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">Previous 
+                          Chapters</font></b></div></td>
+                    </tr>
+                    <tr valign="top"> 
+                      <td width="33%" bgcolor="#000066"> 
+                        <div align="right"><a href="story/y2c01.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2">Chapter 
+                          1: </font></a></div></td>
+                      <td width="67%" bgcolor="#000066"><a href="story/y2c01.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2">&quot;Aperture&quot;</font></a></td>
+                    </tr>
+                    <tr valign="top"> 
+                      <td width="33%" bgcolor="#000066"> 
+                        <div align="right"><a href="story/y2c02.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2">Chapter 
+                          2: </font></a></div></td>
+                      <td width="67%" bgcolor="#000066"><a href="story/y2c02.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2">&quot;Under 
+                        the Sea&quot;</font></a></td>
+                    </tr>
+                    <tr valign="top"> 
+                      <td width="33%" bgcolor="#000066">
+<div align="right"><a href="story/y2c03.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2"> 
+                          Chapter 3: </font></a></div></td>
+                      <td width="67%" bgcolor="#000066"><a href="story/y2c03.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2">&quot;High 
+                        Seas&quot;</font></a></td>
+                    </tr>
+                    <tr valign="top"> 
+                      <td width="33%" bgcolor="#000066"> 
+                        <div align="right"><a href="story/y2c04.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2">Chapter 
+                          4: </font></a></div></td>
+                      <td width="67%" bgcolor="#000066"><a href="story/y2c04.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2">&quot;Agendas&quot;</font></a></td>
+                    </tr>
+                    <tr valign="top"> 
+                      <td width="33%" bgcolor="#000066"> 
+                        <div align="right"><a href="story/y2c05.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2">Chapter 
+                          5: </font></a></div></td>
+                      <td width="67%" bgcolor="#000066"><a href="story/y2c05.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2">&quot;Moonlight 
+                        Observations&quot;</font></a></td>
+                    </tr>
+                    <tr valign="top"> 
+                      <td width="33%" bgcolor="#000066"> 
+                        <div align="right"><a href="story/y2c06.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2">Chapter 
+                          6: </font></a></div></td>
+                      <td width="67%" bgcolor="#000066"><a href="story/y2c06.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2">&quot;Contact&quot;</font></a></td>
+                    </tr>
+                    <tr valign="top"> 
+                      <td width="33%" bgcolor="#000066"> 
+                        <div align="right"><font size="2" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><a href="story/y2c07.html">Chapter 
+                          7: </a></font></div></td>
+                      <td width="67%" bgcolor="#000066"><font size="2" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"><a href="story/y2c07.html">&quot;Lusus 
+                        Naturae&quot;</a></font></td>
+                    </tr>
+                    <tr valign="top"> 
+                      <td width="33%" bgcolor="#000066"> 
+                        <div align="right"><a href="story/y2c08.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2">Chapter 
+                          8: </font></a></div></td>
+                      <td width="67%" bgcolor="#000066"><a href="story/y2c08.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2">&quot;Sign 
+                        Waves&quot;</font></a></td>
+                    </tr>
+                    <tr valign="top"> 
+                      <td width="33%" bgcolor="#000066"> 
+                        <div align="right"><a href="story/y2c09.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2">Chapter 
+                          9: </font></a></div></td>
+                      <td width="67%" bgcolor="#000066"><a href="story/y2c09.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2">&quot;Querida&quot;</font></a></td>
+                    </tr>
+                    <tr valign="top"> 
+                      <td width="33%" bgcolor="#000066"> 
+                        <div align="right"><a href="story/y2c10.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2">Chapter 
+                          10: </font></a></div></td>
+                      <td width="67%" bgcolor="#000066"><a href="story/y2c10.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2">&quot;Breaking 
+                        and Entering&quot;</font></a></td>
+                    </tr>
+                    <tr valign="top"> 
+                      <td width="33%" bgcolor="#000066"> 
+                        <div align="right"><a href="story/y2c11.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2">Chapter 
+                          11: </font></a></div></td>
+                      <td width="67%" bgcolor="#000066"><a href="story/y2c11.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2">&quot;Revelations&quot;</font></a></td>
+                    </tr>
+                    <tr valign="top"> 
+                      <td width="33%" bgcolor="#000066"> 
+                        <div align="right"><a href="story/y2c12.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2">Chapter 
+                          12: </font></a></div></td>
+                      <td width="67%" bgcolor="#000066"><a href="story/y2c12.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2">&quot;Shot 
+                        Through The Heart&quot;</font></a></td>
+                    </tr>
+                    <tr valign="top"> 
+                      <td width="33%" bgcolor="#000066"> 
+                        <div align="right"><a href="story/y2c13.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2">Chapter 
+                          13: </font></a></div></td>
+                      <td width="67%" bgcolor="#000066"><a href="story/y2c13.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2">&quot;Try 
+                        Angulation&quot;</font></a></td>
+                    </tr>
+                    <tr valign="top"> 
+                      <td width="33%" bgcolor="#000066"> 
+                        <div align="right"><a href="story/y2c14.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2">Chapter 
+                          14: </font></a></div></td>
+                      <td width="67%" bgcolor="#000066"><a href="story/y2c14.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2">&quot;Points 
+                        of Connection&quot;</font></a></td>
+                    </tr>
+                    <tr valign="top"> 
+                      <td width="33%" bgcolor="#000066"> 
+                        <div align="right"><a href="story/y2c15.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2">Chapter 
+                          15: </font></a></div></td>
+                      <td width="67%" bgcolor="#000066"><a href="story/y2c15.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2">&quot;Awash&quot;</font></a></td>
+                    </tr>
+                    <tr valign="top"> 
+                      <td width="33%" bgcolor="#000066"> 
+                        <div align="right"><a href="story/y2c16.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2">Chapter 
+                          16: </font></a></div></td>
+                      <td width="67%" bgcolor="#000066"><a href="story/y2c16.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2">&quot;If&quot;</font></a></td>
+                    </tr>
+                    <tr valign="top"> 
+                      <td width="33%" bgcolor="#000066"> 
+                        <div align="right"><a href="story/y2c17.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2">Chapter 
+                          17: </font></a></div></td>
+                      <td width="67%" bgcolor="#000066"><a href="story/y2c17.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2">&quot;Domino 
+                        Dancing&quot;</font></a></td>
+                    </tr>
+                    <tr valign="top"> 
+                      <td width="33%" bgcolor="#000066"> 
+                        <div align="right"><a href="story/y2c18.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2">Chapter 
+                          18: </font></a></div></td>
+                      <td width="67%" bgcolor="#000066"><a href="story/y2c18.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2">&quot;Holy 
+                        Water, Sacred Ground&quot;</font></a></td>
+                    </tr>
+                    <tr valign="top"> 
+                      <td width="33%" bgcolor="#000066"> 
+                        <div align="right"><a href="story/y2c19.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2">Chapter 
+                          19: </font></a></div></td>
+                      <td width="67%" bgcolor="#000066"><a href="story/y2c19.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2">&quot;Capers 
+                        and Kippers&quot;</font></a></td>
+                    </tr>
+                    <tr valign="top"> 
+                      <td width="33%" bgcolor="#000066"> 
+                        <div align="right"><a href="story/y2c20.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2">Chapter 
+                          20: </font></a></div></td>
+                      <td width="67%" bgcolor="#000066"><a href="story/y2c20.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2">&quot;Through 
+                        the Hooking Glass&quot;</font></a></td>
+                    </tr>
+                  </table>
+                  <p>&nbsp;</p>
+                </div></td>
+              <td valign="top"> <div align="center"> <font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2"><img src="graphics/vignettes_large.gif" width="207" height="52" border="0"><br>
+                  So many people, so little time! Year 2 marks the debut of -&quot;Vignettes&quot; 
+                  - this feature provides insight into the supporting players 
+                  in and around Duquesa Bay&reg; but does not necessarily influence 
+                  the main plotlines. You may consider these scenes a tasty side 
+                  dish in between bites of the main course.<br>
+                  </font><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2" color="black">.</font><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2"> 
+                  <table border="0" cellpadding="2" cellspacing="0" width="80%" bgcolor="#000066">
+                    <tr valign="top"> 
+                      <td bgcolor="black"> <div align="center"> <b><font size="2" face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular"> 
+                          Title</font></b></div>
+                        <div align="left"></div></td>
+                      <td bgcolor="black"><font size="2"><strong>Featuring</strong></font></td>
+                    </tr>
+                    <tr valign="middle"> 
+                      <td width="50%" bgcolor="#000066"> <div align="center"> 
+                          <font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2"><a href="story/v01.html">&quot;At 
+                          The Movies&quot; </a></font></div></td>
+                      <td width="50%" bgcolor="#000066"> <div align="left"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="1"><a href="story/v01.html">Joenne 
+                          and Justine</a></font></div></td>
+                    </tr>
+                    <tr valign="middle"> 
+                      <td width="50%" bgcolor="#000066"> <div align="center"> 
+                          <font size="2"><a href="story/v02.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">&quot;Club 
+                          Sandwich&quot; </font></a></font></div></td>
+                      <td width="50%" bgcolor="#000066"> <div align="left"><font size="1"><a href="story/v02.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">Shelby, 
+                          Lydia and Ona Rosa</font></a></font></div></td>
+                    </tr>
+                    <tr valign="middle"> 
+                      <td width="50%" bgcolor="#000066"> <div align="center"> 
+                          <a href="story/v03.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2">&quot;Playing 
+                          Cards&quot; </font></a></div></td>
+                      <td width="50%" bgcolor="#000066"> <div align="left"><font size="1"><a href="story/v03.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">Morri, 
+                          Amy, Zach, Gracie</font></a></font></div></td>
+                    </tr>
+                    <tr valign="middle"> 
+                      <td width="50%" bgcolor="#000066"> <div align="center"> 
+                          <font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2"><a href="story/v04.html">&quot;Ruminations&quot; 
+                          </a></font></div></td>
+                      <td width="50%" bgcolor="#000066"> <div align="left"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="1"><a href="story/v04.html">Penny, 
+                          Jeremy, Brad</a></font></div></td>
+                    </tr>
+                    <tr valign="middle"> 
+                      <td width="50%" bgcolor="#000066"> <div align="center"> 
+                          <font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2"><a href="story/v05.html">&quot;Soothing&quot; 
+                          </a></font></div></td>
+                      <td width="50%" bgcolor="#000066"> <div align="left"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="1"><a href="story/v05.html">Erika, 
+                          Pauline, Big Joe</a></font></div></td>
+                    </tr>
+                    <tr valign="middle"> 
+                      <td width="50%" bgcolor="#000066"> <div align="center"> 
+                          <a href="story/v06.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2">&quot;Here 
+                          She Comes...&quot; </font></a></div></td>
+                      <td width="50%" bgcolor="#000066"> <div align="left"><font size="1"><a href="story/v06.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">Kylee</font></a></font></div></td>
+                    </tr>
+                    <tr valign="middle"> 
+                      <td width="50%" bgcolor="#000066"> <div align="center"> 
+                          <font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2"><a href="story/v07.html">&quot;Happy 
+                          Holidaze&quot; </a></font></div></td>
+                      <td width="50%" bgcolor="#000066"> <div align="left"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="1"><a href="story/v07.html">Benjamin, 
+                          Claudia and family</a></font></div></td>
+                    </tr>
+                    <tr valign="middle"> 
+                      <td width="50%" bgcolor="#000066"> <div align="center"> 
+                          <font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2"><a href="story/v08.html">&quot;Office 
+                          Party&quot; </a></font></div></td>
+                      <td width="50%" bgcolor="#000066"> <div align="left"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="1"><a href="story/v08.html">KCON 
+                          Staff</a></font></div></td>
+                    </tr>
+                    <tr valign="middle"> 
+                      <td width="50%" bgcolor="#000066"> <div align="center"> 
+                          <font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2"><a href="story/v09.html">&quot;Taking 
+                          Care of Business&quot; </a></font></div></td>
+                      <td width="50%" bgcolor="#000066"> <div align="left"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="1"><a href="story/v09.html">Doug 
+                          Martel</a></font></div></td>
+                    </tr>
+                    <tr valign="middle"> 
+                      <td width="50%" bgcolor="#000066"> <div align="center"> 
+                          <font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2"><a href="story/v10.html">&quot;The 
+                          Jade Gate&quot; </a></font></div></td>
+                      <td width="50%" bgcolor="#000066"> <div align="left"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="1"><a href="story/v10.html">Anita, 
+                          Marcy and More</a></font></div></td>
+                    </tr>
+                    <tr valign="middle"> 
+                      <td width="50%" bgcolor="#000066"> <div align="center"> 
+                          <font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2"><a href="story/v11.html">&quot;At 
+                          The Mall&quot; </a></font></div></td>
+                      <td width="50%" bgcolor="#000066"> <div align="left"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="1"><a href="story/v11.html">Jeremy, 
+                          Penny</a></font></div></td>
+                    </tr>
+                    <tr valign="middle"> 
+                      <td width="50%" bgcolor="#000066"> <div align="center"> 
+                          <font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2"><a href="story/v12.html">&quot;In 
+                          the Bedroom&quot; </a></font></div></td>
+                      <td width="50%" bgcolor="#000066"> <div align="left"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="1"><a href="story/v12.html">Turner, 
+                          Kylee</a></font></div></td>
+                    </tr>
+                    <tr valign="middle"> 
+                      <td width="50%" bgcolor="#000066"> <div align="center"> 
+                          <a href="story/v13.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2">&quot;Age 
+                          29: Part VI&quot; </font></a></div></td>
+                      <td width="50%" bgcolor="#000066"> <div align="left"><font size="1"><a href="story/v13.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">Victoria 
+                          Martel</font></a></font></div></td>
+                    </tr>
+                    <tr valign="middle"> 
+                      <td width="50%" bgcolor="#000066"> <div align="center"> 
+                          <a href="story/v14.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2">&quot;Three 
+                          Years To The Day&quot; </font></a></div></td>
+                      <td width="50%" bgcolor="#000066"> <div align="left"><font size="1"><a href="story/v14.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">Erika 
+                          von Meer</font></a></font></div></td>
+                    </tr>
+                    <tr valign="middle"> 
+                      <td width="50%" bgcolor="#000066"> <div align="center"> 
+                          <a href="story/v15.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2">&quot;Le 
+                          Spa Duchesse&quot; </font></a></div></td>
+                      <td width="50%" bgcolor="#000066"> <div align="left"><font size="1"><a href="story/v15.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">Anita, 
+                          Marcy</font></a></font></div></td>
+                    </tr>
+                    <tr valign="middle"> 
+                      <td width="50%" bgcolor="#000066"> <div align="center"> 
+                          <a href="story/v16.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2">&quot;Schedules&quot; 
+                          </font></a></div></td>
+                      <td width="50%" bgcolor="#000066"> <div align="left"><font size="1"><a href="story/v16.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">Erika, 
+                          Tim, Shelby, Sandy</font></a></font></div></td>
+                    </tr>
+                    <tr valign="middle"> 
+                      <td width="50%" bgcolor="#000066"> <div align="center"> 
+                          <a href="story/v17.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2">&quot;The 
+                          District of Columbia&quot; </font></a></div></td>
+                      <td width="50%" bgcolor="#000066"> <div align="left"><font size="1"><a href="story/v17.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">Penny, 
+                          Lydia, George</font></a></font></div></td>
+                    </tr>
+                    <tr valign="middle"> 
+                      <td width="50%" bgcolor="#000066"> <div align="center"><a href="story/v18.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2">&quot;It's 
+                          Only a TV Show&quot; </font></a></div></td>
+                      <td width="50%" bgcolor="#000066"> <div align="left"><font size="1"><a href="story/v18.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">Anita, 
+                          Marcy, Craig</font></a></font></div></td>
+                    </tr>
+                    <tr valign="middle"> 
+                      <td width="50%" bgcolor="#000066"> <div align="center"><a href="story/v19.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="2">&quot;Sail 
+                          On, Ceylon&quot; </font></a></div></td>
+                      <td width="50%" bgcolor="#000066"> <div align="left"><font size="1"><a href="story/v19.html"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">Erika, 
+                          Sammi</font></a></font></div></td>
+                    </tr>
+                  </table>
+                  </font></div></td>
+            </tr>
+          </table>
+							<p></p>
+							<p></p>
+							<p></p>
+						</center>
+					</div>
+				</td>
+				<td width="5%" bgcolor="black"><font color="black">.</font></td>
+			</tr>
+			<tr>
+				<td width="5%" bgcolor="black"><font color="black">.</font></td>
+				<td width="90%" bgcolor="black">
+					<center>
+						<div align="center">
+							<center>
+								<p><font color="black">.</font></p>
+								<p><img border="0" height="40" width="85" src="graphics/h_left_top.gif"><csobj w="163" h="40" t="Button" ht="graphics/h_mainpage_x.gif" st="Main Page : http://www.darkfin.com/main.html"><a href="main.html" onmouseover="return CSIShow(/*CMP*/'button7',1)" onmouseout="return CSIShow(/*CMP*/'button7',0)" onclick="return CSButtonReturn()"><img src="graphics/h_mainpage.gif" width="163" height="40" name="button7" border="0" alt="Main Page : http://www.darkfin.com/main.html"></a></csobj><csobj w="158" h="40" t="Button" ht="graphics/h_story_x.gif" st="Go to the Story: http://www.darkfin.com/story.html"><a href="story.html" onmouseover="return CSIShow(/*CMP*/'button8',1)" onmouseout="return CSIShow(/*CMP*/'button8',0)" onclick="return CSButtonReturn()"><img src="graphics/h_story.gif" width="158" height="40" name="button8" border="0" alt="Go to the Story: http://www.darkfin.com/story.html"></a></csobj><img border="0" height="40" width="125" src="graphics/h_right_top.gif"><br>
+									<csobj w="164" h="49" t="Button" ht="graphics/h_people_x.gif" st="Characters & Settings: http://www.darkfin.com/people_places.html"><a href="people_places.html" onmouseover="return CSIShow(/*CMP*/'button9',1)" onmouseout="return CSIShow(/*CMP*/'button9',0)" onclick="return CSButtonReturn()"><img src="graphics/h_people.gif" width="164" height="49" name="button9" border="0" alt="Characters &amp; Settings: http://www.darkfin.com/people_places.html"></a></csobj><csobj w="155" h="49" t="Button" ht="graphics/h_aquarium_x.gif" st="Gallery Page: http://www.darkfin.com/aquarium.html"><a href="aquarium.html" onmouseover="return CSIShow(/*CMP*/'button10',1)" onmouseout="return CSIShow(/*CMP*/'button10',0)" onclick="return CSButtonReturn()"><img src="graphics/h_aquarium.gif" width="155" height="49" name="button10" border="0" alt="Gallery Page: http://www.darkfin.com/aquarium.html"></a></csobj><csobj w="87" h="49" t="Button" ht="graphics/h_info_x.gif" st="General Information: http://www.darkfin.com/information.html"><a href="information.html" onmouseover="return CSIShow(/*CMP*/'button11',1)" onmouseout="return CSIShow(/*CMP*/'button11',0)" onclick="return CSButtonReturn()"><img src="graphics/h_info.gif" width="87" height="49" name="button11" border="0" alt="General Information: http://www.darkfin.com/information.html"></a></csobj><img border="0" height="49" width="125" src="graphics/h_right_bottom.gif"></p>
+								<p><font color="#99ffff" size="1">Surfaced  on July 1, 2000<br>
+										&reg; All Rights Reserved, 2000-2018<br />
+									</font><a href="mailto:webmaster@darkfin.com"><font size="1" color="#ccccff">Contact the Webmaster</font></a></p>
+							</center>
+						</div>
+					</center>
+				</td>
+				<td width="5%" bgcolor="black"><font color="black">.</font></td>
+			</tr>
+		</table>
+	</body>
+
+</html>
