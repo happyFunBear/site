@@ -1,6 +1,6 @@
 
 module.exports = function (grunt) {
-  var _ = require('lodash');
+  // var _ = require('lodash');
 
   var yearTitle = {
     1: 'Duquesa Bay',
