@@ -46,9 +46,9 @@ $header-mob-shrink-height: 2.5em;
 body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1em;
-    min-height: 100vh;
+    // min-height: 100vh;
     background-color: $background-color;
-    margin: 0;
+    // margin: 0;
     &.chapter {
         padding-top: $header-full-height;
     }
@@ -101,6 +101,7 @@ body.chapter {
 }
 
 .header {
+  visibility: hidden;
     position: fixed;
     top: 0;
     left: 0;
@@ -217,6 +218,9 @@ body.stories {
         &.shrink {
             height: $header-short-shrink-height;
         }
+    }
+    h3 {
+      background: #fff;
     }
     ol {
         list-style: upper-roman;

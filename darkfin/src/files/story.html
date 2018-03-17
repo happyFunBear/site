@@ -2,11 +2,11 @@
 <html>
 
 <head>
-  <title>Darkfin: Story </title>
-  <link rel="stylesheet" href="main.css?1521048870737">
+  <title>Darkfin: Story</title>
+  <link rel="stylesheet" href="main.css?1521247880115">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-  <link rel="icon" href="df-favicon.png?1521048870737" type="image/x-icon">
+  <link rel="icon" href="df-favicon.png?1521247880115" type="image/x-icon">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
@@ -14,14 +14,14 @@
 </head>
 
 <body class="stories">
-    <div class="wrapper">
+  <div class="wrapper">
     <div class="header">
       <h1>Story</h1>
     </div>
-    <div class="body">
+    <div class="body row">
     </div>
     <div class="footer">
-        <div class="copyright-footer">&reg; All Rights Reserved, 2000-2018</div>
+      <div class="copyright-footer">&reg; All Rights Reserved, 2000-2018</div>
     </div>
   </div>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
@@ -32,16 +32,18 @@
       let vignettes = _.sortBy(res.filter(s => (s.type === 'v')), 'fileName');
       let years = _.sortBy(res.filter(s => (s.type === 'y')), 'fileName');
       let prevYear;
-      let vol = $('<ol>'), sol = null, wrap = $('<div class="wrap">');
+      let vol = $('<ol>'), sol = null, wrap = $('<div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12">');
 
       years.forEach(year => {
         if (year.year !== prevYear) {
           if (sol) {
             $('.body').append(wrap.append(sol));
-            wrap = $('<div class="wrap">');
-            wrap.prepend($('<h3>').text('Year ' + year.year + ': ' + year.yearTitle));
+            wrap = $('<div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12">');
+            wrap.prepend($('<h3 class="sticky-top d-block d-sm-none">').text('Year ' + year.year + ': ' + year.yearTitle));
+            wrap.prepend($('<h3 class="d-none d-sm-block">').text('Year ' + year.year + ': ' + year.yearTitle));
           } else {
-            wrap.prepend($('<h3>').text('Year ' + year.year + ': ' + year.yearTitle));
+            wrap.prepend($('<h3 class="sticky-top d-block d-sm-none">').text('Year ' + year.year + ': ' + year.yearTitle));
+            wrap.prepend($('<h3 class="d-none d-sm-block">').text('Year ' + year.year + ': ' + year.yearTitle));
           }
           sol = $('<ol>');
         }
@@ -53,8 +55,9 @@
       $('.body').append(wrap.append(sol));
 
 
-      wrap = $('<div class="wrap">');
-      wrap.append($('<h3>').text('Vignettes '));
+      wrap = $('<div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12">');
+          wrap.append($('<h3 class="sticky-top d-block d-sm-none">').text('Vignettes '));
+              wrap.append($('<h3 class="d-none d-sm-block">').text('Vignettes '));
       vignettes.forEach(vig => {
         vol.append($('<li>').append($('<a>').attr('href', vig.fileName).text(vig.title)));
       });

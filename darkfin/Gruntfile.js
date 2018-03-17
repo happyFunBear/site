@@ -69,7 +69,7 @@ module.exports = function (grunt) {
       let fileOut = baseHtml;
       let fileInfo = {};
       let file = grunt.file.read(path);
-      let h = (/<h2>([\s\S]*?)<\/h2>/gm).exec(file);
+      let h = (/<chapter-title>([\s\S]*?)<\/chapter-title>/gm).exec(file);
       fileInfo.fileName = path.replace(storyPath, '');
       fileInfo.title = h ? h[1] : 'Not Found';
       fileInfo.type = fileInfo.fileName[0]; // y or v
@@ -92,7 +92,7 @@ module.exports = function (grunt) {
       structure.push(fileInfo);
 
       file = file
-        // .replace(/<h2>([\s\S]*?)<\/h2>/, '')
+        .replace(/<chapter-title>([\s\S]*?)<\/chapter-title>/, '')
         .replace(/<bar><\/bar>/g, '<hr>')
         .replace(/<stage>/g, '<div class="stage">')
         .replace(/<\/stage>/g, '</div>')
