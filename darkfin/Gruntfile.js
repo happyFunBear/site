@@ -1,33 +1,37 @@
 
 module.exports = function (grunt) {
-  // var _ = require('lodash');
+  var _ = require('lodash');
 
   var yearTitle = {
     1: 'Duquesa Bay',
     2: 'Chaparral Heights',
     3: 'Quartz Lake',
     4: 'Santa Conchita'
-  }
-  // var storyFilePath = '/files/';
+  };
 
   var resourcePath = '../working-files/resources/';
   var storyPath = '../working-files/story/';
-  var baseHtml = grunt.file.read(resourcePath + 'template.html');
-  // var cssFileName = 'main.css';
+  var baseHtml = grunt.file.read(resourcePath + 'chapter-template.html');
+
   var outPath = 'src/files/';
-  // var h2regex = /<h2>([\s\S]*?)<\/h2>/gm;
 
   var timestamp = (new Date()).getTime();
-  // var footer = `</div></body></html>`;
-  var imagePath = '../assets/images/';
-  // var allFiles = [];
+  var imagePath = 'assets/images/';
+
+  var synopsis = grunt.file.readJSON(resourcePath + 'synopses-working.json');
+
+  var getSynopsis = (year, chapter) => {
+    let v = synopsis.filter(x => (parseInt(x.chapter) == parseInt(chapter) && parseInt(x.year) == parseInt(year)));
+    return v[0] ? v[0].synopsis : '';
+  };
+
   grunt.initConfig({
     post: {
       run: {}
     },
     clean: [outPath],
     watch: {
-      files: ['../working-files/**/*.*'],
+      files: ['../working-files/**/*.*', 'Gruntfile.js'],
       // tasks: ['sass:main', 'post:run']
       tasks: ['make']
     },
@@ -64,7 +68,7 @@ module.exports = function (grunt) {
     let files = grunt.file.expand(storyPath + '*.html');
     const setTimes = function(content) {
       return content.replace(/%%year%%/g, (new Date()).getFullYear()).replace(/%%time%%/g, timestamp);
-    }
+    };
     files.forEach(path => {
       let fileOut = baseHtml;
       let fileInfo = {};
@@ -100,12 +104,15 @@ module.exports = function (grunt) {
         .replace(/<\/line>/g, '</p>')
         .replace(/<actor.*?>/g, '<span class="actor">')
         .replace(/<\/actor>/g, '</span>')
+        .replace(/<image/g, '<img')
+        .replace(/<\/image>/g, '')
         .replace(/\.\.\/graphics\//g, imagePath);
 
 
       fileOut = fileOut
         .replace(/%%title%%/g, fileInfo.title)
         .replace(/%%chapter%%/g, fileInfo.type === 'y' ? `Year ${fileInfo.year}, Chapter ${fileInfo.chapter}` : fileInfo.type === 'v' ? `Vignette ${fileInfo.chapter}` : '')
+        .replace(/%%synopsis%%/g, getSynopsis(fileInfo.year, fileInfo.chapter))
         .replace(/%%body%%/g, file)
         .replace(/%%prev%%/g, fileInfo.prevFile ? `<a href="${fileInfo.prevFile}"><i class="fa fa-chevron-left"></i>Prev</a>` : '')
         .replace(/%%next%%/g, fileInfo.nextFile ? `<a href="${fileInfo.nextFile}">Next<i class="fa fa-chevron-right"></i></a>` : '');
@@ -120,6 +127,7 @@ module.exports = function (grunt) {
 
     grunt.file.write(outPath + 'story.html', storiesFile);
     grunt.file.write(outPath + 'story.json', JSON.stringify(structure));
+    grunt.file.write(outPath + 'people.json', grunt.file.read(resourcePath + 'people.json'));
 
     grunt.file.copy(resourcePath + 'df-favicon.png', outPath + 'df-favicon.png', { encoding: null } );
 
