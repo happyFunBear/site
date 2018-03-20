@@ -9,6 +9,11 @@ module.exports = function (grunt) {
     4: 'Santa Conchita'
   };
 
+
+  var copyList = [
+
+  ];
+  
   var resourcePath = '../working-files/resources/';
   var storyPath = '../working-files/story/';
   var baseHtml = grunt.file.read(resourcePath + 'chapter-template.html');
@@ -80,7 +85,7 @@ module.exports = function (grunt) {
       fileInfo.year = fileInfo.type === 'y' ? fileInfo.fileName[1] : null;
       fileInfo.yearTitle = fileInfo.type === 'y' ? yearTitle[fileInfo.year] : null;
       fileInfo.chapter = fileInfo.type === 'y' ? +fileInfo.fileName.substr(3, 2) : fileInfo.type === 'v' ? +fileInfo.fileName.substr(1, 2) : null;
-
+ 
       let nextFile = fileInfo.type +
         (fileInfo.year ? (fileInfo.year) : '') +
         (fileInfo.type === 'y' ? 'c' : '') +
@@ -105,7 +110,6 @@ module.exports = function (grunt) {
         .replace(/<actor.*?>/g, '<span class="actor">')
         .replace(/<\/actor>/g, '</span>')
         .replace(/<image/g, '<img')
-        .replace(/<\/image>/g, '')
         .replace(/\.\.\/graphics\//g, imagePath);
 
 
@@ -128,6 +132,8 @@ module.exports = function (grunt) {
     grunt.file.write(outPath + 'story.html', storiesFile);
     grunt.file.write(outPath + 'story.json', JSON.stringify(structure));
     grunt.file.write(outPath + 'people.json', grunt.file.read(resourcePath + 'people.json'));
+    grunt.file.write(outPath + 'people.html', grunt.file.read(resourcePath + 'people.html'));
+    grunt.file.write(outPath + 'about.html', grunt.file.read(resourcePath + 'about.html'));
 
     grunt.file.copy(resourcePath + 'df-favicon.png', outPath + 'df-favicon.png', { encoding: null } );
 

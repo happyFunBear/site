@@ -20,6 +20,21 @@ $color-complement-2: #F5B073;
 $color-complement-3: #B56926;
 $color-complement-4: #8F4A0D;
 $navbar-height: 56px;
+$serif-family: Georgia,
+Palatino,
+'Times New Roman',
+Times,
+serif;
+$sans-serif-family: -apple-system,
+BlinkMacSystemFont,
+"Segoe UI",
+Roboto,
+"Helvetica Neue",
+Arial,
+sans-serif,
+"Apple Color Emoji",
+"Segoe UI Emoji",
+"Segoe UI Symbol";
 // @media (min-width: 576px) { ... }
 // // Medium devices (tablets, 768px and up)
 // @media (min-width: 768px) { ... }
@@ -33,6 +48,17 @@ $navbar-height: 56px;
   }
 }
 
+@mixin mobileOnly() {
+  @media only screen and (max-width: 576px) {
+    @content;
+  }
+}
+@mixin onlySmXS() {
+  @media only screen and (max-width: 768px) {
+    @content;
+  }
+}
+
 @mixin notMobile() {
   @media only screen and (min-width: 576px) {
     @content;
@@ -40,7 +66,21 @@ $navbar-height: 56px;
 }
 
 body {
+  min-height: 100vh;
+  padding-bottom: 30px;
   padding-top: $navbar-height;
+  position: relative;
+  .footer-reg {
+    text-align: center;
+    position: absolute;
+    bottom: 30px;
+    padding-top: 10px;
+    height: 20px;
+    left: 0;
+    right: 0;
+    font-size: .85em;
+    color: #777;
+  }
   nav.navbar-dark {
     background-color: $color-primary-3;
   }
@@ -49,7 +89,7 @@ body {
     border-radius: 0;
   }
   .chapter {
-    font-family: Georgia, Palatino, 'Times New Roman', Times, serif;
+    font-family: $serif-family;
   }
 }
 
@@ -57,8 +97,12 @@ body {
   margin-top: -$navbar-height;
   padding-top: $navbar-height;
   div {
-    background-color: rgba(255, 255, 255, 0.9);
-    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 1);
+    margin-left: -10px;
+    margin-right: -10px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
 
@@ -73,7 +117,8 @@ body {
     }
   }
   h2.chapter-title {
-    font-weight: 200;
+    font-weight: lighter;
+    font-family: $sans-serif-family;
   }
   .stage {
     color: #777;
@@ -91,37 +136,126 @@ body {
     margin: 1em auto;
   }
 }
-.footer {
 
-    .footer-links {
-        overflow: auto;
-        clear: both;
-        .prev-chapter a,
-        .next-chapter a {
-            padding: 1em;
-            background: #fff;
-            border: 1px solid #ccc;
-            text-decoration: none;
-            display: block;
-        }
-        .prev-chapter {
-            float: left;
-            i {
-                margin-right: 5px;
-            }
-        }
-        .next-chapter {
-            float: right;
-            i {
-                margin-left: 5px;
-            }
-        } 
+.stories {
+  h3 {
+    margin-bottom: .25em;
+  }
+  ol {
+    list-style: upper-roman;
+  }
+  ol li {
+    padding: 2px;
+  }
+  .wrap {
+    display: inline-block;
+    vertical-align: top;
+    padding: 1em 2em;
+    font-size: .9em;
+  }
+  .year-title {
+    text-align: center;
+    min-height: 2.5em;
+  }
+  ol li a {
+    text-decoration: none;
+  }
+  ol li a:hover {
+    text-decoration: underline;
+  }
+  @include mobileOnly {
+    ol {
+      list-style: none;
+      padding-left: 0;
+      width: 100%;
     }
-    .footer-reg {
-        font-size: .85em;
-        color: #777;
-        padding-top: 1em;
-        padding-bottom: 1em;
+    ol li {
+      margin: 2px auto;
     }
-    
+    ol li a {
+      padding: .75em 2em;
+      display: block;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+  }
+}
+.people {
+  .family-name {
+    text-align: center;
+    background: #ddd;
+    padding: .5rem 0 0 0;
+    margin-top: 1rem;
+    margin-bottom: .5rem;
+  }
+  .character {
+    font-size: .9em;
+    margin-bottom: .5rem;
+    padding-bottom: .5rem;
+    border-bottom: 1px solid #ccc;
+    &.last {
+      border-bottom: none;
+    }
+    dl {
+      padding-left: 205px;
+      margin-bottom: 0;
+      @include onlySmXS {
+        padding-left: 0;
+      }
+    }
+    dt {
+      float: left;
+      margin-right: 5px;
+      &::after {
+        content: ':'
+      }
+    }
+    dd {
+      margin-bottom: .25rem;
+      &.quote {
+        font-style: italic;
+      }
+      &.quote::before {
+        content: '"';
+      }
+      &.quote::after {
+        content: '"';
+      }
+    }
+    .character-image {
+      float: left;
+      @include onlySmXS {
+        float: none;
+        display: block;
+        margin: 0 auto 10px auto;
+      }
+    }
+  }
+}
+.footer {
+  text-align: center;
+  .footer-links {
+    overflow: auto;
+    clear: both;
+    .prev-chapter a,
+    .next-chapter a {
+      padding: 1em;
+      background: #fff;
+      border: 1px solid #ccc;
+      text-decoration: none;
+      display: block;
+    }
+    .prev-chapter {
+      float: left;
+      i {
+        margin-right: 5px;
+      }
+    }
+    .next-chapter {
+      float: right;
+      i {
+        margin-left: 5px;
+      }
+    }
+  }
 }

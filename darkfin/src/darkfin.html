@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <title>Darkfin</title>
   <link rel="stylesheet" href="files/main.css?%%time%%">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/scripts/font-awesome.min.css">
+  <link rel="stylesheet" href="assets/scripts/bootstrap.min.css">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -13,12 +13,15 @@
 <body>
 
 <div id="main"></div>
-
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.5/lodash.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-  <script src="//unpkg.com/navigo@6"></script>
+<div class="footer-reg"><i class="fa fa-registered"></i> All Rights Reserved, 2000-<span><noscript>2018</noscript></span></div>
+  <script src="assets/scripts/jquery-3.3.1.min.js"></script>
+  <script src="assets/scripts/lodash.js"></script>
+  <script src="assets/scripts/popper.min.js"></script>
+  <script src="assets/scripts/bootstrap.min.js"></script>
+  <script src="assets/scripts/navigo@6.js"></script>
   <script src="main.js"></script>
+  <script>
+    $('.footer-reg span').text((new Date).getFullYear());
+  </script>
 </body>
 </html>
