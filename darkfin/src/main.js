@@ -38,48 +38,47 @@ var start = (_router) => _router.resolve();
     let _ret = this.story.filter((_x) => (_x.year == _year && _x.chapter == _chapter));
     return (_ret && _ret.length) > 0 ? _ret[0] : null;
   };
-
+  app.render = (content) => {
+    $('#main').html(content);
+    $('#navbarMain, #navbarShare').collapse('hide');
+    $(window).scrollTop(0);
+    $('nav .nav-item').removeClass('active');
+    $('nav .nav-item .nav-link').each(function() {
+      if (document.location.hash.indexOf($(this).attr('href')) === 0) {
+        $(this).closest('.nav-item').addClass('active');
+      }
+    });
+  };
+  app.loadPage = (file, callback) => {
+    $.get({
+      url: file,
+      dataType: 'html'
+    }).then(res => {
+      app.render(res);
+      if (callback) { callback(); }
+    });
+  };
   app.router.on(
     {
       'main': function () {
-        console.log('main');
+        app.loadPage(filePath + 'landing.html');
       },
       'story/year/:year/chapter/:chapter': (params) => {
         params.chapter = ('0' + params.chapter).slice(-2);
         var fileName = params.year === 'v' ? `v${params.chapter}.html` : `y${params.year}c${params.chapter}.html`;
-        $.get({
-          url: filePath + fileName,
-          dataType: 'html'
-        }).then(res => {
-          $('#main').html(res);
-        });
+        app.loadPage(filePath + fileName);
       },
       'people': () => {
-        $.get({
-          url: filePath + 'people.html',
-          dataType: 'html'
-        }).then(res => {
-          $('#main').html(res);
-        });
+        app.loadPage(filePath + 'people.html');
       },
       'about': () => {
-        $.get({
-          url: filePath + 'about.html',
-          dataType: 'html'
-        }).then(res => {
-          $('#main').html(res);
-        });
+        app.loadPage(filePath + 'about.html');
       },
       'story': () => {
-        $.get({
-          url: filePath + 'story.html',
-          dataType: 'html'
-        }).then(res => {
-          $('#main').html(res);
-        });
+        app.loadPage(filePath + 'story.html');
       },
       '*': () => {
-        console.log('default');
+        app.loadPage(filePath + 'landing.html');
       }
 
     }

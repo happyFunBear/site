@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>Darkfin</title>
@@ -8,12 +9,55 @@
   <link rel="stylesheet" href="assets/scripts/bootstrap.min.css">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/x-icon" href="files/df-favicon.png">
 </head>
-<body>
 
-<div id="main"></div>
-<div class="footer-reg"><i class="fa fa-registered"></i> All Rights Reserved, 2000-<span><noscript>2018</noscript></span></div>
+<body>
+  <nav class="navbar navbar-dark fixed-top navbar-expand-lg">
+    <a class="navbar-brand" href="">Darkfin</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMain" aria-controls="navbarMain"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarMain">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#/story">Story</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#/people">People</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#/location">Location</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#/gallery">Gallery</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#/about">About</a>
+        </li>
+        <li class="nav-item d-block d-md-none">
+          <a class="nav-link" href="" data-toggle="collapse" data-target="#navbarShare" aria-controls="navbarShare"
+          aria-expanded="false" aria-label="Toggle Sharing">Share</a>
+        </li>
+        <div class="collapse navbar-collapse" id="navbarShare">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="">twitter</a>
+                </li>
+        </ul>
+        </div>
+      </ul>
+    </div>
+  </nav>
+  <div id="main"></div>
+  <div class="footer-reg">
+    <i class="fa fa-registered"></i> All Rights Reserved, 2000-
+    <span>
+      <noscript>2018</noscript>
+    </span>
+  </div>
   <script src="assets/scripts/jquery-3.3.1.min.js"></script>
   <script src="assets/scripts/lodash.js"></script>
   <script src="assets/scripts/popper.min.js"></script>
@@ -22,6 +66,13 @@
   <script src="main.js"></script>
   <script>
     $('.footer-reg span').text((new Date).getFullYear());
+    $(window).on('scroll', () => {
+      if (window.scrollY < 600) {
+        // let $j = $('.jumbotron:first');
+        $('.jumbotron:first').css('background-position-y', -window.scrollY * 0.5);
+      }
+    });
   </script>
 </body>
+
 </html>

@@ -37,7 +37,6 @@ module.exports = function (grunt) {
     clean: [outPath],
     watch: {
       files: ['../working-files/**/*.*', 'Gruntfile.js'],
-      // tasks: ['sass:main', 'post:run']
       tasks: ['make']
     },
     copy: {
@@ -45,8 +44,6 @@ module.exports = function (grunt) {
         files: [{
           src: [resourcePath + '*.png'],
           dest: outPath,
-          // expand: true,
-          // flatten: true
         }]
   
       }
@@ -91,10 +88,13 @@ module.exports = function (grunt) {
         (fileInfo.type === 'y' ? 'c' : '') +
         ('0' + (fileInfo.chapter + 1)).slice(-2) + '.html';
 
+      let nextHash = `#/story/year/${fileInfo.year || fileInfo.type}/chapter/${fileInfo.chapter + 1}`;
       let prevFile = fileInfo.type +
         (fileInfo.year ? (fileInfo.year) : '') +
         (fileInfo.type === 'y' ? 'c' : '') +
         ('0' + (fileInfo.chapter - 1)).slice(-2) + '.html';
+        
+      let prevHash = `#/story/year/${fileInfo.year || fileInfo.type}/chapter/${fileInfo.chapter - 1}`;
 
       fileInfo.prevFile = grunt.file.isFile(storyPath + prevFile) && prevFile;
       fileInfo.nextFile = grunt.file.isFile(storyPath + nextFile) && nextFile;
@@ -118,8 +118,8 @@ module.exports = function (grunt) {
         .replace(/%%chapter%%/g, fileInfo.type === 'y' ? `Year ${fileInfo.year}, Chapter ${fileInfo.chapter}` : fileInfo.type === 'v' ? `Vignette ${fileInfo.chapter}` : '')
         .replace(/%%synopsis%%/g, getSynopsis(fileInfo.year, fileInfo.chapter))
         .replace(/%%body%%/g, file)
-        .replace(/%%prev%%/g, fileInfo.prevFile ? `<a href="${fileInfo.prevFile}"><i class="fa fa-chevron-left"></i>Prev</a>` : '')
-        .replace(/%%next%%/g, fileInfo.nextFile ? `<a href="${fileInfo.nextFile}">Next<i class="fa fa-chevron-right"></i></a>` : '');
+        .replace(/%%prev%%/g, fileInfo.prevFile ? `<a href="${prevHash}"><i class="fa fa-chevron-left"></i>Prev</a>` : '')
+        .replace(/%%next%%/g, fileInfo.nextFile ? `<a href="${nextHash}">Next<i class="fa fa-chevron-right"></i></a>` : '');
        
       fileOut = setTimes(fileOut);
       grunt.file.write(outPath + fileInfo.fileName, fileOut);
@@ -134,6 +134,7 @@ module.exports = function (grunt) {
     grunt.file.write(outPath + 'people.json', grunt.file.read(resourcePath + 'people.json'));
     grunt.file.write(outPath + 'people.html', grunt.file.read(resourcePath + 'people.html'));
     grunt.file.write(outPath + 'about.html', grunt.file.read(resourcePath + 'about.html'));
+    grunt.file.write(outPath + 'landing.html', grunt.file.read(resourcePath + 'landing.html'));
 
     grunt.file.copy(resourcePath + 'df-favicon.png', outPath + 'df-favicon.png', { encoding: null } );
 
