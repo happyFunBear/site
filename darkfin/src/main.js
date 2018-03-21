@@ -1,6 +1,6 @@
 
 var app = {
-  filePath: '/~bchugg/df/files/',
+  filePath: 'files/',
   story: [],
   people: [],
   utils: {},
@@ -9,7 +9,7 @@ var app = {
   start: (_router) => _router.resolve()
 };
 
-var filePath = '/~bchugg/df/files/';
+var filePath = 'files/';
 var ROUTER;
 var story = [];
 var people = [];
@@ -44,7 +44,7 @@ var start = (_router) => _router.resolve();
     $(window).scrollTop(0);
     $('nav .nav-item').removeClass('active');
     $('nav .nav-item .nav-link').each(function() {
-      if (document.location.hash.indexOf($(this).attr('href')) === 0) {
+      if ($(this).attr('href') && document.location.hash.indexOf($(this).attr('href')) === 0) {
         $(this).closest('.nav-item').addClass('active');
       }
     });
@@ -76,6 +76,12 @@ var start = (_router) => _router.resolve();
       },
       'story': () => {
         app.loadPage(filePath + 'story.html');
+      },
+      'gallery': () => {
+        app.loadPage(filePath + 'gallery.html');
+      },
+      'location': () => {
+        app.loadPage(filePath + 'location.html');
       },
       '*': () => {
         app.loadPage(filePath + 'landing.html');

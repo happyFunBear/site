@@ -1,32 +1,35 @@
 // Palette URL: http://paletton.com/#uid=73k0u0kleqtbzEKgVuIpcmGtdhZ 
-$color-primary-0: #2C7980; // Main Primary color */
-$color-primary-1: #77B4BA;
-$color-primary-2: #478E95;
-$color-primary-3: #19676E;
-$color-primary-4: #095057;
-$color-secondary-1-0: #3A518E; // Main Secondary color (1)  */
-$color-secondary-1-1: #8697C5;
-$color-secondary-1-2: #576CA5;
-$color-secondary-1-3: #243B7A;
-$color-secondary-1-4: #122760;
-$color-secondary-2-0: #D3A647; // Main Secondary color (2) */
-$color-secondary-2-1: #FFE1A3;
-$color-secondary-2-2: #F5CB73;
-$color-secondary-2-3: #B58726;
-$color-secondary-2-4: #8F650D;
-$color-complement-0: #D38947; // Main Complement color */
-$color-complement-1: #FFCEA3;
-$color-complement-2: #F5B073;
-$color-complement-3: #B56926;
-$color-complement-4: #8F4A0D;
+// $color-primary-0: #2C7980; // Main Primary color */
+// $color-primary-1: #77B4BA;
+// $color-primary-2: #478E95;
+// $color-primary-3: #19676E;
+// $color-primary-4: #095057;
+// $color-secondary-1-0: #3A518E; // Main Secondary color (1)  */
+// $color-secondary-1-1: #8697C5;
+// $color-secondary-1-2: #576CA5;
+// $color-secondary-1-3: #243B7A;
+// $color-secondary-1-4: #122760;
+// $color-secondary-2-0: #D3A647; // Main Secondary color (2) */
+// $color-secondary-2-1: #FFE1A3;
+// $color-secondary-2-2: #F5CB73;
+// $color-secondary-2-3: #B58726;
+// $color-secondary-2-4: #8F650D;
+// $color-complement-0: #D38947; // Main Complement color */
+// $color-complement-1: #FFCEA3;
+// $color-complement-2: #F5B073;
+// $color-complement-3: #B56926;
+// $color-complement-4: #8F4A0D;.
+// --
 $nav-color: #0a2950;
 $navbar-height: 56px;
 $footer-height: 45px;
+// --
 $serif-family: Georgia,
 Palatino,
 'Times New Roman',
 Times,
 serif;
+// --
 $sans-serif-family: -apple-system,
 BlinkMacSystemFont,
 "Segoe UI",
@@ -37,6 +40,7 @@ sans-serif,
 "Apple Color Emoji",
 "Segoe UI Emoji",
 "Segoe UI Symbol";
+// --
 // @media (min-width: 576px) { ... }
 // // Medium devices (tablets, 768px and up)
 // @media (min-width: 768px) { ... }
@@ -76,17 +80,27 @@ body {
   .footer-reg {
     text-align: center;
     position: absolute;
-    bottom: 10px;
-    padding-top: 10px;
-    height: 30px;
+    bottom: 0;
+    padding: 12px 0 8px 0;
+    height: $footer-height;
     left: 0;
     right: 0;
     font-size: .85em;
     color: #777;
-    border-top: 1px solid #ddd;
+    box-shadow: inset 0px 11px 9px -12px #666;
+    background: #efefef;
   }
   nav.navbar-dark {
     background-color: #0a2950;
+  }
+  #navbarShare {
+    .nav-item {
+      padding-left: 1rem;
+      i {
+        min-width: 1rem;
+        margin-right: .5rem
+      }
+    }
   }
   .jumbotron {
     border-radius: 0;
@@ -151,6 +165,7 @@ body {
   }
   ol {
     list-style: upper-roman;
+    font-size: 90%;
   }
   ol li {
     padding: 2px;
@@ -163,7 +178,7 @@ body {
   }
   .year-title {
     text-align: center;
-    min-height: 2.5em;
+    min-height: 2em;
   }
   ol li a {
     text-decoration: none;
@@ -201,7 +216,8 @@ body {
       padding: .5rem;
       background-position-x: right;
       background-image: url(../assets/images/bar-bg-city.jpg);
-      text-shadow: 1px 0 1px #000, -1px 0 1px #000, 0 -1px 1px #000, 0 1px 1px #000;
+      text-shadow: 2px 0 1px #000, -2px 0 1px #000, 0 -2px 1px #000, 0 2px 1px #000;
+      font-family: "Arial Black", sans-serif;
     }
   }
   .character {
@@ -240,6 +256,8 @@ body {
     }
     .character-image {
       float: left;
+      height: 200px;
+      width: 200px;
       @include onlySmXS {
         float: none;
         display: block;
@@ -287,7 +305,9 @@ body {
     }
   }
   .body {
-    .writer, .artists, .social-media {
+    .writer,
+    .artists,
+    .social-media {
       margin-bottom: 2rem;
     }
     .social-media {

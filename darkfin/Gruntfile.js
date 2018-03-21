@@ -135,6 +135,8 @@ module.exports = function (grunt) {
     grunt.file.write(outPath + 'people.html', grunt.file.read(resourcePath + 'people.html'));
     grunt.file.write(outPath + 'about.html', grunt.file.read(resourcePath + 'about.html'));
     grunt.file.write(outPath + 'landing.html', grunt.file.read(resourcePath + 'landing.html'));
+    grunt.file.write(outPath + 'location.html', grunt.file.read(resourcePath + 'location.html'));
+    grunt.file.write(outPath + 'gallery.html', grunt.file.read(resourcePath + 'gallery.html'));
 
     grunt.file.copy(resourcePath + 'df-favicon.png', outPath + 'df-favicon.png', { encoding: null } );
 
