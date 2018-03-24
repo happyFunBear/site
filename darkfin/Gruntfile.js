@@ -109,7 +109,7 @@ module.exports = function (grunt) {
         .replace(/<\/line>/g, '</p>')
         .replace(/<actor.*?>/g, '<span class="actor">')
         .replace(/<\/actor>/g, '</span>')
-        .replace(/<image/g, '<img')
+        .replace(/<image/g, '<img class="add-modal" ')
         .replace(/\.\.\/graphics\//g, imagePath);
 
 

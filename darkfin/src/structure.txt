@@ -1,0 +1,22 @@
+site
+  /scripts
+  /files
+    /images
+    /resources
+      /templates
+      /base
+    /story
+
+
+src/
+  index.html
+  main.js
+  main.css
+  /files
+  /assets
+    /js
+    /css
+    /images
+  
+
+  
