@@ -1,0 +1,17 @@
+
+
+site/
+  app/
+    assets/
+      images/
+      scripts/
+      styles/
+    files/
+    pages/
+    story/
+  source/
+    resources/
+      images/
+      pages/
+    story/
+

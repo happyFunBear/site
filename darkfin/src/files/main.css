@@ -3,7 +3,7 @@ html body {
   padding-bottom: 45px;
   padding-top: 56px;
   position: relative;
-  background-color: #0a2950; }
+  background-color: #fff; }
   html body .footer-reg {
     text-align: center;
     position: absolute;
@@ -32,15 +32,6 @@ html body {
     background-repeat: repeat; }
   html body .chapter .content {
     font-family: Georgia, Palatino, "Times New Roman", Times, serif; }
-
-#gradientBackdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 100vw;
-  z-index: -1;
-  background: linear-gradient(top, #0a2950 0%, #0a2950 10%, white 100%); }
 
 #main {
   min-height: calc(100vh - (45px + 56px));
@@ -215,3 +206,5 @@ html body {
       float: right; }
       .footer .footer-links .next-chapter i {
         margin-left: 5px; }
+
+/*# sourceMappingURL=main.css.map */

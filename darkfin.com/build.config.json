@@ -1,0 +1,37 @@
+{
+  "yearTitle": {
+    "1": "Duquesa Bay",
+    "2": "Chaparral Heights",
+    "3": "Quartz Lake",
+    "4": "Santa Conchita"
+  },
+  "resourcePath": "./source/resources/",
+  "storyPath": "./source/story/",
+  "pagesPath": "./source/resources/pages/",
+  "chapterTemplate": "chapter-template.html",
+  "imagePath": "assets/images/",
+  "outPath": {
+    "dir": "./app/",
+    "story": "./app/story/",
+    "assets": "./app/assets/",
+    "images": "./app/assets/images/",
+    "scripts": "./app/assets/scripts/",
+    "styles": "./app/assets/styles/",
+    "fonts": "./app/assets/fonts/",
+    "pages": "./app/pages/",
+    "files": "./app/files/"
+  },
+  "scssFiles": [
+    "./source/resources/main.scss"
+  ],
+  "cssFiles": [
+    "./node_modules/bootstrap/dist/css/bootstrap.css",
+    "./node_modules/font-awesome/css/font-awesome.css"
+  ],
+  "jsFiles": [
+    "./node_modules/jquery/dist/jquery.js",
+    "./node_modules/lodash/lodash.js",
+    "./node_modules/bootstrap/dist/js/bootstrap.js",
+    "./node_modules/navigo/lib/navigo.js"
+  ]
+}

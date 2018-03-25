@@ -27,6 +27,19 @@
     let people = _.groupBy(app.people, 'family');
     let $t;
 
+    function loadImages() {
+      let _min = window.scrollY - window.innerHeight;
+      let _max = window.scrollY + 2 * window.innerHeight;
+      $('.character-image').each(function () {
+        let _imgTop = $(this).offset().top;
+        if ($(this).attr('data-src') && _imgTop > _min && _imgTop < _max) {
+          console.log($(this).attr('data-src'));
+          $(this).attr('src', $(this).attr('data-src')).removeAttr('data-src');
+        }
+      });
+    }
+
+    $(window).on('scroll', _.debounce(loadImages, 250));
     _.each(people, (members, family) => {
       $('.body').append(`<div class="col-12 family-name"><h4>${family}</h4></div>`);
       _.each(members, (person, idx) => {
@@ -34,16 +47,20 @@
         if (idx === members.length - 1) {
           $t.addClass('last');
         }
-        $t.find('.character-image').attr('src', '' + person.image.replace('graphics', 'assets/images'));
+        $t.find('.character-image').attr({
+          'data-src': '' + person.image.replace('graphics', 'assets/images'),
+          src: 'assets/images/blank.png'
+        });
         $t.attr('id', person.name);
         _.forIn(person, (val, key) => {
           if (key !== 'family' && key !== 'image' && key !== 'tags') {
             $t.find('dl').append($('<dt class="' + key + '">' + _.capitalize(key) + '</dt><dd class="' + key + '">' + val + '</dd>'))
           }
         });
-      $('.body').append($t);
+        $('.body').append($t);
       });
     });
+    loadImages();
 
   }(jQuery));
 

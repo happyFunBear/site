@@ -1,0 +1,28 @@
+{
+  "name": "darkfin",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {},
+  "private": true,
+  "dependencies": {
+    "bootstrap": "^4.0.0",
+    "font-awesome": "^4.7.0",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-clean": "^1.1.0",
+    "grunt-contrib-cssmin": "^2.2.1",
+    "grunt-contrib-uglify": "^3.3.0",
+    "grunt-contrib-uglify-es": "^3.3.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "jquery": "^3.3.1",
+    "jquery-mobile": "^1.5.0-alpha.1",
+    "lodash": "^4.17.5",
+    "navigo": "^7.1.1",
+    "popper.js": "^1.14.1"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.2",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-replace": "^1.0.1"
+  }
+}

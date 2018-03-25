@@ -1,0 +1,66 @@
+<div class="people">
+
+  <div class="jumbotron">
+    <div class="container">
+      <h1>Dramatis Personae</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores facilis, consectetur eveniet nobis vero ad deserunt fugiat
+        obcaecati, ipsam accusantium nihil vel quae fugit cupiditate quod similique nemo aperiam atque?
+      </p>
+    </div>
+  </div>
+  <div class="container">
+    <div class="body row">
+      <div id="temp" class="col-12 character">
+        <img class="character-image" />
+        <!-- <h3 class="character-name"></h3> -->
+        <dl></dl>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+
+  (function ($) {
+    let $template = $('#temp').detach().removeAttr('id');
+    let people = _.groupBy(app.people, 'family');
+    let $t;
+
+    function loadImages() {
+      let _min = window.scrollY - window.innerHeight;
+      let _max = window.scrollY + 3  * window.innerHeight;
+      $('.character-image').each(function () {
+        let _imgTop = $(this).offset().top;
+        if ($(this).attr('data-src') && _imgTop > _min && _imgTop < _max) {
+          $(this).attr('src', $(this).attr('data-src')).removeAttr('data-src');
+        }
+      });
+    }
+
+    $(window).on('scroll', _.debounce(loadImages, 150));
+    _.each(people, (members, family) => {
+      $('.body').append(`<div class="col-12 family-name"><h4>${family}</h4></div>`);
+      _.each(members, (person, idx) => {
+        $t = $template.clone();
+        if (idx === members.length - 1) {
+          $t.addClass('last');
+        }
+        $t.find('.character-image').attr({
+          'data-src': '' + person.image.replace('graphics', 'assets/images'),
+          src: 'assets/images/blank.png'
+        });
+        $t.attr('id', person.name);
+        _.forIn(person, (val, key) => {
+          if (key !== 'family' && key !== 'image' && key !== 'tags') {
+            $t.find('dl').append($('<dt class="' + key + '">' + _.capitalize(key) + '</dt><dd class="' + key + '">' + val + '</dd>'))
+          }
+        });
+        $('.body').append($t);
+      });
+    });
+    loadImages();
+
+  }(jQuery));
+
+</script>
