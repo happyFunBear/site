@@ -10,7 +10,17 @@ var app = {
   router: new Navigo(null, true),
   start: (_router) => _router.resolve(),
   fadeIn: 250,
-  fadeOut: 250
+  fadeOut: 250,
+  page: '',
+  pageTypes: [
+    'landing',
+    'story',
+    'chapter',
+    'about',
+    'gallery',
+    'people',
+    'location'
+  ]
 };
 
 var filePath = 'files/';
@@ -51,6 +61,7 @@ $('#main').on('click', '.add-modal', function(evt) {
     if ($main.html().length === 0) {
       $main.css('opacity', 0);
       $(window).scrollTop(0);
+      $('body').attr('page-type', app.page);
       $(main).html(content);
       $main.animate(
         { opacity: 1 },
@@ -67,7 +78,9 @@ $('#main').on('click', '.add-modal', function(evt) {
           duration: 250,
           complete: function () {
             $(window).scrollTop(0);
+            $('body').attr('page-type', app.page);
             $(main).html(content);
+            console.log(app.router);
           }
         })
         .animate({ opacity: 1 }, 500);
@@ -94,29 +107,37 @@ $('#main').on('click', '.add-modal', function(evt) {
   app.router.on(
     {
       'main': function () {
+        app.page = 'landing';
         app.loadPage(filePath + 'landing.html');
       },
       'story/year/:year/chapter/:chapter': (params) => {
+        app.page = 'chapter';
         params.chapter = ('0' + params.chapter).slice(-2);
         var fileName = params.year === 'v' ? `v${params.chapter}.html` : `y${params.year}c${params.chapter}.html`;
         app.loadPage(app.storyPath + fileName);
       },
       'people': () => {
+        app.page = 'people';
         app.loadPage(app.pagesPath + 'people.html');
       },
       'about': () => {
+        app.page = 'about';
         app.loadPage(app.pagesPath + 'about.html');
       },
       'story': () => {
+        app.page = 'story';
         app.loadPage(app.pagesPath + 'story.html');
       },
       'gallery': () => {
+        app.page = 'gallery';
         app.loadPage(app.pagesPath + 'gallery.html');
       },
       'location': () => {
+        app.page = 'location';
         app.loadPage(app.pagesPath + 'location.html');
       },
       '*': () => {
+        app.page = 'landing';
         app.loadPage(app.pagesPath + 'landing.html');
       }
 
