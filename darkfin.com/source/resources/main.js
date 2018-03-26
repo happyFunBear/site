@@ -33,7 +33,7 @@ var utils = {
 var start = (_router) => _router.resolve();
 
 $('#main').on('click', '.add-modal', function(evt) {
-  console.log(evt);
+  // console.log(evt);
 });
 
 (function ($) {
@@ -80,7 +80,6 @@ $('#main').on('click', '.add-modal', function(evt) {
             $(window).scrollTop(0);
             $('body').attr('page-type', app.page);
             $(main).html(content);
-            console.log(app.router);
           }
         })
         .animate({ opacity: 1 }, 500);
