@@ -200,6 +200,7 @@ module.exports = function (grunt) {
 
     grunt.file.copy(config.resourcePath + 'people.json'  , config.outPath.files + 'people.json');
     grunt.file.copy(config.resourcePath + 'synopses.json', config.outPath.files + 'synopses.json');
+    grunt.file.copy(config.resourcePath + 'locations.json', config.outPath.files + 'locations.json');
 
     grunt.file.copy(config.pagesPath + 'story.html'    , config.outPath.pages + 'story.html');
     grunt.file.copy(config.pagesPath + 'people.html'   , config.outPath.pages + 'people.html');

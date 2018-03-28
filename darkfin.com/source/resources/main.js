@@ -5,6 +5,7 @@ var app = {
   pagesPath: 'pages/',
   story: [],
   people: [],
+  locations: [],
   utils: {},
   pages: {},
   router: new Navigo(null, true),
@@ -41,9 +42,11 @@ $('#main').on('click', '.add-modal', function(evt) {
   app.loadResources = function () {
     return $.when(
       $.getJSON(app.filePath + 'people.json'),
+      $.getJSON(app.filePath + 'locations.json'),
       $.getJSON(app.filePath + 'story.json')
-    ).then((_people, _story) => {
+    ).then((_people, _locations, _story) => {
       this.story = _story[0];
+      this.locations = _locations[0];
       this.people = _people[0];
     });
   };

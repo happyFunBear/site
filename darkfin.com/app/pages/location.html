@@ -1,19 +1,111 @@
 <div class="location">
 
-    <div class="jumbotron">
-      <div class="container">
-        <h1>Duquessa Bay</h1>
-        <p>
-          In the California coastal community of Duquesa Bay, a lone vigilante speaks for a whole other world, just beneath the surface.
-          Adored by some, abhorred by others she is Darkfin and this is her story. </p>
-      </div>
-    </div>
+  <div class="jumbotron">
     <div class="container">
-      <h1>Location Page</h1>
+      <h1>Duquesa Bay</h1>
+      <p>
+        In the California coastal community of Duquesa Bay, a lone vigilante speaks for a whole other world, just beneath the surface.
+        Adored by some, abhorred by others she is Darkfin and this is her story. </p>
     </div>
   </div>
-  
-  <script>
-  
-  
-  </script>
+
+  <!-- '<div class="tooltip" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>' -->
+  <div class="container">
+    <!-- <h1>Location Page</h1> -->
+    <div id="mapWrapper">
+      <img id="dbMap" src="assets/images/map_new_clean.jpg" />
+      <i class="map-dot fa fa-map-marker fa-1" id="refDot"></i>
+    </div>
+    <div>
+      <h4>Quartz County, California contains the Santa Conchita Valley which is the home of four communities:</h4>
+
+      <p>
+        <strong>Duquesa Bay®</strong> - Population: 35,000 A combination of rich, beach front properties and a college town (Santa
+        Conchita University (28)).</p>
+
+      <p>Beacon Point (24) is an ultra rich section of Duquesa Bay, home to approximately 1,000 people, known as the "Platinum
+        K".</p>
+
+      <p>
+        <strong>Chaparral Heights</strong> - Population: 30,000 Upper-middle class suburbia with lots of upscale strip malls and
+        planned communities.</p>
+
+      <p>
+        <strong>Santa Conchita</strong> - Population: 40,000 The oldest portion of Quartz County, Santa Conchita grew up near the
+        Santa Conchita Mission (now a historical site). Much of the original Santa Conchita is decaying industrial areas
+        and farm based businesses.
+      </p>
+
+      <p>South Side is the most run down and low income section of the valley. It is home to abandoned factories, migrant farm
+        workers and trendy dance clubs.</p>
+      <p>East Side edges into open farm land and is home to the remaining farm industries and farm workers.</p>
+      <p>North Side is upscale and benefits from proximity to more recently constructed Chaparral Heights.</p>
+      <p>West Side is moving more slowly upscale, offering historic and "quaint" housing for SCU students who live outside Duquesa
+        Bay. Still mostly working class housing and apartments.</p>
+
+      <p>
+        <strong>Quartz Lake</strong> - Population: 5,000 Farmland and farm community, but also home to the famous Quartz Lake Inn
+        (30), a combination country club and upscale meeting place overlooking beautiful Quartz Lake. Santa Conchita Mission
+        Historical Site (12) is located on the western edge of Quartz Lake. The hills surrounding the scenic lake are home
+        to a combination of older farmhand housing and more recent secluded mansions.</p>
+    </div>
+  </div>
+</div>
+<style>
+  html body .tooltip-inner {
+    background: rgba(255, 255, 255, 0.85);
+    color: #000;
+    font-weight: lighter;
+    font-size: 90%;
+  }
+  html body .tooltip .arrow::before {
+    border-color: #fff;
+  }
+  #mapWrapper {
+    position: relative;
+    display: block;
+    width: 494px;
+    height: 446px;
+    margin: 10px auto;
+  }
+
+  .map-dot {
+    top: -10000px;
+    left: -10000px;
+    margin-top: -12px;
+    margin-left: -4px;
+    color: red;
+    text-shadow: 1px 1px 1px white;
+    position: absolute;
+  }
+</style>
+<script>
+  (function ($) {
+
+    let $map = $('#mapWrapper');
+    let _h = $map.height();
+    let _w = $map.width();
+    let $dot = $('<i class="map-dot fa fa-map-marker fa-1"></i>');
+    console.log($('#refDot').height(), $('#refDot').width());
+    app.locations.forEach(loc => {
+      // console.log(loc, _h, _w);
+      let $d = $dot.clone().attr({
+        'data-toggle': 'tooltip',
+        'data-html': true,
+        'title': `<strong>${loc.name}</strong><br>${loc.description}`
+      });
+      $map.append($d);
+      $d.css({
+        // left: (loc.x * _w) - $d.width() / 2 + 'px',
+        // top: (loc.y * _h) - $d.height() + 'px'
+        left: (loc.x * 100) + '%',
+        top: (loc.y * 100) + '%'
+      });
+    });
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    });
+
+  }(jQuery))
+
+</script>
