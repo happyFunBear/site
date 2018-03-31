@@ -16,6 +16,9 @@
       <img id="dbMap" src="assets/images/map_new_clean.jpg" />
       <i class="map-dot fa fa-map-marker fa-1" id="refDot"></i>
     </div>
+    <ol id="mapNumbers">
+
+    </ol>
     <div>
       <h4>Quartz County, California contains the Santa Conchita Valley which is the home of four communities:</h4>
 
@@ -24,7 +27,8 @@
         Conchita University (28)).</p>
 
       <p>Beacon Point (24) is an ultra rich section of Duquesa Bay, home to approximately 1,000 people, known as the "Platinum
-        K".</p>
+        K".
+      </p>
 
       <p>
         <strong>Chaparral Heights</strong> - Population: 30,000 Upper-middle class suburbia with lots of upscale strip malls and
@@ -52,15 +56,20 @@
   </div>
 </div>
 <style>
+  html body .tooltip {
+    z-index: 1029;
+  }
   html body .tooltip-inner {
     background: rgba(255, 255, 255, 0.85);
     color: #000;
     font-weight: lighter;
     font-size: 90%;
   }
+
   html body .tooltip .arrow::before {
-    border-color: #fff;
+    border-top-color: rgba(255, 255, 255, 0.85);
   }
+
   #mapWrapper {
     position: relative;
     display: block;
@@ -77,33 +86,76 @@
     color: red;
     text-shadow: 1px 1px 1px white;
     position: absolute;
+    opacity: 0.75;
+  }
+  .map-dot.selected.fa {
+    font-size: 150%;
+    margin-top: -18px;
+    margin-left: -7px;
+    opacity: 1.0;
+  }
+  #mapNumbers li {
+    cursor: pointer;
+  }
+
+  #mapNumbers li.selected i {
+    color: red;
   }
 </style>
 <script>
   (function ($) {
 
     let $map = $('#mapWrapper');
+    let $locs = $('#mapNumbers');
     let _h = $map.height();
     let _w = $map.width();
     let $dot = $('<i class="map-dot fa fa-map-marker fa-1"></i>');
-    console.log($('#refDot').height(), $('#refDot').width());
-    app.locations.forEach(loc => {
-      // console.log(loc, _h, _w);
+    let $mapLoc = $('<li class=""></li>');
+    app.locations.forEach((loc, idx) => {
+      let $n = $mapLoc.clone().attr({
+        'data-map-ref': idx + 1
+      }).html(`<i class="fa fa-map-marker fa-1"></i> <strong>${loc.name}</strong>${loc.description ? ': ' : ''}${loc.description}`);
       let $d = $dot.clone().attr({
         'data-toggle': 'tooltip',
         'data-html': true,
-        'title': `<strong>${loc.name}</strong><br>${loc.description}`
+        'data-map-id': idx + 1,
+        'title': `<strong>${loc.name}</strong>`
+        // 'title': `<strong>${loc.name}</strong><br>${loc.description}`
       });
       $map.append($d);
       $d.css({
-        // left: (loc.x * _w) - $d.width() / 2 + 'px',
-        // top: (loc.y * _h) - $d.height() + 'px'
         left: (loc.x * 100) + '%',
         top: (loc.y * 100) + '%'
       });
+      $locs.append($n);
+    });
+    let highlightItem = function(ref) {
+      $('[data-map-ref]').removeClass('selected');
+      console.log(ref);
+      if (ref) {
+        $('[data-map-ref=' + ref + ']').addClass('selected');
+      }
+    }
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip().on('shown.bs.tooltip', function() {
+        $(this).addClass('selected');
+        highlightItem($(this).attr('data-map-id'));
+      }).on('hide.bs.tooltip', function() { 
+        $(this).removeClass('selected');
+        highlightItem();
+      });
     });
     $(function () {
-      $('[data-toggle="tooltip"]').tooltip()
+      $('[data-map-ref]').on('click', function () {
+        let ref = $(this).attr('data-map-ref');
+        $(`[data-map-id]`).each(function () {
+          if ($(this).attr('data-map-id') == ref) {
+            $(this).tooltip('toggle');
+          } else {
+            $(this).tooltip('hide')
+          }
+        });
+      });
     });
 
   }(jQuery))

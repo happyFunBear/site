@@ -117,7 +117,7 @@ body[page-type="landing"] .footer-reg {
     .landing #dfFigure {
       width: 150px; } }
 .landing .action-card {
-  background: #0a2950;
+  background: rgba(255, 255, 255, 0.1);
   color: #fff;
   padding: 10px 15px;
   margin-bottom: 10px;
@@ -125,6 +125,11 @@ body[page-type="landing"] .footer-reg {
   text-align: center;
   position: relative;
   border-radius: 5px; }
+  .landing .action-card:hover {
+    cursor: pointer; }
+    @media only screen and (min-width: 576px) {
+      .landing .action-card:hover {
+        background: rgba(255, 255, 255, 0.33); } }
   @media only screen and (max-width: 992px) {
     .landing .action-card {
       padding-right: 220px;
@@ -155,11 +160,16 @@ body[page-type="landing"] .footer-reg {
         width: 100px;
         border-radius: 5px; } }
 .landing .landing-section {
-  background: #0a2950;
+  background: rgba(255, 255, 255, 0.1);
   margin-top: 15px;
   padding: 40px;
   color: #fff;
   text-align: center; }
+  .landing .landing-section:hover {
+    cursor: pointer; }
+    @media only screen and (min-width: 576px) {
+      .landing .landing-section:hover {
+        background: rgba(255, 255, 255, 0.33); } }
 
 .chapter img {
   display: none; }

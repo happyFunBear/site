@@ -39,6 +39,12 @@ sans-serif,
   }
 }
 
+@mixin notMobile() {
+  @media only screen and (min-width: 576px) {
+    @content;
+  }
+}
+
 @mixin onlySmXS() {
   @media only screen and (max-width: 768px) {
     @content;
@@ -192,7 +198,7 @@ body[page-type="landing"] {
     }
   }
   .action-card {
-    background:  $nav-color;
+    background: rgba(255, 255, 255, 0.10);
     color: #fff;
     padding: 10px 15px;
     margin-bottom: 10px;
@@ -200,6 +206,12 @@ body[page-type="landing"] {
     text-align: center;
     position: relative;
     border-radius: 5px;
+    &:hover {
+      cursor: pointer;
+      @include notMobile() {
+        background: rgba(255, 255, 255, 0.33);
+      }
+    }
     @include onlyMdSmXs {
       padding-right: 220px;
       min-height: 220px;
@@ -213,7 +225,7 @@ body[page-type="landing"] {
     h4 {
       @include mobileOnly {
         font-size: 1.25rem;
-      }  
+      }
     }
     img {
       display: block;
@@ -234,11 +246,17 @@ body[page-type="landing"] {
     }
   }
   .landing-section {
-    background: $nav-color;
+    background: rgba(255, 255, 255, 0.10);
     margin-top: 15px;
     padding: 40px;
     color: #fff;
     text-align: center;
+    &:hover {
+      cursor: pointer;
+      @include notMobile() {
+        background: rgba(255, 255, 255, 0.33);
+      }
+    }
   }
 }
 

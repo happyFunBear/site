@@ -27,7 +27,7 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-4 col-md-12">
-        <div class="action-card">
+        <div class="action-card" data-link="#/story">
           <h4>Dive In</h4>
           <img src="assets/images/blank.png" />
           <div>
@@ -37,7 +37,7 @@
         </div>
       </div>
       <div class="col-lg-4 col-md-12">
-        <div class="action-card">
+        <div class="action-card" data-link="#/people">
           <h4>Meet The Characters</h4>
           <img src="assets/images/blank.png" />
           <div>
@@ -46,7 +46,7 @@
         </div>
       </div>
       <div class="col-lg-4 col-md-12">
-        <div class="action-card">
+        <div class="action-card" data-link="#/location">
           <h4>Visit Duquesa Bay</h4>
           <img src="assets/images/blank.png" />
           <div>
@@ -57,7 +57,7 @@
     </div>
     <div class="row">
       <div class="col-12">
-        <div class="landing-section">
+        <div class="landing-section" data-link="#/about">
           <h2>
             About Darkfin and her creators.
           </h2>
@@ -68,6 +68,8 @@
 </div>
 
 <script>
-
+  $('[data-link]').on('click', function() {
+    location.hash = $(this).data('link');
+  });
 
 </script>

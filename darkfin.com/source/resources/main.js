@@ -130,6 +130,10 @@ $('#main').on('click', '.add-modal', function(evt) {
         app.page = 'story';
         app.loadPage(app.pagesPath + 'story.html');
       },
+      'prolog': () => {
+        app.page = 'prolog';
+        app.loadPage(app.pagesPath + 'prolog.html');
+      },
       'gallery': () => {
         app.page = 'gallery';
         app.loadPage(app.pagesPath + 'gallery.html');

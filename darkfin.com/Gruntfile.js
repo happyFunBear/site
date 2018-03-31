@@ -208,6 +208,7 @@ module.exports = function (grunt) {
     grunt.file.copy(config.pagesPath + 'landing.html'  , config.outPath.pages + 'landing.html');
     grunt.file.copy(config.pagesPath + 'location.html' , config.outPath.pages + 'location.html');
     grunt.file.copy(config.pagesPath + 'gallery.html'  , config.outPath.pages + 'gallery.html');
+    grunt.file.copy(config.pagesPath + 'prolog.html'  , config.outPath.pages + 'prolog.html');
 
     grunt.file.copy(config.resourcePath + 'main.js'    , config.outPath.scripts + 'main.js');
 
