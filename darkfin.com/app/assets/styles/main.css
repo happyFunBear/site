@@ -329,3 +329,39 @@ body[page-type="landing"] .footer-reg {
       float: right; }
       .footer .footer-links .next-chapter i {
         margin-left: 5px; }
+
+.spin {
+  padding: 20px;
+  perspective: 500px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .spin > * {
+    flex: 0 0 auto; }
+  .spin figure {
+    margin: 0;
+    width: 800px;
+    transform-style: preserve-3d;
+    transition: transform .5s; }
+    .spin figure img {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 0 25px; }
+      .spin figure img:not(:first-of-type) {
+        position: absolute;
+        left: 0;
+        top: 0; }
+  .spin .spin-controls {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 0; }
+    .spin .spin-controls button {
+      flex: 0 0 auto;
+      margin: 0 5px;
+      cursor: pointer;
+      color: #333;
+      background: none;
+      border: 1px solid;
+      letter-spacing: 1px;
+      padding: 5px 10px; }
