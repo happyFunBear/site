@@ -19,7 +19,7 @@ sans-serif,
 "Apple Color Emoji",
 "Segoe UI Emoji",
 "Segoe UI Symbol";
-// --
+// -- 
 // @media (min-width: 576px) { ... }
 // // Medium devices (tablets, 768px and up)
 // @media (min-width: 768px) { ... }
@@ -53,6 +53,12 @@ sans-serif,
 
 @mixin onlyMdSmXs () {
   @media only screen and (max-width: 992px) {
+    @content;
+  }
+}
+
+@mixin landscape() {
+  @media only screen and (orientation: landscape) {
     @content;
   }
 }
@@ -95,6 +101,9 @@ html body {
     background-attachment: fixed;
     background-image: url(../images/ocean_bkg_dark.jpg);
     background-repeat: repeat;
+    @include mobileOnly {
+      margin-bottom: 1rem;
+    } 
   }
   .chapter .content {
     font-family: $serif-family;
@@ -127,6 +136,92 @@ body[page-type="landing"] {
     background: #000;
     color: #ccc;
     box-shadow: none;
+  }
+}
+
+html body .tooltip {
+  z-index: 1029;
+}
+
+html body .tooltip-inner {
+  background: rgba(255, 255, 255, 0.85);
+  color: #000;
+  font-weight: lighter;
+  font-size: 90%;
+}
+
+html body .tooltip .arrow::before {
+  border-top-color: rgba(255, 255, 255, 0.85);
+}
+
+body .modal-backdrop.show {
+  opacity: .66;
+  background-color: #000833;
+}
+
+.modal-image {
+  .modal-dialog {
+    max-width: none;
+    width: auto;
+  }
+  .modal-content {
+    max-width: none;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    box-shadow: 0 0 20px black;
+    border: 1px solid black;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: transparent;
+  }
+}
+
+.location {
+  padding-bottom: 4rem;
+  #mapWrapper {
+    position: relative;
+    display: block;
+    width: 494px;
+    height: 446px;
+    margin: 10px auto;
+  }
+  .map-dot {
+    top: -10000px;
+    left: -10000px;
+    margin-top: -12px;
+    margin-left: -4px;
+    color: red;
+    text-shadow: 1px 1px 1px white;
+    position: absolute;
+    opacity: 0.75;
+  }
+  .map-dot.selected.fa {
+    font-size: 150%;
+    margin-top: -18px;
+    margin-left: -7px;
+    opacity: 1.0;
+  }
+  #mapNumbers {
+    margin-bottom: 25px;
+    li {
+      cursor: pointer;
+      &.selected i {
+        color: red;
+      }
+    }
+  }
+  ul {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    list-style: none;
+    li {
+      margin-bottom: 15px;
+      li {
+        margin-bottom: 5px;
+      }
+    }
   }
 }
 
@@ -276,6 +371,12 @@ body[page-type="landing"] {
     font-family: $sans-serif-family;
     div {
       padding: .5em 0;
+    }
+    @include mobileOnly {
+      font-size: 1.25rem;
+    }
+    @include landscape {
+      position: static;
     }
   }
   .stage {
@@ -479,63 +580,73 @@ body[page-type="landing"] {
     }
   }
 }
-
+.carousel-item {
+  text-align: center;
+}
+.carousel.carousel-fade {
+  .carousel-item {
+    transition-property: opacity;
+    transition-duration: 1s;
+  }
+  .carousel-item, .active.left, .active.right {
+    opacity: 0;
+  }
+  .active, .next.left, .prev.right {
+    opacity: 1;
+  }
+  .carousel-item,
+  .next,
+  .prev,
+  .active.left,
+  .active.right {
+    left: 0;
+    transform: translate3d(0,0,0);
+  }
+}
 // Carousel configuration parameters
 $item-width: 800px; // Now we can use percentages!
 // $item-width: 40%; // Now we can use percentages!
 $item-separation: 50px; // This now is set with Js
 $viewer-distance: 500px;
-
 .spin {
-	padding: 20px;
-
-	perspective: $viewer-distance;
-	overflow: hidden;
-	
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	> * {
-		flex: 0 0 auto;
-	}
-	
-	figure {
-		margin: 0;
-		
-		width: $item-width;
-		transform-style: preserve-3d;
-		transition: transform .5s;
-		
-		img {
-			width: 100%;
-			box-sizing: border-box;
-			padding: 0 $item-separation / 2;
-			
-			&:not(:first-of-type) {
-				position: absolute;
-				left: 0;
-				top: 0;
-			}
-		}
-	}
-	
-	.spin-controls {
-		display: flex;
-		justify-content: center;
-		margin: 20px 0 0;
-		
-		button {
-			flex: 0 0 auto;
-			margin: 0 5px;
-			
-			cursor: pointer;
-			
-			color: #333;
-			background: none;
-			border: 1px solid;
-			letter-spacing: 1px;
-			padding: 5px 10px;
-		}
-	}
-	
+  padding: 20px;
+  perspective: $viewer-distance;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  >* {
+    flex: 0 0 auto;
+  }
+  figure {
+    margin: 0;
+    width: $item-width;
+    transform-style: preserve-3d;
+    transition: transform .5s;
+    img {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 0 $item-separation / 2;
+      &:not(:first-of-type) {
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+    }
+  }
+  .spin-controls {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 0;
+    button {
+      flex: 0 0 auto;
+      margin: 0 5px;
+      cursor: pointer;
+      color: #333;
+      background: none;
+      border: 1px solid;
+      letter-spacing: 1px;
+      padding: 5px 10px;
+    }
+  }
 }

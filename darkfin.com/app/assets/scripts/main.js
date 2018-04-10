@@ -29,17 +29,12 @@ var ROUTER;
 var story = [];
 var people = [];
 
-var utils = {
-};
 var start = (_router) => _router.resolve();
 
-$('#main').on('click', '.add-modal', function(evt) {
-  // console.log(evt);
-});
 
 (function ($) {
 
-  app.loadResources = function () {
+  app.loadResources = function() {
     return $.when(
       $.getJSON(app.filePath + 'people.json'),
       $.getJSON(app.filePath + 'locations.json'),
@@ -50,17 +45,50 @@ $('#main').on('click', '.add-modal', function(evt) {
       this.people = _people[0];
     });
   };
+
   app.utils.getCharacter = (_name) => {
     let _ret = this.people.filter(_x => (_x.name == _name));
     return (_ret && _ret.length) > 0 ? _ret[0] : null;
   };
+
   app.utils.getChapter = (_year, _chapter) => {
     let _ret = this.story.filter((_x) => (_x.year == _year && _x.chapter == _chapter));
     return (_ret && _ret.length) > 0 ? _ret[0] : null;
   };
+
+  {
+    /* <meta property="og:title" content="European Travel Destinations">
+<meta property="og:description" content="Offering tour packages for individuals or groups.">
+<meta property="og:image" content="http://euro-travel-example.com/thumbnail.jpg">
+<meta property="og:url" content="http://euro-travel-example.com/index.htm">
+<meta name="twitter:card" content="summary_large_image">
+
+
+<!--  Non-Essential, But Recommended -->
+
+<meta property="og:site_name" content="European Travel, Inc.">
+<meta name="twitter:image:alt" content="Alt text for image"> */
+}
+
+  app.utils.setMetaData = (content, type) => {
+    let title = 'Darkfin of Duquesa Bay';
+    if (type === 'chapter') {
+      title = $(content).find('.chapter-title').text();
+    }
+    $('meta[property="og:title"]').attr('content', title);
+    $('meta[property="og:description"]').attr('content', 'lorem ipsom dolor');
+    // $('meta[property="og:image"]').attr('content', 'Darkfin of Duquesa Bay');
+    $('meta[property="og:url"]').attr('content', document.location);
+    $('meta[property="og:site_name"]').attr('content', 'Darkfin of Duquesa Bay');
+    // <meta name="twitter:card" content="summary_large_image">
+    // $('meta[name="twitter:card"]').attr('content', 'Darkfin of Duquesa Bay');
+    $('meta[name="twitter:image:alt"]').attr('content', 'Darkfin of Duquesa Bay');
+  };
+
   app.render = (content) => {
     let $main = $('#main');
     $('#navbarMain, #navbarShare').removeClass('show');
+    app.utils.setMetaData(content, app.page);
     if ($main.html().length === 0) {
       $main.css('opacity', 0);
       $(window).scrollTop(0);
@@ -149,20 +177,28 @@ $('#main').on('click', '.add-modal', function(evt) {
 
     }
   );
-  $('.modal-image').on('show.bs.modal', function (event) {
-    let $target = $(event.relatedTarget);
-    let img = $target.data('src');
-    $(this).find('.modal-content').html(`<img src="${img}" />`);
-  });
-  // app.modal = {
-  //   show: (content) => {
-  //     $('.bd-example-modal-lg').modal('show');
-  //     $('#modal').find('#modal-content').html(content);
-  //   },
-  //   hide: () => {
 
-  //   }
-  // };
+  app.utils.expandImage = (img) => {
+    let $baseImg = $(img);
+    let $img = $('<img>').attr('src', img.src).css({
+      position: 'absolute',
+      top: '-10000px',
+      left: '-10000px',
+      height: 'auto',
+      weight: 'auto'
+    });
+    $('body').prepend($img);
+    let ret = $img.height() * 0.98 > $baseImg.height() || $img.width() * 0.98 > $baseImg.width();
+    $img.remove();
+    return ret;
+  };
+  $('#main').on('click', '.add-modal', function (evt) {
+    if (app.utils.expandImage(evt.target)) {
+      $('.modal-image').find('.modal-content img').attr('src', evt.target.src);
+      $('.modal-image').modal();  
+    }
+  });
+  
   app.pages.story = () => {
 
   };

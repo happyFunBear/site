@@ -1,19 +1,82 @@
 <div class="gallery">
 
-    <div class="jumbotron">
-      <div class="container">
-        <h1>Gallery</h1>
-        <p>
-          In the California coastal community of Duquesa Bay, a lone vigilante speaks for a whole other world, just beneath the surface.
-          Adored by some, abhorred by others she is Darkfin and this is her story. </p>
-      </div>
-    </div>
+  <div class="jumbotron">
     <div class="container">
-      <h1>Gallery Page</h1>
+      <h1>Gallery</h1>
+      <p>
+        In the California coastal community of Duquesa Bay, a lone vigilante speaks for a whole other world, just beneath the surface.
+        Adored by some, abhorred by others she is Darkfin and this is her story. </p>
     </div>
   </div>
-  
-  <script>
-  
-  
-  </script>
+  <div class="container">
+
+    <div class="card-columns"></div>
+    <div class="card" id="card">
+      <img class="card-img-top add-modal" alt="Card image cap">
+      <div class="card-body">
+        <p class="card-text"></p>
+      </div>
+    </div>
+
+
+  </div>
+</div>
+
+<script>
+  var images = [
+    {
+      src: 'assets/images/dive_deeper.jpg',
+      alt: 'Season Three Promo',
+      text: 'A rendered image promo for Season Three.'
+    },
+    {
+      src: 'assets/images/comic_cover1.jpg',
+      alt: 'Darkfin Comic Cover',
+      text: 'Darkfin "comic" cover that was part of the design for the main page during Year One.'
+    },
+    {
+      src: 'assets/images/sea_dragon.jpg',
+      alt: 'Spiny Norman, the Sea Dragon',
+      text: `This is "Spiny Norman" the Sea Dragon. This Leafy Sea Dragon has been "adopted" by us here at Darkfin, thanks to a special program from <a href="http://www.aquariumofpacific.org/" target="_new">The Aquarium of the Pacific</a>.`
+    },
+    {
+      src: 'assets/images/desktop_surface_1024.jpg',
+      alt: 'Darkfin Surfaces',
+      text: 'Darkfin Surfaces.'
+    },
+    {
+      src: 'assets/images/desktop_think_1024.jpg',
+      alt: 'Darkfin Brooding',
+      text: 'Darkfin Brooding.'
+    },
+    {
+      src: 'assets/images/df_with_dolphins.jpg',
+      alt: 'Darkfin with Dolphins',
+      text: 'Alex Amezcua gives us his image of Darkfin swimming with the dolphins in Duquesa Bay.'
+    },
+    {
+      src: 'assets/images/erika_full_image.jpg',
+      alt: 'Darkfin Contemplative',
+      text: 'A full image of a contemplative Erika von Meer by Elizabeth Crusade.'
+    },
+    {
+      src: 'assets/images/df_thinking.jpg',
+      alt: 'Darkfin Thinking',
+      text: `Elizabeth Crusade's study of Darkfin's skin early in the character design process. The fins under her arms are intentionally left off to better show the character.`
+    },
+  ];
+
+  var $card = $('#card').removeAttr('id').detach();
+  var $cardCol = $('.card-columns');
+  images.forEach(item => {
+    var $c = $card.clone();
+    $c.find('img').attr({
+      src: item.src,
+      alt: item.alt
+    });
+    $c.find('.card-text').html(item.text);
+    $cardCol.append($c);
+  });
+
+
+</script>

@@ -4,9 +4,14 @@
 <head>
   <meta charset="utf-8">
   <title>Darkfin</title>
-  <!-- <link rel="stylesheet" href="files/main.css?%%time%%">
-  <link rel="stylesheet" href="assets/scripts/font-awesome.min.css">
-  <link rel="stylesheet" href="assets/scripts/bootstrap.min.css"> -->
+
+  <meta property="og:title" content="Darkfin of Duquesa ">
+  <meta property="og:description" content="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor ducimus quidem commodi at consequatur quisquam.">
+  <meta property="og:image" content="assets/images/df-logo.png">
+  <meta property="og:url" content="">
+  <meta name="twitter:card" content="assets/images/df-logo.png">  
+  <meta property="og:site_name" content="Darkfin of Duquesa Bay">
+  <meta name="twitter:image:alt" content="Darkfin">
   
   <link rel="stylesheet" href="assets/styles/main.css?%%time%%">
   <link rel="stylesheet" href="assets/styles/build.css">
@@ -14,9 +19,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="assets/images/df-favicon.png">
 </head>
-
 <body>
-  <!-- <div id="gradientBackdrop"></div> -->
 
   <nav class="navbar navbar-dark fixed-top navbar-expand-lg">
     <a class="navbar-brand" href="#/">Darkfin</a>
@@ -74,8 +77,7 @@
 
   <div class="modal fade modal-image" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content" data-dismiss="modal" aria-label="close">
-      </div>
+      <div class="modal-content" data-dismiss="modal" aria-label="close"><img /></div>
     </div>
   </div>
   <div class="footer-reg">
@@ -93,7 +95,7 @@
   <script>
     $('.footer-reg span').text((new Date).getFullYear());
     $(window).on('scroll', () => {
-      if (window.scrollY < 600) {
+      if (window.scrollY < 900) {
         let _h = $('.jumbotron:first').height();
         $('.jumbotron:first').css('background-position-y', -window.scrollY * 0.5);
         $('.jumbotron:first p, .jumbotron:first h1').css('opacity', 1 - 0.5 * (window.scrollY/_h));

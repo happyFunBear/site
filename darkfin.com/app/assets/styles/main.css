@@ -30,6 +30,9 @@ html body {
     background-attachment: fixed;
     background-image: url(../images/ocean_bkg_dark.jpg);
     background-repeat: repeat; }
+    @media only screen and (max-width: 576px) {
+      html body .jumbotron {
+        margin-bottom: 1rem; } }
   html body .chapter .content {
     font-family: Georgia, Palatino, "Times New Roman", Times, serif; }
 
@@ -54,6 +57,74 @@ body[page-type="landing"] .footer-reg {
   background: #000;
   color: #ccc;
   box-shadow: none; }
+
+html body .tooltip {
+  z-index: 1029; }
+
+html body .tooltip-inner {
+  background: rgba(255, 255, 255, 0.85);
+  color: #000;
+  font-weight: lighter;
+  font-size: 90%; }
+
+html body .tooltip .arrow::before {
+  border-top-color: rgba(255, 255, 255, 0.85); }
+
+body .modal-backdrop.show {
+  opacity: .66;
+  background-color: #000833; }
+
+.modal-image .modal-dialog {
+  max-width: none;
+  width: auto; }
+.modal-image .modal-content {
+  max-width: none;
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+  border: none;
+  box-shadow: 0 0 20px black;
+  border: 1px solid black;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: transparent; }
+
+.location {
+  padding-bottom: 4rem; }
+  .location #mapWrapper {
+    position: relative;
+    display: block;
+    width: 494px;
+    height: 446px;
+    margin: 10px auto; }
+  .location .map-dot {
+    top: -10000px;
+    left: -10000px;
+    margin-top: -12px;
+    margin-left: -4px;
+    color: red;
+    text-shadow: 1px 1px 1px white;
+    position: absolute;
+    opacity: 0.75; }
+  .location .map-dot.selected.fa {
+    font-size: 150%;
+    margin-top: -18px;
+    margin-left: -7px;
+    opacity: 1.0; }
+  .location #mapNumbers {
+    margin-bottom: 25px; }
+    .location #mapNumbers li {
+      cursor: pointer; }
+      .location #mapNumbers li.selected i {
+        color: red; }
+  .location ul {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    list-style: none; }
+    .location ul li {
+      margin-bottom: 15px; }
+      .location ul li li {
+        margin-bottom: 5px; }
 
 .landing header.splash {
   position: relative;
@@ -185,6 +256,12 @@ body[page-type="landing"] .footer-reg {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; }
   .chapter h2.chapter-title div {
     padding: .5em 0; }
+  @media only screen and (max-width: 576px) {
+    .chapter h2.chapter-title {
+      font-size: 1.25rem; } }
+  @media only screen and (orientation: landscape) {
+    .chapter h2.chapter-title {
+      position: static; } }
 .chapter .stage {
   color: #777;
   font-size: .95em;
@@ -330,6 +407,24 @@ body[page-type="landing"] .footer-reg {
       .footer .footer-links .next-chapter i {
         margin-left: 5px; }
 
+.carousel-item {
+  text-align: center; }
+
+.carousel.carousel-fade .carousel-item {
+  transition-property: opacity;
+  transition-duration: 1s; }
+.carousel.carousel-fade .carousel-item, .carousel.carousel-fade .active.left, .carousel.carousel-fade .active.right {
+  opacity: 0; }
+.carousel.carousel-fade .active, .carousel.carousel-fade .next.left, .carousel.carousel-fade .prev.right {
+  opacity: 1; }
+.carousel.carousel-fade .carousel-item,
+.carousel.carousel-fade .next,
+.carousel.carousel-fade .prev,
+.carousel.carousel-fade .active.left,
+.carousel.carousel-fade .active.right {
+  left: 0;
+  transform: translate3d(0, 0, 0); }
+
 .spin {
   padding: 20px;
   perspective: 500px;
@@ -365,3 +460,5 @@ body[page-type="landing"] .footer-reg {
       border: 1px solid;
       letter-spacing: 1px;
       padding: 5px 10px; }
+
+/*# sourceMappingURL=main.css.map */

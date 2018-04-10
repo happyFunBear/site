@@ -9,99 +9,59 @@
     </div>
   </div>
 
-  <!-- '<div class="tooltip" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>' -->
   <div class="container">
-    <!-- <h1>Location Page</h1> -->
     <div id="mapWrapper">
       <img id="dbMap" src="assets/images/map_new_clean.jpg" />
       <i class="map-dot fa fa-map-marker fa-1" id="refDot"></i>
     </div>
-    <ol id="mapNumbers">
-
-    </ol>
+    <ol id="mapNumbers"></ol>
     <div>
       <h4>Quartz County, California contains the Santa Conchita Valley which is the home of four communities:</h4>
-
-      <p>
-        <strong>Duquesa Bay®</strong> - Population: 35,000 A combination of rich, beach front properties and a college town (Santa
-        Conchita University (28)).</p>
-
-      <p>Beacon Point (24) is an ultra rich section of Duquesa Bay, home to approximately 1,000 people, known as the "Platinum
-        K".
-      </p>
-
-      <p>
-        <strong>Chaparral Heights</strong> - Population: 30,000 Upper-middle class suburbia with lots of upscale strip malls and
-        planned communities.</p>
-
-      <p>
-        <strong>Santa Conchita</strong> - Population: 40,000 The oldest portion of Quartz County, Santa Conchita grew up near the
-        Santa Conchita Mission (now a historical site). Much of the original Santa Conchita is decaying industrial areas
-        and farm based businesses.
-      </p>
-
-      <p>South Side is the most run down and low income section of the valley. It is home to abandoned factories, migrant farm
-        workers and trendy dance clubs.</p>
-      <p>East Side edges into open farm land and is home to the remaining farm industries and farm workers.</p>
-      <p>North Side is upscale and benefits from proximity to more recently constructed Chaparral Heights.</p>
-      <p>West Side is moving more slowly upscale, offering historic and "quaint" housing for SCU students who live outside Duquesa
-        Bay. Still mostly working class housing and apartments.</p>
-
-      <p>
-        <strong>Quartz Lake</strong> - Population: 5,000 Farmland and farm community, but also home to the famous Quartz Lake Inn
-        (30), a combination country club and upscale meeting place overlooking beautiful Quartz Lake. Santa Conchita Mission
-        Historical Site (12) is located on the western edge of Quartz Lake. The hills surrounding the scenic lake are home
-        to a combination of older farmhand housing and more recent secluded mansions.</p>
+      <ul>
+        <li>
+          <strong>Duquesa Bay®</strong> - Population: 35,000 A combination of rich, beach front properties and a college town (Santa
+          Conchita University (28)).
+          <ul>
+            <li>
+              <em>Beacon Point</em> (24) is an ultra rich section of Duquesa Bay, home to approximately 1,000 people, known as the "Platinum K".
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Chaparral Heights</strong> - Population: 30,000 Upper-middle class suburbia with lots of upscale strip malls and
+          planned communities.
+        </li>
+        <li>
+          <strong>Santa Conchita</strong> - Population: 40,000 The oldest portion of Quartz County, Santa Conchita grew up near the
+          Santa Conchita Mission (now a historical site). Much of the original Santa Conchita is decaying industrial areas
+          and farm based businesses.
+          <ul>
+            <li>
+              <em>South Side</em> is the most run down and low income section of the valley. It is home to abandoned factories, migrant farm workers
+              and trendy dance clubs.
+            </li>
+            <li>
+              <em>East Side</em> edges into open farm land and is home to the remaining farm industries and farm workers.
+            </li>
+            <li>
+              <em>North Side</em> is upscale and benefits from proximity to more recently constructed Chaparral Heights.
+            </li>
+            <li>
+              <em>West Side</em> is moving more slowly upscale, offering historic and "quaint" housing for SCU students who live outside Duquesa
+              Bay. Still mostly working class housing and apartments.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Quartz Lake</strong> - Population: 5,000 Farmland and farm community, but also home to the famous Quartz Lake Inn
+          (30), a combination country club and upscale meeting place overlooking beautiful Quartz Lake. Santa Conchita Mission
+          Historical Site (12) is located on the western edge of Quartz Lake. The hills surrounding the scenic lake are home
+          to a combination of older farmhand housing and more recent secluded mansions.
+        </li>
+      </ul>
     </div>
   </div>
 </div>
-<style>
-  html body .tooltip {
-    z-index: 1029;
-  }
-  html body .tooltip-inner {
-    background: rgba(255, 255, 255, 0.85);
-    color: #000;
-    font-weight: lighter;
-    font-size: 90%;
-  }
-
-  html body .tooltip .arrow::before {
-    border-top-color: rgba(255, 255, 255, 0.85);
-  }
-
-  #mapWrapper {
-    position: relative;
-    display: block;
-    width: 494px;
-    height: 446px;
-    margin: 10px auto;
-  }
-
-  .map-dot {
-    top: -10000px;
-    left: -10000px;
-    margin-top: -12px;
-    margin-left: -4px;
-    color: red;
-    text-shadow: 1px 1px 1px white;
-    position: absolute;
-    opacity: 0.75;
-  }
-  .map-dot.selected.fa {
-    font-size: 150%;
-    margin-top: -18px;
-    margin-left: -7px;
-    opacity: 1.0;
-  }
-  #mapNumbers li {
-    cursor: pointer;
-  }
-
-  #mapNumbers li.selected i {
-    color: red;
-  }
-</style>
 <script>
   (function ($) {
 
@@ -129,18 +89,17 @@
       });
       $locs.append($n);
     });
-    let highlightItem = function(ref) {
+    let highlightItem = function (ref) {
       $('[data-map-ref]').removeClass('selected');
-      console.log(ref);
       if (ref) {
         $('[data-map-ref=' + ref + ']').addClass('selected');
       }
     }
     $(function () {
-      $('[data-toggle="tooltip"]').tooltip().on('shown.bs.tooltip', function() {
+      $('[data-toggle="tooltip"]').tooltip().on('shown.bs.tooltip', function () {
         $(this).addClass('selected');
         highlightItem($(this).attr('data-map-id'));
-      }).on('hide.bs.tooltip', function() { 
+      }).on('hide.bs.tooltip', function () {
         $(this).removeClass('selected');
         highlightItem();
       });
