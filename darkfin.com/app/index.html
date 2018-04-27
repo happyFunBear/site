@@ -13,7 +13,7 @@
   <meta property="og:site_name" content="Darkfin of Duquesa Bay">
   <meta name="twitter:image:alt" content="Darkfin">
   
-  <link rel="stylesheet" href="assets/styles/main.css?1523327346646">
+  <link rel="stylesheet" href="assets/styles/main.css?1524097457845">
   <link rel="stylesheet" href="assets/styles/build.css">
   
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -91,15 +91,15 @@
   <script src="assets/scripts/bootstrap.js"></script> -->
   <script src="assets/scripts/build.js"></script>
   <!-- <script src="assets/scripts/navigo.js"></script> -->
-  <script src="assets/scripts/main.js?1523327346646"></script>
+  <script src="assets/scripts/main.js?1524097457845"></script>
   <script>
     $('.footer-reg span').text((new Date).getFullYear());
-    $(window).on('scroll', () => {
-      if (window.scrollY < 900) {
+    $(window).on('scroll', function() {
+      let top = $(window).scrollTop();
+      if (top < 900) {
         let _h = $('.jumbotron:first').height();
-        $('.jumbotron:first').css('background-position-y', -window.scrollY * 0.5);
-        $('.jumbotron:first p, .jumbotron:first h1').css('opacity', 1 - 0.5 * (window.scrollY/_h));
-        
+        $('.jumbotron:first').css('background-position-y', - top * 0.5);
+        $('.jumbotron:first p, .jumbotron:first h1').css('opacity', 1 - 0.5 * (top/_h));
       }
     });
   </script>

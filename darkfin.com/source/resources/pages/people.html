@@ -28,8 +28,8 @@
     let $t;
 
     function loadImages() {
-      let _min = window.scrollY - window.innerHeight;
-      let _max = window.scrollY + 3  * window.innerHeight;
+      let _min = $(window).scrollTop() - window.innerHeight;
+      let _max = $(window).scrollTop() + 3 * window.innerHeight;
       $('.character-image').each(function () {
         let _imgTop = $(this).offset().top;
         if ($(this).attr('data-src') && _imgTop > _min && _imgTop < _max) {
@@ -39,9 +39,9 @@
     }
 
     $(window).on('scroll', _.debounce(loadImages, 150));
-    _.each(people, (members, family) => {
-      $('.body').append(`<div class="col-12 family-name"><h4>${family}</h4></div>`);
-      _.each(members, (person, idx) => {
+    _.each(people, function (members, family) {
+      $('.body').append('<div class="col-12 family-name"><h4>' + family + '</h4></div>');
+      _.each(members, function (person, idx) {
         $t = $template.clone();
         if (idx === members.length - 1) {
           $t.addClass('last');
@@ -51,7 +51,7 @@
           src: 'assets/images/blank.png'
         });
         $t.attr('id', person.name);
-        _.forIn(person, (val, key) => {
+        _.forIn(person, function (val, key) {
           if (key !== 'family' && key !== 'image' && key !== 'tags') {
             $t.find('dl').append($('<dt class="' + key + '">' + _.capitalize(key) + '</dt><dd class="' + key + '">' + val + '</dd>'))
           }

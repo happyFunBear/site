@@ -71,15 +71,15 @@
     let _w = $map.width();
     let $dot = $('<i class="map-dot fa fa-map-marker fa-1"></i>');
     let $mapLoc = $('<li class=""></li>');
-    app.locations.forEach((loc, idx) => {
+    app.locations.forEach(function(loc, idx) {
       let $n = $mapLoc.clone().attr({
         'data-map-ref': idx + 1
-      }).html(`<i class="fa fa-map-marker fa-1"></i> <strong>${loc.name}</strong>${loc.description ? ': ' : ''}${loc.description}`);
+      }).html('<i class="fa fa-map-marker fa-1"></i> <strong>' + loc.name + '</strong>' + (loc.description ? ': ' : '') + loc.description);
       let $d = $dot.clone().attr({
         'data-toggle': 'tooltip',
         'data-html': true,
         'data-map-id': idx + 1,
-        'title': `<strong>${loc.name}</strong>`
+        'title': '<strong>' + loc.name + '</strong>'
         // 'title': `<strong>${loc.name}</strong><br>${loc.description}`
       });
       $map.append($d);
@@ -95,7 +95,7 @@
         $('[data-map-ref=' + ref + ']').addClass('selected');
       }
     }
-    $(function () {
+    $(function() {
       $('[data-toggle="tooltip"]').tooltip().on('shown.bs.tooltip', function () {
         $(this).addClass('selected');
         highlightItem($(this).attr('data-map-id'));
@@ -104,10 +104,10 @@
         highlightItem();
       });
     });
-    $(function () {
+    $(function() {
       $('[data-map-ref]').on('click', function () {
         let ref = $(this).attr('data-map-ref');
-        $(`[data-map-id]`).each(function () {
+        $('[data-map-id]').each(function () {
           if ($(this).attr('data-map-id') == ref) {
             $(this).tooltip('toggle');
           } else {

@@ -34,24 +34,29 @@
   (function ($) {
     let yearNum = ['Zero', 'One', 'Two', 'Three', 'Four'];
     let $template = $('#temp').detach().removeAttr('id');
-    let vignette = _.sortBy(app.story.filter(s => (s.type === 'v')), 'fileName');
-    let story = _.sortBy(app.story.filter(s => (s.type === 'y')), 'fileName');
+    let vignette = _.sortBy(app.story.filter(function(s) {
+      return s.type === 'v';
+    }), 'fileName');
+    let story = _.sortBy(app.story.filter(function(s) {
+      return s.type === 'y';
+    }), 'fileName');
     let years = _.groupBy(story, 'year');
     let $t;
+    console.log(app.story, vignette);
 
-    _.each(years, (stories, year) => {
+    _.each(years, function(stories, year) {
       $t = $template.clone();
-      $t.find('.year-title').html(`Year ${yearNum[year]}<br><em>${stories[0].yearTitle}</em>`);
-      _.each(stories, (chapter) => {
-        $t.find('ol').append(`<li><a href="#/story/year/${chapter.year}/chapter/${chapter.chapter}">${chapter.title}</a></li>`);
+      $t.find('.year-title').html('Year ' + yearNum[year] + '<br><em>' +  stories[0].yearTitle + '</em>');
+      _.each(stories, function(chapter) {
+        $t.find('ol').append('<li><a href="#/story/year/' + chapter.year + '/chapter/' + chapter.chapter + '">' + chapter.title + '</a></li>');
       });
       $('.body').append($t);
     });
 
     $t = $template.clone();
-    $t.find('.year-title').html(`<br>Vignettes`);
-    _.each(vignette, (chapter) => {
-      $t.find('ol').append(`<li><a href="#/story/year/v/chapter/${chapter.chapter}">${chapter.title}</a></li>`);
+    $t.find('.year-title').html('<br>Vignettes');
+    _.each(vignette, function(chapter) {
+      $t.find('ol').append('<li><a href="#/story/year/v/chapter/' + chapter.chapter + '">' + chapter.title + '</a></li>');
     });
     $('.body').append($t);
 

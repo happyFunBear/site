@@ -9,7 +9,7 @@ var app = {
   utils: {},
   pages: {},
   router: new Navigo(null, true),
-  start: (_router) => _router.resolve(),
+  start: function(_router){ _router.resolve(); },
   fadeIn: 250,
   fadeOut: 250,
   page: '',
@@ -29,8 +29,7 @@ var ROUTER;
 var story = [];
 var people = [];
 
-var start = (_router) => _router.resolve();
-
+// var start = function(_router){ _router.resolve(); }
 
 (function ($) {
 
@@ -39,20 +38,24 @@ var start = (_router) => _router.resolve();
       $.getJSON(app.filePath + 'people.json'),
       $.getJSON(app.filePath + 'locations.json'),
       $.getJSON(app.filePath + 'story.json')
-    ).then((_people, _locations, _story) => {
-      this.story = _story[0];
-      this.locations = _locations[0];
-      this.people = _people[0];
+    ).then(function(_people, _locations, _story) {
+      app.story = _story[0];
+      app.locations = _locations[0];
+      app.people = _people[0];
     });
   };
 
-  app.utils.getCharacter = (_name) => {
-    let _ret = this.people.filter(_x => (_x.name == _name));
+  app.utils.getCharacter = function(_name) {
+    let _ret = app.people.filter(function(_x) {
+      return (_x.name == _name);
+    });
     return (_ret && _ret.length) > 0 ? _ret[0] : null;
   };
 
-  app.utils.getChapter = (_year, _chapter) => {
-    let _ret = this.story.filter((_x) => (_x.year == _year && _x.chapter == _chapter));
+  app.utils.getChapter = function(_year, _chapter) {
+    let _ret = app.story.filter(function(_x) {
+      return (_x.year == _year && _x.chapter == _chapter);
+    });
     return (_ret && _ret.length) > 0 ? _ret[0] : null;
   };
 
@@ -70,7 +73,7 @@ var start = (_router) => _router.resolve();
 <meta name="twitter:image:alt" content="Alt text for image"> */
 }
 
-  app.utils.setMetaData = (content, type) => {
+  app.utils.setMetaData = function(content, type) {
     let title = 'Darkfin of Duquesa Bay';
     if (type === 'chapter') {
       title = $(content).find('.chapter-title').text();
@@ -85,7 +88,7 @@ var start = (_router) => _router.resolve();
     $('meta[name="twitter:image:alt"]').attr('content', 'Darkfin of Duquesa Bay');
   };
 
-  app.render = (content) => {
+  app.render = function(content) {
     let $main = $('#main');
     $('#navbarMain, #navbarShare').removeClass('show');
     app.utils.setMetaData(content, app.page);
@@ -122,12 +125,12 @@ var start = (_router) => _router.resolve();
       }
     });
   };
-  app.loadPage = (file, callback) => {
+  app.loadPage = function(file, callback) {
     // fade out
     $.get({
       url: file,
       dataType: 'html'
-    }).then(res => {
+    }).then(function(res) {
       app.render(res);
       if (callback) { callback(); }
     });
@@ -140,37 +143,37 @@ var start = (_router) => _router.resolve();
         app.page = 'landing';
         app.loadPage(filePath + 'landing.html');
       },
-      'story/year/:year/chapter/:chapter': (params) => {
+      'story/year/:year/chapter/:chapter': function(params) {
         app.page = 'chapter';
         params.chapter = ('0' + params.chapter).slice(-2);
-        var fileName = params.year === 'v' ? `v${params.chapter}.html` : `y${params.year}c${params.chapter}.html`;
-        app.loadPage(app.storyPath + fileName);
+        var fileName = params.year === 'v' ? 'v' + params.chapter + '.html' : 'y' + params.year + 'c' + params.chapter + '.html';
+        app.loadPage(app.storyPath + fileName, app.pages.story);
       },
-      'people': () => {
+      'people': function () {
         app.page = 'people';
         app.loadPage(app.pagesPath + 'people.html');
       },
-      'about': () => {
+      'about': function () {
         app.page = 'about';
         app.loadPage(app.pagesPath + 'about.html');
       },
-      'story': () => {
+      'story': function () {
         app.page = 'story';
         app.loadPage(app.pagesPath + 'story.html');
       },
-      'prolog': () => {
+      'prolog': function () {
         app.page = 'prolog';
         app.loadPage(app.pagesPath + 'prolog.html');
       },
-      'gallery': () => {
+      'gallery': function () {
         app.page = 'gallery';
         app.loadPage(app.pagesPath + 'gallery.html');
       },
-      'location': () => {
+      'location': function () {
         app.page = 'location';
         app.loadPage(app.pagesPath + 'location.html');
       },
-      '*': () => {
+      '*': function () {
         app.page = 'landing';
         app.loadPage(app.pagesPath + 'landing.html');
       }
@@ -178,7 +181,7 @@ var start = (_router) => _router.resolve();
     }
   );
 
-  app.utils.expandImage = (img) => {
+  app.utils.expandImage = function(img) {
     let $baseImg = $(img);
     let $img = $('<img>').attr('src', img.src).css({
       position: 'absolute',
@@ -199,12 +202,28 @@ var start = (_router) => _router.resolve();
     }
   });
   
-  app.pages.story = () => {
-
+  app.pages.story = function()  {
+    // $('.line .actor').each(function() {
+    //   var actor = $(this).text();
+    //   var char = app.people.filter(function(p){
+    //     return p.name.toLowerCase().indexOf(actor.toLowerCase()) > -1;
+    //   });
+    //   if (char.length === 1) {
+    //     var content = $('<div>');
+    //     content.append($('<h5>').text(char[0].name));
+    //     content.append($('<p>').html(char[0].bio));
+    //     $(this).addClass('show-character').text('').append($('<a href="javascript:void();">').text(actor).popover({
+    //       content: content,
+    //       html: true,
+    //       placement: 'top',
+    //       trigger: 'focus'
+    //     }));
+    //   }
+    // });
   };
 
 
-  $(document).ready(app.loadResources().then(() => {
+  $(document).ready(app.loadResources().then(function() {
     app.start(app.router);
   }));
 

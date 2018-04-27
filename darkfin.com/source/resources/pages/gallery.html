@@ -42,7 +42,7 @@
     {
       src: 'assets/images/sea_dragon.jpg',
       alt: 'Spiny Norman, the Sea Dragon',
-      text: `This is "Spiny Norman" the Sea Dragon. This Leafy Sea Dragon has been "adopted" by us here at Darkfin, thanks to a special program from <a href="http://www.aquariumofpacific.org/" target="_new">The Aquarium of the Pacific</a>.`
+      text: 'This is "Spiny Norman" the Sea Dragon. This Leafy Sea Dragon has been "adopted" by us here at Darkfin, thanks to a special program from <a href="http://www.aquariumofpacific.org/" target="_new">The Aquarium of the Pacific</a>.'
     },
     {
       src: 'assets/images/desktop_surface_1024.jpg',
@@ -67,13 +67,13 @@
     {
       src: 'assets/images/df_thinking.jpg',
       alt: 'Darkfin Thinking',
-      text: `Elizabeth Crusade's study of Darkfin's skin early in the character design process. The fins under her arms are intentionally left off to better show the character.`
+      text: 'Elizabeth Crusade\'s study of Darkfin\'s skin early in the character design process. The fins under her arms are intentionally left off to better show the character.'
     },
   ];
 
   var $card = $('#card').removeAttr('id').detach();
   var $cardCol = $('.card-columns');
-  images.forEach(item => {
+  images.forEach(function(item) {
     var $c = $card.clone();
     $c.find('img').attr({
       src: item.src,

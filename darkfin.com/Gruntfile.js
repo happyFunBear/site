@@ -185,16 +185,9 @@ module.exports = function (grunt) {
 
     var storiesFile = grunt.file.read(config.pagesPath + 'story.html');
 
-    // grunt.file.write(config.outPath.pages + 'story.html', storiesFile);
+
     grunt.file.write(config.outPath.files + 'story.json', JSON.stringify(structure, null, 4));
-    // grunt.file.copy(config.pagesPath + 'index.html', config.outPath.dir + 'index.html');
 
-    // grunt.file.write(config.outPath.files + 'people.json', grunt.file.read(config.resourcePath + 'people.json'));
-
-    // grunt.file.write(config.outPath.pages + 'people.html', grunt.file.read(config.pagesPath + 'people.html'));
-    // grunt.file.write(config.outPath.pages + 'about.html', grunt.file.read(config.pagesPath + 'about.html'));
-    // grunt.file.write(config.outPath.pages + 'landing.html', grunt.file.read(config.pagesPath + 'landing.html'));
-    // grunt.file.write(config.outPath.pages + 'location.html', grunt.file.read(config.pagesPath + 'location.html'));
     
     grunt.file.write(config.outPath.dir + 'index.html', setTimes(grunt.file.read(config.pagesPath + 'index.html')));
 
@@ -212,7 +205,6 @@ module.exports = function (grunt) {
 
     grunt.file.copy(config.resourcePath + 'main.js'    , config.outPath.scripts + 'main.js');
 
-    // grunt.file.copy(config.resourcePath + 'images/' + 'df-favicon.png', config.outPath.images + 'df-favicon.png', { encoding: null });
 
   });
 
