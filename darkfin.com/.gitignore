@@ -42,3 +42,7 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+darkfin.com/app/assets
+darkfin.com/app/files
+darkfin.com/app/story
