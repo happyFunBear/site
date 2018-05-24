@@ -3,6 +3,14 @@
   #main {
     background: #000;
   }
+  .spin {
+    cursor: pointer;
+    cursor: e-resize;
+  }
+  .spin.reverse {
+    cursor: w-resize;
+
+  }
 </style>
 <div class="prolog">
   <div class="jumbotron">
@@ -14,8 +22,8 @@
       </p>
     </div>
   </div>
-  <div class="container">
-    <div class="spin" data-bfc="true">
+  <div class="container my-2">
+    <div class="spin">
       <div class="spin-inner">
         <img src="assets/images/p_p1.jpg" />
         <img src="assets/images/p_p2.jpg" />
@@ -24,7 +32,7 @@
       </div>
     </div>
 
-    <div class="row">
+    <div class="row py-2">
       <div class="col-12 py-2 text-center">
         <h3>
           <a href="#/story/year/1/chapter/1">Start Her Story</a>
@@ -42,20 +50,24 @@
     slides.last().prev().addClass('under');
     var next = function (item) {
       item.removeClass('top').addClass('shown'); // change to shown
-      item.prev() ? item.prev().removeClass('under').addClass('top') : null; // make previous top
-      item.prev() && item.prev().prev() ? item.prev().prev().addClass('under') : null; // add under
+      item.prev() && item.prev().attr('src') ? item.prev().removeClass('under').addClass('top') : null; // make previous top
+      item.prev() && item.prev().prev() && item.prev().prev().attr('src') ? item.prev().prev().addClass('under') : null; // add under
+      item.prev().is(slides.first()) ? $('.spin').addClass('reverse') : null;
     }
     var prev = function (item) {
-      item.prev() ? item.prev().removeClass('under') : null;
+      item.prev() ? item.prev().removeClass('under') : $('.spin').addClass('blerf');
       item.next() ? item.next().removeClass('shown').addClass('top') : null;
       item.removeClass('top').addClass('under');
+      item.next().is(slides.last()) ? $('.spin').removeClass('reverse') : null;
     }
     var direction = 1;
     slides.on('click', function () {
       if ($(this).is($('.spin img:first'))) {
         direction = -1;
+        $('.spin').addClass('backward');
       } else if ($(this).is($('.spin img:last'))) {
         direction = 1;
+        $('.spin').addClass('forward');
       }
       direction === 1 ? next($(this)) : prev($(this));
 

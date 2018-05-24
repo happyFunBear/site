@@ -17,6 +17,11 @@
 
   </div>
   <div class="container">
+    <div class="row py-2">
+      <div class="col-12">
+        <h3 class="text-center"><a href="#/prolog">Prolog</a></h3>
+      </div>
+    </div>
     <div class="body row">
       <div id="temp" class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12">
         <h3 class="sticky-top header-offset d-block d-sm-none">
@@ -42,7 +47,6 @@
     }), 'fileName');
     let years = _.groupBy(story, 'year');
     let $t;
-    console.log(app.story, vignette);
 
     _.each(years, function(stories, year) {
       $t = $template.clone();
