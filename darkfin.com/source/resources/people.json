@@ -91,14 +91,24 @@
     "quote": "MINE, MINE, MINE."
   },
   {
-    "name": "Lydia Martel Renselier",
+    "name": "Bradley Martel",
     "family": "The Martel Family",
-    "image": "graphics/lydia_headshot.jpg",
-    "age": "45Hair: Red",
+    "image": "graphics/brad_headshot.jpg",
+    "age": "26",
     "hair": "Blond & Black",
     "eyes": "Hazel",
     "bio": "The college drop-out playboy of the family, he's a concert promoter and loves to participate in various legal and non-legal activities.",
     "quote": "Let's discuss this over drinks."
+  },
+  {
+    "name": "Lydia Martel Renselier",
+    "family": "The Martel Family",
+    "image": "graphics/lydia_headshot.jpg",
+    "age": "45",
+    "hair": "Red",
+    "eyes": "Brown",
+    "bio": "The sister of Doug, she is the county museum curator and well-known philanthropist. She uses arm crutches because of MS.",
+    "quote": "What mask shall I wear today?"
   },
   {
     "name": "Penelope \"Penny\" Renselier",

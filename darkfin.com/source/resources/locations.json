@@ -2,20 +2,20 @@
   {
     "name": "Burten State Prison",
     "description": "",
-    "x": 0.292089249,
-    "y": 0.056433409
+    "x": 0.282089249,
+    "y": 0.036433409
   },
   {
     "name": "USCG HQ",
     "description": "",
-    "x": 0.135902637,
-    "y": 0.171557562
+    "x": 0.100902637,
+    "y": 0.151557562
   },
   {
     "name": "The Northlands Tract",
     "description": "high-end upper-middle class homes of Javier & Ona Rosa Sanchez, Shelby Willis, Marcy Nolan",
-    "x": 0.23326572,
-    "y": 0.390519187
+    "x": 0.21326572,
+    "y": 0.340519187
   },
   {
     "name": "Chaparral Studios, home of the TV show \"Sigma 7\"",
@@ -26,32 +26,32 @@
   {
     "name": "The Cactus Field",
     "description": "home of Douglas Martel's AAA baseball team",
-    "x": 0.379310345,
-    "y": 0.386004515
+    "x": 0.349310345,
+    "y": 0.336004515
   },
   {
     "name": "Meer-A-Mar Corporate Building",
     "description": "also the home office to the Pacific Coast Oil Consortium and Ben Martel's dentist office",
-    "x": 0.336713996,
-    "y": 0.474040632
+    "x": 0.346713996,
+    "y": 0.454040632
   },
   {
     "name": "The Reredos",
     "description": "Santa Conchita's main shopping mall",
-    "x": 0.442190669,
-    "y": 0.471783296
+    "x": 0.446190669,
+    "y": 0.46178329
   },
   {
     "name": "Willowbrook Avenue",
     "description": "home to Amethyst Hill and Morrigan McBride",
     "x": 0.574036511,
-    "y": 0.449209932
+    "y": 0.439209932
   },
   {
     "name": "The old storefront/industrial area",
     "description": "Techtonic Nightclub, The Jade Gate, Brad Martel & Penny Renselier's store",
-    "x": 0.69168357,
-    "y": 0.417607223
+    "x": 0.70168357,
+    "y": 0.407607223
   },
   {
     "name": "Quartz County Air Field",
@@ -62,19 +62,19 @@
   {
     "name": "Fiore Farms",
     "description": "almonds, apricots, avocados",
-    "x": 0.9168357,
+    "x": 0.9268357,
     "y": 0.483069977
   },
   {
     "name": "Mission Santa Conchita",
     "description": "founded in 1784",
-    "x": 0.795131846,
+    "x": 0.825131846,
     "y": 0.480812641
   },
   {
     "name": "Our Lady of Guadalupe Catholic Church",
     "description": "predominantly working class Latino",
-    "x": 0.880324544,
+    "x": 0.910324544,
     "y": 0.559819413
   },
   {
@@ -86,44 +86,44 @@
   {
     "name": "The Daily Beacon Newspaper office",
     "description": "",
-    "x": 0.588235294,
+    "x": 0.60235294,
     "y": 0.652370203
   },
   {
     "name": "Quartz County Municipal Complex",
     "description": "Seat of local government, courthouse, sheriff, jail, coroner's office, chamber of commerce, Assemblymen George Renselier's field office, the museum",
     "x": 0.507099391,
-    "y": 0.616252822
+    "y": 0.626252822
   },
   {
     "name": "El Presidio parklands and oil refinery",
     "description": "",
     "x": 0.456389452,
-    "y": 0.58013544
+    "y": 0.57513544
   },
   {
     "name": "Saint Brendan's Catholic Church",
     "description": "predominantly upper-middle class white",
-    "x": 0.415821501,
+    "x": 0.405821501,
     "y": 0.744920993
   },
   {
     "name": "Plaza Cappella strip mall",
     "description": "Joenne Mirabello's dance studio, Victoria Martel's dress shop, Muldoon's Bar & Grill",
-    "x": 0.52535497,
+    "x": 0.54535497,
     "y": 0.735891648
   },
   {
     "name": "The Del Pilar Hotel & Spa",
     "description": "",
-    "x": 0.290060852,
-    "y": 0.783295711
+    "x": 0.280060852,
+    "y": 0.793295711
   },
   {
     "name": "The old Duquesa Bay graveyard",
     "description": "",
-    "x": 0.330628803,
-    "y": 0.884875847
+    "x": 0.325628803,
+    "y": 0.86075847
   },
   {
     "name": "Bay Valley Medical Center",
@@ -140,25 +140,25 @@
   {
     "name": "Beacon Point Estates",
     "description": "mansions of the von Meers, Martels, Renseliers, Gates, Henshaws",
-    "x": 0.194726166,
-    "y": 0.769751693
+    "x": 0.170726166,
+    "y": 0.759751693
   },
   {
     "name": "Jeremy Colvin's trailer park",
     "description": "",
     "x": 0.204868154,
-    "y": 0.923250564
+    "y": 0.933250564
   },
   {
     "name": "The Marina",
     "description": "Erika von Meer's boat dock, the Bay Shore Condominums, home to Kylee Shepperton, Anita Fiore, Vicotria Martel and Tim Hajanian ",
-    "x": 0.342799189,
+    "x": 0.322799189,
     "y": 0.738148984
   },
   {
     "name": "Duquesa Bay Yacht & Polo Club",
     "description": "",
-    "x": 0.430020284,
+    "x": 0.415020284,
     "y": 0.659142212
   },
   {
@@ -176,7 +176,14 @@
   {
     "name": "Quartz Lake Inn",
     "description": "golf and tennis resort along with owner Joe Tizso's vineyard and the Balaton restaurant",
-    "x": 0.862068966,
-    "y": 0.361173815
+    "x": 0.866068966,
+    "y": 0.341173815
+  }
+  ,
+  {
+    "name": "Las Islas Conchas",
+    "description": "",
+    "x": 0.080902637,
+    "y": 0.5
   }
 ]

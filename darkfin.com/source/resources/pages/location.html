@@ -11,7 +11,7 @@
 
   <div class="container">
     <div id="mapWrapper">
-      <img id="dbMap" src="assets/images/map_new_clean.jpg" />
+      <img id="dbMap" src="assets/images/duquesa-bay-map.jpg" />
       <i class="map-dot fa fa-map-marker fa-1" id="refDot"></i>
     </div>
     <ol id="mapNumbers"></ol>
@@ -79,7 +79,8 @@
         'data-toggle': 'tooltip',
         'data-html': true,
         'data-map-id': idx + 1,
-        'title': '<strong>' + loc.name + '</strong>'
+        'title': '<strong>' + loc.name + '</strong>',
+        // 'data-container': '.location'
         // 'title': `<strong>${loc.name}</strong><br>${loc.description}`
       });
       $map.append($d);
@@ -89,19 +90,32 @@
       });
       $locs.append($n);
     });
+    $map.css({
+      width: 'auto',
+      height: 'auto'
+    })
     let highlightItem = function (ref) {
       $('[data-map-ref]').removeClass('selected');
       if (ref) {
         $('[data-map-ref=' + ref + ']').addClass('selected');
       }
     }
+    let removeHightlight = function (ref) {
+      $('[data-map-ref=' + ref + ']').removeClass('selected');
+    }
     $(function() {
       $('[data-toggle="tooltip"]').tooltip().on('shown.bs.tooltip', function () {
+        var ref = $(this).attr('data-map-id');
         $(this).addClass('selected');
-        highlightItem($(this).attr('data-map-id'));
+        highlightItem(ref);
+        $('[data-toggle="tooltip"]').each(function() {
+          if (ref != $(this).attr('data-map-id')) {
+            $(this).tooltip('hide');
+          }
+        });
       }).on('hide.bs.tooltip', function () {
         $(this).removeClass('selected');
-        highlightItem();
+        removeHightlight($(this).attr('data-map-id'));
       });
     });
     $(function() {

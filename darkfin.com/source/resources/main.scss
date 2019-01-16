@@ -186,9 +186,15 @@ body .modal-backdrop.show {
   #mapWrapper {
     position: relative;
     display: block;
-    width: 494px;
-    height: 446px;
+    max-width: 576px;
+    width: 576px;
+    height: 520px;
     margin: 10px auto;
+    border: 1px solid #000;
+    img {
+      width: 100%;
+    }
+
   }
   .map-dot {
     top: -10000px;
@@ -593,8 +599,9 @@ body .modal-backdrop.show {
 .spin {
   position: relative;
   height: 432px;
-  // width: 800px;
   width: 576px;
+  max-width: 100%;
+  max-height: calc(100vh - #{$navbar-height});
   overflow: hidden;
   margin-left: auto;
   margin-right: auto;

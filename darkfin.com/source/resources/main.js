@@ -129,7 +129,9 @@ var people = [];
     // fade out
     $.get({
       url: file,
-      dataType: 'html'
+      dataType: 'html',
+      cache: false
+      
     }).then(function(res) {
       app.render(res);
       if (callback) { callback(); }
@@ -192,6 +194,7 @@ var people = [];
     });
     $('body').prepend($img);
     let ret = $img.height() * 0.98 > $baseImg.height() || $img.width() * 0.98 > $baseImg.width();
+    ret = ret && ($img.width() * 0.98 < $('body').width());
     $img.remove();
     return ret;
   };
